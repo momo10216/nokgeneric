@@ -1,0 +1,377 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE install PUBLIC "-//Joomla! 2.5//DTD template 1.0//EN" "http://www.joomla.org/xml/dtd/2.5/template-install.dtd">
+<extension version="3.1" type="template" client="site" method="upgrade">
+	<name>nok-generic</name>
+	<version>1.0</version>
+	<creationDate>08/05/2014</creationDate>
+	<author>Norbert Kuemin</author>
+	<authorEmail>norbert@kuem.in</authorEmail>
+	<copyright>Copyright (C) 2014 GPL V2. All rights reserved.</copyright>
+	<description>TPL_NOK-GENERIC_XML_DESCRIPTION</description>
+	<files>
+		<filename>component.php</filename>
+		<filename>documentation_de.html</filename>
+		<filename>documentation_en.html</filename>
+		<filename>error.php</filename>
+		<filename>index.html</filename>
+		<filename>index.php</filename>
+		<filename>templateDetails.xml</filename>
+		<filename>template_preview.png</filename>
+		<filename>template_thumbnail.png</filename>
+		<folder>css</folder>
+		<folder>html</folder>
+		<folder>images</folder>
+		<folder>img</folder>
+		<folder>js</folder>
+		<folder>language</folder>
+	</files>
+	<positions>
+		<position>debug</position>
+		<position>position-0</position>
+		<position>position-1</position>
+		<position>position-2</position>
+		<position>position-3</position>
+		<position>position-4</position>
+		<position>position-5</position>
+		<position>position-6</position>
+		<position>position-7</position>
+		<position>position-8</position>
+		<position>position-9</position>
+		<position>position-10</position>
+		<position>position-11</position>
+		<position>position-12</position>
+		<position>position-13</position>
+		<position>position-14</position>
+	</positions>
+	<languages folder="language">
+		<language tag="en-GB">en-GB/en-GB.tpl_nok-generic.ini</language>
+		<language tag="en-GB">en-GB/en-GB.tpl_nok-generic.sys.ini</language>
+		<language tag="de-DE">de-DE/de-DE.tpl_nok-generic.ini</language>
+		<language tag="de-DE">de-DE/de-DE.tpl_nok-generic.sys.ini</language>
+	</languages>
+	<config>
+		<fields name="params">
+			<fieldset name="common" label="TPL_NOK-GENERIC_COMMON_LABEL">
+				<field name="templateColor" class="" type="color" default="#08C"
+					label="TPL_NOK-GENERIC_COLOR_LABEL"
+					description="TPL_NOK-GENERIC_COLOR_DESC" />
+				<field name="templateForegroundColor" class="" type="color" default="#333"
+					label="TPL_NOK-GENERIC_FOREGROUND_COLOR_LABEL"
+					description="TPL_NOK-GENERIC_FOREGROUND_COLOR_DESC" />
+				<field name="templateLinkColor" class="" type="color" default="#333"
+					label="TPL_NOK-GENERIC_LINK_COLOR_LABEL"
+					description="TPL_NOK-GENERIC_LINK_COLOR_DESC" />
+				<field name="templateLinkDecoration" default="none"
+					type="list"
+					label="TPL_NOK-GENERIC_LINK_DECORATION_LABEL"
+					description="TPL_NOK-GENERIC_LINK_DECORATION_DESC" >
+					<option value="none">TPL_NOK-GENERIC_TEXT_DECORATION_NONE</option>
+					<option value="underline">TPL_NOK-GENERIC_TEXT_DECORATION_UNDERLINE</option>
+					<option value="overline">TPL_NOK-GENERIC_TEXT_DECORATION_OVERLINE</option>
+					<option value="line-through">TPL_NOK-GENERIC_TEXT_DECORATION_LINETHROUGH</option>
+					<option value="blink">TPL_NOK-GENERIC_TEXT_DECORATION_BLINK</option>
+				</field>
+				<field name="googleFont"
+					type="radio"
+					class="btn-group btn-group-yesno"
+					default="1"
+					label="TPL_NOK-GENERIC_FONT_LABEL"
+					description="TPL_NOK-GENERIC_FONT_DESC" >
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field name="googleFontName" class="" type="text" default="Open+Sans"
+					label="TPL_NOK-GENERIC_FONT_NAME_LABEL"
+					description="TPL_NOK-GENERIC_FONT_NAME_DESC" />
+				<field name="fluidContainer"
+					type="radio"
+					class="btn-group btn-group-yesno"
+					default="0"
+					label="TPL_NOK-GENERIC_FLUID_LABEL"
+					description="TPL_NOK-GENERIC_FLUID_DESC" >
+					<option value="1">TPL_NOK-GENERIC_FLUID</option>
+					<option value="0">TPL_NOK-GENERIC_STATIC</option>
+				</field>
+				<field name="templateRadius"
+					type="integer" first="0" last="10" step="1" default="0"
+					label="TPL_NOK-GENERIC_RADIUS_LABEL" description="TPL_NOK-GENERIC_RADIUS_DESC" />
+				<field name="faviconFile" class="" type="media" default=""
+					label="TPL_NOK-GENERIC_FAVICON_FILE_LABEL"
+					description="TPL_NOK-GENERIC_FAVICON_FILE_DESC" />
+			</fieldset>
+
+			<fieldset name="body" label="TPL_NOK-GENERIC_BODY_LABEL">
+				<field name="bodyBackgroundColor" class="" type="color" default="#F4F6F7"
+					label="TPL_NOK-GENERIC_BACKGROUND_COLOR_LABEL"
+					description="TPL_NOK-GENERIC_BODY_BACKGROUND_COLOR_DESC" />
+				<field name="bodyBackgroundFile" class="" type="media" default=""
+					label="TPL_NOK-GENERIC_BACKGROUND_FILE_LABEL"
+					description="TPL_NOK-GENERIC_BODY_BACKGROUND_FILE_DESC" />
+				<field name="bodyBackgroundRepeat"
+					type="list"
+					default=""
+					label="TPL_NOK-GENERIC_BACKGROUND_REPEAT_LABEL"
+					description="TPL_NOK-GENERIC_BACKGROUND_REPEAT_DESC" >
+					<option value="">TPL_NOK-GENERIC_BACKGROUND_REPEAT_UNDEF_LABEL</option>
+					<option value="repeat-x">TPL_NOK-GENERIC_BACKGROUND_REPEAT_X_LABEL</option>
+					<option value="repeat-y">TPL_NOK-GENERIC_BACKGROUND_REPEAT_Y_LABEL</option>
+					<option value="no-repeat">TPL_NOK-GENERIC_BACKGROUND_REPEAT_NOT_LABEL</option>
+				</field>
+				<field name="bodyBackgroundAttachment"
+					type="list"
+					default="scroll"
+					label="TPL_NOK-GENERIC_BACKGROUND_ATTACHMENT_LABEL"
+					description="TPL_NOK-GENERIC_BACKGROUND_ATTACHMENT_DESC" >
+					<option value="scroll">TPL_NOK-GENERIC_BACKGROUND_ATTACHMENT_SCROLL_LABEL</option>
+					<option value="fixed">TPL_NOK-GENERIC_BACKGROUND_ATTACHMENT_FIXED_LABEL</option>
+				</field>
+				<field name="bodyBackgroundPosition"
+					type="list"
+					default="top left"
+					label="TPL_NOK-GENERIC_BACKGROUND_POSITION_LABEL"
+					description="TPL_NOK-GENERIC_BACKGROUND_POSITION_DESC" >
+					<option value="top left">TPL_NOK-GENERIC_BACKGROUND_POSITION_TOP_LEFT_LABEL</option>
+					<option value="top center">TPL_NOK-GENERIC_BACKGROUND_POSITION_TOP_CENTER_LABEL</option>
+					<option value="top right">TPL_NOK-GENERIC_BACKGROUND_POSITION_TOP_RIGHT_LABEL</option>
+					<option value="center left">TPL_NOK-GENERIC_BACKGROUND_POSITION_CENTER_LEFT_LABEL</option>
+					<option value="center center">TPL_NOK-GENERIC_BACKGROUND_POSITION_CENTER_CENTER_LABEL</option>
+					<option value="center right">TPL_NOK-GENERIC_BACKGROUND_POSITION_CENTER_RIGHT_LABEL</option>
+					<option value="bottom left">TPL_NOK-GENERIC_BACKGROUND_POSITION_BOTTOM_LEFT_LABEL</option>
+					<option value="bottom center">TPL_NOK-GENERIC_BACKGROUND_POSITION_BOTTOM_CENTER_LABEL</option>
+					<option value="bottom right">TPL_NOK-GENERIC_BACKGROUND_POSITION_BOTTOM_RIGHT_LABEL</option>
+				</field>
+			</fieldset>
+
+			<fieldset name="menu" label="TPL_NOK-GENERIC_MENU_LABEL">
+				<field name="menuType"
+					type="list"
+					default="block"
+					label="TPL_NOK-GENERIC_MENU_TYPE_LABEL"
+					description="TPL_NOK-GENERIC_MENU_TYPE_DESC" >
+					<option value="block">TPL_NOK-GENERIC_MENU_BLOCK</option>
+					<option value="bar">TPL_NOK-GENERIC_MENU_BAR</option>
+					<option value="tab">TPL_NOK-GENERIC_MENU_TAB</option>
+				</field>
+				<field name="menuBackgroundColor" class="" type="color" default=""
+					label="TPL_NOK-GENERIC_MENU_BACKGROUND_COLOR_LABEL"
+					description="TPL_NOK-GENERIC_MENU_BACKGROUND_COLOR_DESC" />
+				<field name="menuEntryBackgroundColor" class="" type="color" default="#FFFFFF"
+					label="TPL_NOK-GENERIC_MENUENTRY_BACKGROUND_COLOR_LABEL"
+					description="TPL_NOK-GENERIC_MENUENTRY_BACKGROUND_COLOR_DESC" />
+				<field name="menuEntryFocusBackgroundColor" class="" type="color" default="#DDDDDD"
+					label="TPL_NOK-GENERIC_MENUENTRY_FOCUS_BACKGROUND_COLOR_LABEL"
+					description="TPL_NOK-GENERIC_MENUENTRY_FOCUS_BACKGROUND_COLOR_DESC" />
+				<field name="menuEntryForegroundColor" class="" type="color" default="#FFFFFF"
+					label="TPL_NOK-GENERIC_FOREGROUND_COLOR_LABEL"
+					description="TPL_NOK-GENERIC_MENUENTRY_FOREGROUND_COLOR_DESC" />
+				<field name="menuEntryRadius"
+					type="integer" first="0" last="10" step="1" default="0"
+					label="TPL_NOK-GENERIC_MENUENTRY_RADIUS_LABEL"
+					description="TPL_NOK-GENERIC_MENUENTRY_RADIUS_DESC" />
+				<field name="menuEntryHorizontalSpacing" class="" type="integer" default="12"
+					first="0" last="50" step="1" label="TPL_NOK-GENERIC_MENUENTRY_HORIZONTAL_SPACING_LABEL"
+					description="TPL_NOK-GENERIC_MENUENTRY_HORIZONTAL_SPACING_DESC" />
+				<field name="menuChildBackgroundColor" class="" type="color" default="#FFFFFF"
+					label="TPL_NOK-GENERIC_MENUCHILD_BACKGROUND_COLOR_LABEL"
+					description="TPL_NOK-GENERIC_MENUCHILD_BACKGROUND_COLOR_DESC" />
+				<field name="menuChildFocusBackgroundColor" class="" type="color" default="#DDDDDD"
+					label="TPL_NOK-GENERIC_MENUCHILD_FOCUS_BACKGROUND_COLOR_LABEL"
+					description="TPL_NOK-GENERIC_MENUCHILD_FOCUS_BACKGROUND_COLOR_DESC" />
+				<field name="menuChildForegroundColor" class="" type="color" default="#000000"
+					label="TPL_NOK-GENERIC_MENUCHILD_FOREGROUND_COLOR_LABEL"
+					description="TPL_NOK-GENERIC_MENUCHILD_FOREGROUND_COLOR_DESC" />
+				<field name="menuChildBorderColor" class="" type="color" default="#CCCCCC"
+					label="TPL_NOK-GENERIC_MENUCHILD_BORDER_COLOR_LABEL"
+					description="TPL_NOK-GENERIC_MENUCHILD_BORDER_COLOR_DESC" />
+				<field name="menuMobileType"
+					type="list"
+					default="same"
+					label="TPL_NOK-GENERIC_MENU_MOBILE_TYPE_LABEL"
+					description="TPL_NOK-GENERIC_MENU_MOBILE_TYPE_DESC" >
+					<option value="same">TPL_NOK-GENERIC_MENU_MOBILE_TYPE_SAME</option>
+					<option value="nav-btn-left">TPL_NOK-GENERIC_MENU_MOBILE_TYPE_NAVBTNLEFT</option>
+					<option value="nav-btn-right">TPL_NOK-GENERIC_MENU_MOBILE_TYPE_NAVBTNRIGHT</option>
+					<option value="nav-select-left">TPL_NOK-GENERIC_MENU_MOBILE_TYPE_NAVSELECTLEFT</option>
+					<option value="nav-select-right">TPL_NOK-GENERIC_MENU_MOBILE_TYPE_NAVSELECTRIGHT</option>
+				</field>
+			</fieldset>
+
+			<fieldset name="content" label="TPL_NOK-GENERIC_CONTENT_LABEL">
+				<field name="contentBackgroundColor" class="" type="color" default="#F4F6F7"
+					label="TPL_NOK-GENERIC_BACKGROUND_COLOR_LABEL"
+					description="TPL_NOK-GENERIC_CONTENT_BACKGROUND_COLOR_DESC" />
+				<field name="contentBackgroundFile" class="" type="media" default=""
+					label="TPL_NOK-GENERIC_BACKGROUND_FILE_LABEL"
+					description="TPL_NOK-GENERIC_CONTENT_BACKGROUND_FILE_DESC" />
+				<field name="contentBackgroundRepeat"
+					type="list"
+					default=""
+					label="TPL_NOK-GENERIC_BACKGROUND_REPEAT_LABEL"
+					description="TPL_NOK-GENERIC_BACKGROUND_REPEAT_DESC" >
+					<option value="">TPL_NOK-GENERIC_BACKGROUND_REPEAT_UNDEF_LABEL</option>
+					<option value="repeat-x">TPL_NOK-GENERIC_BACKGROUND_REPEAT_X_LABEL</option>
+					<option value="repeat-y">TPL_NOK-GENERIC_BACKGROUND_REPEAT_Y_LABEL</option>
+					<option value="no-repeat">TPL_NOK-GENERIC_BACKGROUND_REPEAT_NOT_LABEL</option>
+				</field>
+				<field name="contentBackgroundAttachment"
+					type="list"
+					default="scroll"
+					label="TPL_NOK-GENERIC_BACKGROUND_ATTACHMENT_LABEL"
+					description="TPL_NOK-GENERIC_BACKGROUND_ATTACHMENT_DESC" >
+					<option value="scroll">TPL_NOK-GENERIC_BACKGROUND_ATTACHMENT_SCROLL_LABEL</option>
+					<option value="fixed">TPL_NOK-GENERIC_BACKGROUND_ATTACHMENT_FIXED_LABEL</option>
+				</field>
+				<field name="contentBackgroundPosition"
+					type="list"
+					default="top left"
+					label="TPL_NOK-GENERIC_BACKGROUND_POSITION_LABEL"
+					description="TPL_NOK-GENERIC_BACKGROUND_POSITION_DESC" >
+					<option value="top left">TPL_NOK-GENERIC_BACKGROUND_POSITION_TOP_LEFT_LABEL</option>
+					<option value="top center">TPL_NOK-GENERIC_BACKGROUND_POSITION_TOP_CENTER_LABEL</option>
+					<option value="top right">TPL_NOK-GENERIC_BACKGROUND_POSITION_TOP_RIGHT_LABEL</option>
+					<option value="center left">TPL_NOK-GENERIC_BACKGROUND_POSITION_CENTER_LEFT_LABEL</option>
+					<option value="center center">TPL_NOK-GENERIC_BACKGROUND_POSITION_CENTER_CENTER_LABEL</option>
+					<option value="center right">TPL_NOK-GENERIC_BACKGROUND_POSITION_CENTER_RIGHT_LABEL</option>
+					<option value="bottom left">TPL_NOK-GENERIC_BACKGROUND_POSITION_BOTTOM_LEFT_LABEL</option>
+					<option value="bottom center">TPL_NOK-GENERIC_BACKGROUND_POSITION_BOTTOM_CENTER_LABEL</option>
+					<option value="bottom right">TPL_NOK-GENERIC_BACKGROUND_POSITION_BOTTOM_RIGHT_LABEL</option>
+				</field>
+				<field name="contentBorderType"
+					type="list"
+					default="none"
+					label="TPL_NOK-GENERIC_BORDER_TYPE_LABEL"
+					description="TPL_NOK-GENERIC_CONTENT_BORDER_TYPE_DESC" >
+					<option value="none">TPL_NOK-GENERIC_BORDER_TYPE_NONE</option>
+					<option value="hidden">TPL_NOK-GENERIC_BORDER_TYPE_HIDDEN</option>
+					<option value="dotted">TPL_NOK-GENERIC_BORDER_TYPE_DOTTED</option>
+					<option value="dashed">TPL_NOK-GENERIC_BORDER_TYPE_DASHED</option>
+					<option value="solid">TPL_NOK-GENERIC_BORDER_TYPE_SOLID</option>
+					<option value="double">TPL_NOK-GENERIC_BORDER_TYPE_DOUBLE</option>
+					<option value="groove">TPL_NOK-GENERIC_BORDER_TYPE_GROOVE</option>
+					<option value="ridge">TPL_NOK-GENERIC_BORDER_TYPE_RIDGE</option>
+					<option value="inset">TPL_NOK-GENERIC_BORDER_TYPE_INSET</option>
+					<option value="outset">TPL_NOK-GENERIC_BORDER_TYPE_OUTSET</option>
+				</field>
+				<field name="contentBorderSize"
+					type="integer" first="0" last="10" step="1" default="0"
+					label="TPL_NOK-GENERIC_BORDER_SIZE_LABEL"
+					description="TPL_NOK-GENERIC_CONTENT_BORDER_SIZE_DESC" />
+				<field name="contentBorderColor" class="" type="color" default="#000000"
+					label="TPL_NOK-GENERIC_BORDER_COLOR_LABEL"
+					description="TPL_NOK-GENERIC_CONTENT_BORDER_COLOR_DESC" />
+			</fieldset>
+			<fieldset name="module" label="TPL_NOK-GENERIC_MODULE_LABEL">
+				<field name="moduleBackgroundColor" class="" type="color" default="#F5F5F5"
+					label="TPL_NOK-GENERIC_BACKGROUND_COLOR_LABEL"
+					description="TPL_NOK-GENERIC_MODULE_BACKGROUND_COLOR_DESC" />
+				<field name="moduleBorderType"
+					type="list"
+					default="none"
+					label="TPL_NOK-GENERIC_BORDER_TYPE_LABEL"
+					description="TPL_NOK-GENERIC_MODULE_BORDER_TYPE_DESC" >
+					<option value="none">TPL_NOK-GENERIC_BORDER_TYPE_NONE</option>
+					<option value="hidden">TPL_NOK-GENERIC_BORDER_TYPE_HIDDEN</option>
+					<option value="dotted">TPL_NOK-GENERIC_BORDER_TYPE_DOTTED</option>
+					<option value="dashed">TPL_NOK-GENERIC_BORDER_TYPE_DASHED</option>
+					<option value="solid">TPL_NOK-GENERIC_BORDER_TYPE_SOLID</option>
+					<option value="double">TPL_NOK-GENERIC_BORDER_TYPE_DOUBLE</option>
+					<option value="groove">TPL_NOK-GENERIC_BORDER_TYPE_GROOVE</option>
+					<option value="ridge">TPL_NOK-GENERIC_BORDER_TYPE_RIDGE</option>
+					<option value="inset">TPL_NOK-GENERIC_BORDER_TYPE_INSET</option>
+					<option value="outset">TPL_NOK-GENERIC_BORDER_TYPE_OUTSET</option>
+				</field>
+				<field name="moduleBorderSize"
+					type="integer" first="0" last="10" step="1" default="0"
+					label="TPL_NOK-GENERIC_BORDER_SIZE_LABEL"
+					description="TPL_NOK-GENERIC_MODULE_BORDER_SIZE_DESC" />
+				<field name="moduleBorderColor" class="" type="color" default="#E3E3E3"
+					label="TPL_NOK-GENERIC_BORDER_COLOR_LABEL"
+					description="TPL_NOK-GENERIC_MODULE_BORDER_COLOR_DESC" />
+				<field name="modulePaddingSize"
+					type="integer" first="0" last="30" step="1" default="19"
+					label="TPL_NOK-GENERIC_PADDING_SIZE_LABEL"
+					description="TPL_NOK-GENERIC_MODULE_PADDING_SIZE_DESC" />
+				<field name="moduleTitleIcon" class="" type="media" default=""
+					label="TPL_NOK-GENERIC_MODULE_TITLE_ICON_FILE_LABEL"
+					description="TPL_NOK-GENERIC_MODULE_TITLE_ICON_FILE_DESC" />
+				<field name="moduleTitleBackgroundFile" class="" type="media" default=""
+					label="TPL_NOK-GENERIC_MODULE_TITLE_BACKGROUND_FILE_LABEL"
+					description="TPL_NOK-GENERIC_MODULE_TITLE_BACKGROUND_FILE_DESC" />
+				<field name="moduleTitleDecoration" default="none"
+					type="list"
+					label="TPL_NOK-GENERIC_MODULE_TITLE_DECORATION_LABEL"
+					description="TPL_NOK-GENERIC_MODULE_TITLE_DECORATION_DESC" >
+					<option value="none">TPL_NOK-GENERIC_TEXT_DECORATION_NONE</option>
+					<option value="underline">TPL_NOK-GENERIC_TEXT_DECORATION_UNDERLINE</option>
+					<option value="overline">TPL_NOK-GENERIC_TEXT_DECORATION_OVERLINE</option>
+					<option value="line-through">TPL_NOK-GENERIC_TEXT_DECORATION_LINETHROUGH</option>
+					<option value="blink">TPL_NOK-GENERIC_TEXT_DECORATION_BLINK</option>
+				</field>
+			</fieldset>
+			<fieldset name="footer" label="TPL_NOK-GENERIC_FOOTER_LABEL">
+				<field name="footerBackgroundColor" class="" type="color" default="#F4F6F7"
+					label="TPL_NOK-GENERIC_BACKGROUND_COLOR_LABEL"
+					description="TPL_NOK-GENERIC_FOOTER_BACKGROUND_COLOR_DESC" />
+				<field name="footerBackgroundFile" class="" type="media" default=""
+					label="TPL_NOK-GENERIC_BACKGROUND_FILE_LABEL"
+					description="TPL_NOK-GENERIC_FOOTER_BACKGROUND_FILE_DESC" />
+				<field name="footerBackgroundRepeat"
+					type="list"
+					default=""
+					label="TPL_NOK-GENERIC_BACKGROUND_REPEAT_LABEL"
+					description="TPL_NOK-GENERIC_BACKGROUND_REPEAT_DESC" >
+					<option value="">TPL_NOK-GENERIC_BACKGROUND_REPEAT_UNDEF_LABEL</option>
+					<option value="repeat-x">TPL_NOK-GENERIC_BACKGROUND_REPEAT_X_LABEL</option>
+					<option value="repeat-y">TPL_NOK-GENERIC_BACKGROUND_REPEAT_Y_LABEL</option>
+					<option value="no-repeat">TPL_NOK-GENERIC_BACKGROUND_REPEAT_NOT_LABEL</option>
+				</field>
+				<field name="footerBackgroundAttachment"
+					type="list"
+					default="scroll"
+					label="TPL_NOK-GENERIC_BACKGROUND_ATTACHMENT_LABEL"
+					description="TPL_NOK-GENERIC_BACKGROUND_ATTACHMENT_DESC" >
+					<option value="scroll">TPL_NOK-GENERIC_BACKGROUND_ATTACHMENT_SCROLL_LABEL</option>
+					<option value="fixed">TPL_NOK-GENERIC_BACKGROUND_ATTACHMENT_FIXED_LABEL</option>
+				</field>
+				<field name="footerBackgroundPosition"
+					type="list"
+					default="top left"
+					label="TPL_NOK-GENERIC_BACKGROUND_POSITION_LABEL"
+					description="TPL_NOK-GENERIC_BACKGROUND_POSITION_DESC" >
+					<option value="top left">TPL_NOK-GENERIC_BACKGROUND_POSITION_TOP_LEFT_LABEL</option>
+					<option value="top center">TPL_NOK-GENERIC_BACKGROUND_POSITION_TOP_CENTER_LABEL</option>
+					<option value="top right">TPL_NOK-GENERIC_BACKGROUND_POSITION_TOP_RIGHT_LABEL</option>
+					<option value="center left">TPL_NOK-GENERIC_BACKGROUND_POSITION_CENTER_LEFT_LABEL</option>
+					<option value="center center">TPL_NOK-GENERIC_BACKGROUND_POSITION_CENTER_CENTER_LABEL</option>
+					<option value="center right">TPL_NOK-GENERIC_BACKGROUND_POSITION_CENTER_RIGHT_LABEL</option>
+					<option value="bottom left">TPL_NOK-GENERIC_BACKGROUND_POSITION_BOTTOM_LEFT_LABEL</option>
+					<option value="bottom center">TPL_NOK-GENERIC_BACKGROUND_POSITION_BOTTOM_CENTER_LABEL</option>
+					<option value="bottom right">TPL_NOK-GENERIC_BACKGROUND_POSITION_BOTTOM_RIGHT_LABEL</option>
+				</field>
+				<field name="footerBorderType"
+					type="list"
+					default="none"
+					label="TPL_NOK-GENERIC_BORDER_TYPE_LABEL"
+					description="TPL_NOK-GENERIC_FOOTER_BORDER_TYPE_DESC" >
+					<option value="none">TPL_NOK-GENERIC_BORDER_TYPE_NONE</option>
+					<option value="hidden">TPL_NOK-GENERIC_BORDER_TYPE_HIDDEN</option>
+					<option value="dotted">TPL_NOK-GENERIC_BORDER_TYPE_DOTTED</option>
+					<option value="dashed">TPL_NOK-GENERIC_BORDER_TYPE_DASHED</option>
+					<option value="solid">TPL_NOK-GENERIC_BORDER_TYPE_SOLID</option>
+					<option value="double">TPL_NOK-GENERIC_BORDER_TYPE_DOUBLE</option>
+					<option value="groove">TPL_NOK-GENERIC_BORDER_TYPE_GROOVE</option>
+					<option value="ridge">TPL_NOK-GENERIC_BORDER_TYPE_RIDGE</option>
+					<option value="inset">TPL_NOK-GENERIC_BORDER_TYPE_INSET</option>
+					<option value="outset">TPL_NOK-GENERIC_BORDER_TYPE_OUTSET</option>
+				</field>
+				<field name="footerBorderSize"
+					type="integer" first="0" last="10" step="1" default="0"
+					label="TPL_NOK-GENERIC_BORDER_SIZE_LABEL"
+					description="TPL_NOK-GENERIC_FOOTER_BORDER_SIZE_DESC" />
+				<field name="footerBorderColor" class="" type="color" default="#000000"
+					label="TPL_NOK-GENERIC_BORDER_COLOR_LABEL"
+					description="TPL_NOK-GENERIC_FOOTER_BORDER_COLOR_DESC" />
+			</fieldset>
+		</fields>
+	</config>
+</extension>
