@@ -374,4 +374,7 @@
 			</fieldset>
 		</fields>
 	</config>
+	<updateservers>
+		<server type="extension" priority="2" name="TPL_NOK-GENERIC_UPDATE_NAME">http://kuem.in/joomlaupdate/tpl_nokgeneric.xml</server>
+	</updateservers>
 </extension>
