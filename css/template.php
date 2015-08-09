@@ -7356,10 +7356,14 @@ figcaption {
 .navigation .nav > li > a:focus + .nav-child {
 	display: block;
 }
+.navigation .nav-child > li:hover {
+	position: relative;
+}
+
 .navigation .nav-child > li:hover > .nav-child,
 .navigation .nav-child > li > a:focus + .nav-child {
 	display: block;
-	top: 0;
+	top: -6px;
 	left: 100%;
 }
 .navigation .nav-child > li:hover > .nav-child:after,
