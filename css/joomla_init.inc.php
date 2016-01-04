@@ -32,6 +32,37 @@ if (!defined('_JDEFINES'))
 
 require_once JPATH_BASE . '/includes/framework.php';
 
+function hex2RGB($hexStr, $returnAsString = false, $seperator = ',') {
+    $hexStr = preg_replace("/[^0-9A-Fa-f]/", '', $hexStr); // Gets a proper hex string
+    $rgbArray = array();
+    if (strlen($hexStr) == 6) { //If a proper hex code, convert using bitwise operation. No overhead... faster
+        $colorVal = hexdec($hexStr);
+        $rgbArray['red'] = 0xFF & ($colorVal >> 0x10);
+        $rgbArray['green'] = 0xFF & ($colorVal >> 0x8);
+        $rgbArray['blue'] = 0xFF & $colorVal;
+    } elseif (strlen($hexStr) == 3) { //if shorthand notation, need some string manipulations
+        $rgbArray['red'] = hexdec(str_repeat(substr($hexStr, 0, 1), 2));
+        $rgbArray['green'] = hexdec(str_repeat(substr($hexStr, 1, 1), 2));
+        $rgbArray['blue'] = hexdec(str_repeat(substr($hexStr, 2, 1), 2));
+    } else {
+        return false; //Invalid hex color code
+    }
+    return $returnAsString ? implode($seperator, $rgbArray) : $rgbArray; // returns the rgb string or the associative array
+}
+
+function calcBackground($templateParams, $colorKey, $opacityKey="") {
+	$backgroundColor = $templateParams->get($colorKey);
+	if (empty($backgroundColor)) { return ""; }
+	if (!empty($opacityKey)) {
+		$backgroundOpacity = $templateParams->get($opacityKey);
+		if (!empty($backgroundOpacity)) {
+			$backgroundOpacity = $backgroundOpacity/100;
+			return "rgba(".hex2RGB($backgroundColor,true).",".$backgroundOpacity.")";
+		}
+	}
+	return "rgb(".hex2RGB($backgroundColor,true).")";	
+}
+ 
 // Instantiate the application.
 $app = JFactory::getApplication('site');
 $templateParams = JFactory::getApplication()->getTemplate(true)->params;
@@ -41,21 +72,17 @@ $templateForegroundColor = $templateParams->get('templateForegroundColor');
 $templateLinkColor = $templateParams->get('templateLinkColor');
 $templateLinkDecoration = $templateParams->get('templateLinkDecoration');
 $templateRadius = $templateParams->get('templateRadius');
-$moduleBackgroundColor = $templateParams->get('moduleBackgroundColor');
-$moduleBorderColor = $templateParams->get('moduleBorderColor');
-$moduleBorderSize = $templateParams->get('moduleBorderSize');
-$moduleBorderType = $templateParams->get('moduleBorderType');
-$modulePaddingSize = $templateParams->get('modulePaddingSize');
-$moduleTitleBackgroundFile = $templateParams->get('moduleTitleBackgroundFile');
-$moduleTitleIcon = $templateParams->get('moduleTitleIcon');
-$moduleTitleDecoration = $templateParams->get('moduleTitleDecoration');
+
 $bodyBackgroundColor = $templateParams->get('bodyBackgroundColor');
 $bodyBackgroundFile = $templateParams->get('bodyBackgroundFile');
 $bodyBackgroundRepeat = $templateParams->get('bodyBackgroundRepeat');
 $bodyBackgroundAttachment = $templateParams->get('bodyBackgroundAttachment');
 $bodyBackgroundPosition = $templateParams->get('bodyBackgroundPosition');
+
+$headerBackgroundColor = calcBackground($templateParams,'headerBackgroundColor','headerBackgroundOpacity');
+
 $menuType = $templateParams->get('menuType');
-$menuBackgroundColor = $templateParams->get('menuBackgroundColor');
+$menuBackgroundColor = calcBackground($templateParams,'menuBackgroundColor','menuBackgroundOpacity');
 $menuEntryBackgroundColor = $templateParams->get('menuEntryBackgroundColor');
 $menuEntryFocusBackgroundColor = $templateParams->get('menuEntryFocusBackgroundColor');
 $menuEntryForegroundColor = $templateParams->get('menuEntryForegroundColor');
@@ -66,7 +93,17 @@ $menuChildFocusBackgroundColor = $templateParams->get('menuChildFocusBackgroundC
 $menuChildForegroundColor = $templateParams->get('menuChildForegroundColor');
 $menuChildBorderColor = $templateParams->get('menuChildBorderColor');
 $menuMobileType = $templateParams->get('menuMobileType');
-$contentBackgroundColor = $templateParams->get('contentBackgroundColor');
+
+$moduleBackgroundColor = calcBackground($templateParams,'moduleBackgroundColor','moduleBackgroundOpacity');
+$moduleBorderColor = $templateParams->get('moduleBorderColor');
+$moduleBorderSize = $templateParams->get('moduleBorderSize');
+$moduleBorderType = $templateParams->get('moduleBorderType');
+$modulePaddingSize = $templateParams->get('modulePaddingSize');
+$moduleTitleBackgroundFile = $templateParams->get('moduleTitleBackgroundFile');
+$moduleTitleIcon = $templateParams->get('moduleTitleIcon');
+$moduleTitleDecoration = $templateParams->get('moduleTitleDecoration');
+
+$contentBackgroundColor = calcBackground($templateParams,'contentBackgroundColor','contentBackgroundOpacity');
 $contentBackgroundFile = $templateParams->get('contentBackgroundFile');
 $contentBackgroundRepeat = $templateParams->get('contentBackgroundRepeat');
 $contentBackgroundAttachment = $templateParams->get('contentBackgroundAttachment');
@@ -74,7 +111,8 @@ $contentBackgroundPosition = $templateParams->get('contentBackgroundPosition');
 $contentBorderType = $templateParams->get('contentBorderType');
 $contentBorderSize = $templateParams->get('contentBorderSize');
 $contentBorderColor = $templateParams->get('contentBorderColor');
-$footerBackgroundColor = $templateParams->get('footerBackgroundColor');
+
+$footerBackgroundColor = calcBackground($templateParams,'footerBackgroundColor','footerBackgroundOpacity');
 $footerBackgroundFile = $templateParams->get('footerBackgroundFile');
 $footerBackgroundRepeat = $templateParams->get('footerBackgroundRepeat');
 $footerBackgroundAttachment = $templateParams->get('footerBackgroundAttachment');
@@ -83,4 +121,3 @@ $footerBorderType = $templateParams->get('footerBorderType');
 $footerBorderSize = $templateParams->get('footerBorderSize');
 $footerBorderColor = $templateParams->get('footerBorderColor');
 ?>
-

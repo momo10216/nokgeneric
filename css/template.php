@@ -6,6 +6,11 @@
  * @copyright   Copyright (C) 2014 Norbert Kuemin. All rights reserved.
  * @license     GNU General Public License version 2 or later; see LICENSE.txt
  */
+/*
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
+*/
+
 if (file_exists(__DIR__ . '/joomla_init.inc.php'))
 {
 	include_once __DIR__ . '/joomla_init.inc.php';
@@ -205,28 +210,28 @@ body {
 	font-family: Verdana, Helvetica, Arial, sans-serif;
 	font-size: 13px;
 	line-height: 18px;
-	color: <?php echo $templateForegroundColor;?>;
+	color: <?php echo $templateForegroundColor; ?>;
 	background-color: #fff;
 }
 a {
 <?php if ($templateLinkColor) : ?>
-	color: <?php echo $templateLinkColor;?>;
+	color: <?php echo $templateLinkColor; ?>;
 <?php else: ?>
-	color: <?php echo $templateColor;?>;
+	color: <?php echo $templateColor; ?>;
 <?php endif; ?>
 <?php if ($templateLinkDecoration) : ?>
-	text-decoration: <?php echo $templateLinkDecoration;?>;
+	text-decoration: <?php echo $templateLinkDecoration; ?>;
 <?php endif; ?>
 }
 a:hover,
 a:focus {
 <?php if ($templateLinkColor) : ?>
-	color: <?php echo $templateLinkColor;?>;
+	color: <?php echo $templateLinkColor; ?>;
 <?php else: ?>
-	color: <?php echo $templateColor;?>;
+	color: <?php echo $templateColor; ?>;
 <?php endif; ?>
 <?php if ($templateLinkDecoration) : ?>
-	text-decoration: <?php echo $templateLinkDecoration;?>;
+	text-decoration: <?php echo $templateLinkDecoration; ?>;
 <?php endif; ?>
 }
 .img-rounded {
@@ -541,6 +546,9 @@ a:focus {
 	clear: both;
 }
 .container-fluid {
+<?php if ($contentBackgroundColor) : ?>
+	background-color: <?php echo $contentBackgroundColor; ?>;
+<?php endif; ?>
 	padding-right: 20px;
 	padding-left: 20px;
 	*zoom: 1;
@@ -2148,7 +2156,7 @@ table th[class*="span"],
 	-moz-box-shadow: inset 0 1px 1px rgba(0,0,0,0.05);
 	box-shadow: inset 0 1px 1px rgba(0,0,0,0.05);
 <?php if ($moduleTitleIcon) : ?>
-	background-image: url("<?php echo JURI::base()."../../../".$moduleTitleIcon;?>");
+	background-image: url("<?php echo JURI::base()."../../../".$moduleTitleIcon; ?>");
 	background-repeat: no-repeat;
 	background-position: top <?php echo $modulePaddingSize; ?>px left <?php echo $modulePaddingSize; ?>px;
 <?php endif; ?>
@@ -7088,6 +7096,11 @@ body.site.fluid {
 	color: #08c;
 	text-decoration: none;
 }
+.header-inner {
+<?php if ($headerBackgroundColor) : ?>
+	background-color: <?php echo $headerBackgroundColor;?>;
+<?php endif; ?>
+}
 .header {
 	margin-bottom: 0px;
 }
@@ -7131,7 +7144,9 @@ body.site.fluid {
 	max-width: 960px;
 }
 .body .container {
-	background-color: <?php echo $contentBackgroundColor;?>;
+<?php if ($contentBackgroundColor) : ?>
+	background-color: <?php echo $contentBackgroundColor; ?>;
+<?php endif; ?>
 	-moz-border-radius: <?php echo $templateRadius; ?>px;
 	-webkit-border-radius: <?php echo $templateRadius; ?>px;
 	border-radius: <?php echo $templateRadius; ?>px;

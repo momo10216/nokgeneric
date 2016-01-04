@@ -2,11 +2,11 @@
 <!DOCTYPE install PUBLIC "-//Joomla! 2.5//DTD template 1.0//EN" "http://www.joomla.org/xml/dtd/2.5/template-install.dtd">
 <extension version="3.1" type="template" client="site" method="upgrade">
 	<name>NoK-Generic</name>
-	<version>1.1</version>
+	<version>1.2</version>
 	<creationDate>08/05/2014</creationDate>
 	<author>Norbert Kuemin</author>
 	<authorEmail>norbert@kuem.in</authorEmail>
-	<copyright>Copyright (C) 2014 GPL V2. All rights reserved.</copyright>
+	<copyright>Copyright (C) 2014-2016 GPL V2. All rights reserved.</copyright>
 	<description>TPL_NOK-GENERIC_XML_DESCRIPTION</description>
 	<files>
 		<filename>component.php</filename>
@@ -101,7 +101,7 @@
 			</fieldset>
 
 			<fieldset name="body" label="TPL_NOK-GENERIC_BODY_LABEL">
-				<field name="bodyBackgroundColor" class="" type="color" default="#F4F6F7"
+				<field name="bodyBackgroundColor" class="" type="color" default=""
 					label="TPL_NOK-GENERIC_BACKGROUND_COLOR_LABEL"
 					description="TPL_NOK-GENERIC_BODY_BACKGROUND_COLOR_DESC" />
 				<field name="bodyBackgroundFile" class="" type="media" default=""
@@ -142,6 +142,16 @@
 				</field>
 			</fieldset>
 
+			<fieldset name="header" label="TPL_NOK-GENERIC_HEADER_LABEL">
+				<field name="headerBackgroundColor" class="" type="color" default=""
+					label="TPL_NOK-GENERIC_BACKGROUND_COLOR_LABEL"
+					description="TPL_NOK-GENERIC_FOOTER_BACKGROUND_COLOR_DESC" />
+				<field name="headerBackgroundOpacity"
+					type="integer" first="0" last="100" step="10" default="100"
+					label="TPL_NOK-GENERIC_OPACITY_LABEL"
+					description="TPL_NOK-GENERIC_OPACITY_DESC" />
+			</fieldset>
+
 			<fieldset name="menu" label="TPL_NOK-GENERIC_MENU_LABEL">
 				<field name="menuType"
 					type="list"
@@ -155,6 +165,10 @@
 				<field name="menuBackgroundColor" class="" type="color" default=""
 					label="TPL_NOK-GENERIC_MENU_BACKGROUND_COLOR_LABEL"
 					description="TPL_NOK-GENERIC_MENU_BACKGROUND_COLOR_DESC" />
+				<field name="menuBackgroundOpacity"
+					type="integer" first="0" last="100" step="10" default="100"
+					label="TPL_NOK-GENERIC_OPACITY_LABEL"
+					description="TPL_NOK-GENERIC_OPACITY_DESC" />
 				<field name="menuEntryBackgroundColor" class="" type="color" default="#FFFFFF"
 					label="TPL_NOK-GENERIC_MENUENTRY_BACKGROUND_COLOR_LABEL"
 					description="TPL_NOK-GENERIC_MENUENTRY_BACKGROUND_COLOR_DESC" />
@@ -197,9 +211,13 @@
 			</fieldset>
 
 			<fieldset name="content" label="TPL_NOK-GENERIC_CONTENT_LABEL">
-				<field name="contentBackgroundColor" class="" type="color" default="#F4F6F7"
+				<field name="contentBackgroundColor" class="" type="color" default=""
 					label="TPL_NOK-GENERIC_BACKGROUND_COLOR_LABEL"
 					description="TPL_NOK-GENERIC_CONTENT_BACKGROUND_COLOR_DESC" />
+				<field name="contentBackgroundOpacity"
+					type="integer" first="0" last="100" step="10" default="100"
+					label="TPL_NOK-GENERIC_OPACITY_LABEL"
+					description="TPL_NOK-GENERIC_OPACITY_DESC" />
 				<field name="contentBackgroundFile" class="" type="media" default=""
 					label="TPL_NOK-GENERIC_BACKGROUND_FILE_LABEL"
 					description="TPL_NOK-GENERIC_CONTENT_BACKGROUND_FILE_DESC" />
@@ -260,10 +278,15 @@
 					label="TPL_NOK-GENERIC_BORDER_COLOR_LABEL"
 					description="TPL_NOK-GENERIC_CONTENT_BORDER_COLOR_DESC" />
 			</fieldset>
+
 			<fieldset name="module" label="TPL_NOK-GENERIC_MODULE_LABEL">
 				<field name="moduleBackgroundColor" class="" type="color" default="#F5F5F5"
 					label="TPL_NOK-GENERIC_BACKGROUND_COLOR_LABEL"
 					description="TPL_NOK-GENERIC_MODULE_BACKGROUND_COLOR_DESC" />
+				<field name="moduleBackgroundOpacity"
+					type="integer" first="0" last="100" step="10" default="100"
+					label="TPL_NOK-GENERIC_OPACITY_LABEL"
+					description="TPL_NOK-GENERIC_OPACITY_DESC" />
 				<field name="moduleBorderType"
 					type="list"
 					default="none"
@@ -308,10 +331,15 @@
 					<option value="blink">TPL_NOK-GENERIC_TEXT_DECORATION_BLINK</option>
 				</field>
 			</fieldset>
+
 			<fieldset name="footer" label="TPL_NOK-GENERIC_FOOTER_LABEL">
-				<field name="footerBackgroundColor" class="" type="color" default="#F4F6F7"
+				<field name="footerBackgroundColor" class="" type="color" default=""
 					label="TPL_NOK-GENERIC_BACKGROUND_COLOR_LABEL"
 					description="TPL_NOK-GENERIC_FOOTER_BACKGROUND_COLOR_DESC" />
+				<field name="footerBackgroundOpacity"
+					type="integer" first="0" last="100" step="10" default="100"
+					label="TPL_NOK-GENERIC_OPACITY_LABEL"
+					description="TPL_NOK-GENERIC_OPACITY_DESC" />
 				<field name="footerBackgroundFile" class="" type="media" default=""
 					label="TPL_NOK-GENERIC_BACKGROUND_FILE_LABEL"
 					description="TPL_NOK-GENERIC_FOOTER_BACKGROUND_FILE_DESC" />
