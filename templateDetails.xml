@@ -2,7 +2,7 @@
 <!DOCTYPE install PUBLIC "-//Joomla! 2.5//DTD template 1.0//EN" "http://www.joomla.org/xml/dtd/2.5/template-install.dtd">
 <extension version="3.1" type="template" client="site" method="upgrade">
 	<name>NoK-Generic</name>
-	<version>1.1</version>
+	<version>1.1.1</version>
 	<creationDate>08/05/2014</creationDate>
 	<author>Norbert Kuemin</author>
 	<authorEmail>norbert@kuem.in</authorEmail>
@@ -162,6 +162,7 @@
 					<option value="bar">TPL_NOK-GENERIC_MENU_BAR</option>
 					<option value="tab">TPL_NOK-GENERIC_MENU_TAB</option>
 				</field>
+
 				<field name="menuBackgroundColor" class="" type="color" default=""
 					label="TPL_NOK-GENERIC_MENU_BACKGROUND_COLOR_LABEL"
 					description="TPL_NOK-GENERIC_MENU_BACKGROUND_COLOR_DESC" />
@@ -169,13 +170,10 @@
 					type="integer" first="0" last="100" step="10" default="100"
 					label="TPL_NOK-GENERIC_OPACITY_LABEL"
 					description="TPL_NOK-GENERIC_OPACITY_DESC" />
-				<field name="menuEntryBackgroundColor" class="" type="color" default="#FFFFFF"
+				<field name="menuEntryBackgroundColor" class="" type="color" default="#DDDDDD"
 					label="TPL_NOK-GENERIC_MENUENTRY_BACKGROUND_COLOR_LABEL"
 					description="TPL_NOK-GENERIC_MENUENTRY_BACKGROUND_COLOR_DESC" />
-				<field name="menuEntryFocusBackgroundColor" class="" type="color" default="#DDDDDD"
-					label="TPL_NOK-GENERIC_MENUENTRY_FOCUS_BACKGROUND_COLOR_LABEL"
-					description="TPL_NOK-GENERIC_MENUENTRY_FOCUS_BACKGROUND_COLOR_DESC" />
-				<field name="menuEntryForegroundColor" class="" type="color" default="#FFFFFF"
+				<field name="menuEntryForegroundColor" class="" type="color" default="#000000"
 					label="TPL_NOK-GENERIC_FOREGROUND_COLOR_LABEL"
 					description="TPL_NOK-GENERIC_MENUENTRY_FOREGROUND_COLOR_DESC" />
 				<field name="menuEntryRadius"
@@ -185,18 +183,40 @@
 				<field name="menuEntryHorizontalSpacing" class="" type="integer" default="12"
 					first="0" last="50" step="1" label="TPL_NOK-GENERIC_MENUENTRY_HORIZONTAL_SPACING_LABEL"
 					description="TPL_NOK-GENERIC_MENUENTRY_HORIZONTAL_SPACING_DESC" />
+				<field name="menuEntryFocusBackgroundColor" class="" type="color" default="#FFFFFF"
+					label="TPL_NOK-GENERIC_MENUENTRY_FOCUS_BACKGROUND_COLOR_LABEL"
+					description="TPL_NOK-GENERIC_MENUENTRY_FOCUS_BACKGROUND_COLOR_DESC" />
+				<field name="menuEntryFocusForegroundColor" class="" type="color" default="#000000"
+					label="TPL_NOK-GENERIC_MENUENTRY_FOCUS_FOREGROUND_COLOR_LABEL"
+					description="TPL_NOK-GENERIC_MENUENTRY_FOCUS_FOREGROUND_COLOR_DESC" />
+				<field name="menuEntryHoverBackgroundColor" class="" type="color" default="#AAAAAA"
+					label="TPL_NOK-GENERIC_MENUENTRY_HOVER_BACKGROUND_COLOR_LABEL"
+					description="TPL_NOK-GENERIC_MENUENTRY_HOVER_BACKGROUND_COLOR_DESC" />
+				<field name="menuEntryHoverForegroundColor" class="" type="color" default="#000000"
+					label="TPL_NOK-GENERIC_MENUENTRY_HOVER_FOREGROUND_COLOR_LABEL"
+					description="TPL_NOK-GENERIC_MENUENTRY_HOVER_FOREGROUND_COLOR_DESC" />
 				<field name="menuChildBackgroundColor" class="" type="color" default="#FFFFFF"
 					label="TPL_NOK-GENERIC_MENUCHILD_BACKGROUND_COLOR_LABEL"
 					description="TPL_NOK-GENERIC_MENUCHILD_BACKGROUND_COLOR_DESC" />
-				<field name="menuChildFocusBackgroundColor" class="" type="color" default="#DDDDDD"
-					label="TPL_NOK-GENERIC_MENUCHILD_FOCUS_BACKGROUND_COLOR_LABEL"
-					description="TPL_NOK-GENERIC_MENUCHILD_FOCUS_BACKGROUND_COLOR_DESC" />
 				<field name="menuChildForegroundColor" class="" type="color" default="#000000"
 					label="TPL_NOK-GENERIC_MENUCHILD_FOREGROUND_COLOR_LABEL"
 					description="TPL_NOK-GENERIC_MENUCHILD_FOREGROUND_COLOR_DESC" />
+				<field name="menuChildFocusBackgroundColor" class="" type="color" default="#DDDDDD"
+					label="TPL_NOK-GENERIC_MENUCHILD_FOCUS_BACKGROUND_COLOR_LABEL"
+					description="TPL_NOK-GENERIC_MENUCHILD_FOCUS_BACKGROUND_COLOR_DESC" />
+				<field name="menuChildFocusForegroundColor" class="" type="color" default="#000000"
+					label="TPL_NOK-GENERIC_MENUCHILD_FOCUS_FOREGROUND_COLOR_LABEL"
+					description="TPL_NOK-GENERIC_MENUCHILD_FOCUS_FOREGROUND_COLOR_DESC" />
+				<field name="menuChildHoverBackgroundColor" class="" type="color" default="#DDDDDD"
+					label="TPL_NOK-GENERIC_MENUCHILD_HOVER_BACKGROUND_COLOR_LABEL"
+					description="TPL_NOK-GENERIC_MENUCHILD_HOVER_BACKGROUND_COLOR_DESC" />
+				<field name="menuChildHoverForegroundColor" class="" type="color" default="#000000"
+					label="TPL_NOK-GENERIC_MENUCHILD_HOVER_FOREGROUND_COLOR_LABEL"
+					description="TPL_NOK-GENERIC_MENUCHILD_HOVER_FOREGROUND_COLOR_DESC" />
 				<field name="menuChildBorderColor" class="" type="color" default="#CCCCCC"
 					label="TPL_NOK-GENERIC_MENUCHILD_BORDER_COLOR_LABEL"
 					description="TPL_NOK-GENERIC_MENUCHILD_BORDER_COLOR_DESC" />
+
 				<field name="menuMobileType"
 					type="list"
 					default="same"

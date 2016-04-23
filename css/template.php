@@ -2899,6 +2899,9 @@ input[type="submit"].btn.btn-mini {
 <?php if ($menuEntryForegroundColor) : ?>
 	color: <?php echo $menuEntryForegroundColor; ?>;
 <?php endif; ?>
+<?php if ($menuEntryBackgroundColor) : ?>
+	background-color: <?php echo $menuEntryBackgroundColor; ?>;
+<?php endif; ?>
 }
 .nav > li > a:hover,
 .nav > li > a:focus {
@@ -3271,8 +3274,14 @@ input[type="submit"].btn.btn-mini {
 	*z-index: 2;
 }
 .navbar-inner {
+<?php if ($menuType != "tab") : ?>
 	min-height: 40px;
-	background-color: #fafafa;
+<?php endif; ?>
+<?php if ($menuBackgroundColor) : ?>
+	background-color: <?php echo $menuBackgroundColor;?>;
+<?php else: ?>
+	background-color: <?php echo $templateColor;?>;
+<?php endif; ?>
 	background-image: -moz-linear-gradient(top,#ffffff,#f2f2f2);
 	background-image: -webkit-gradient(linear,0 0,0 100%,from(#ffffff),to(#f2f2f2));
 	background-image: -webkit-linear-gradient(top,#ffffff,#f2f2f2);
@@ -3283,9 +3292,11 @@ input[type="submit"].btn.btn-mini {
 	-webkit-border-radius: <?php echo $templateRadius; ?>px;
 	-moz-border-radius: <?php echo $templateRadius; ?>px;
 	border-radius: <?php echo $templateRadius; ?>px;
+<?php if ($menuType != "tab") : ?>
 	-webkit-box-shadow: 0 1px 4px rgba(0,0,0,0.065);
 	-moz-box-shadow: 0 1px 4px rgba(0,0,0,0.065);
 	box-shadow: 0 1px 4px rgba(0,0,0,0.065);
+<?php endif; ?>
 	*zoom: 1;
 }
 .navbar-inner:before,
@@ -3474,7 +3485,9 @@ input[type="submit"].btn.btn-mini {
 .navbar .nav > li > a {
 	float: none;
 	padding: 11px 15px 11px;
-	color: #555;
+<?php if ($menuEntryForegroundColor) : ?>
+	color: <?php echo $menuEntryForegroundColor;?>;
+<?php endif; ?>
 	text-decoration: none;
 }
 .navbar .nav .dropdown-toggle .caret {
@@ -3482,19 +3495,29 @@ input[type="submit"].btn.btn-mini {
 }
 .navbar .nav > li > a:focus,
 .navbar .nav > li > a:hover {
-	background-color: transparent;
-	color: #333;
+<?php if ($menuEntryHoverForegroundColor) : ?>
+	background-color: <?php echo $menuEntryHoverForegroundColor;?>;
+<?php endif; ?>
 	text-decoration: none;
+<?php if ($menuEntryHoverBackgroundColor) : ?>
+	background-color: <?php echo $menuEntryHoverBackgroundColor;?>;
+<?php endif; ?>
 }
 .navbar .nav > .active > a,
 .navbar .nav > .active > a:hover,
 .navbar .nav > .active > a:focus {
-	color: #555;
+<?php if ($menuEntryFocusForegroundColor) : ?>
+	color: <?php echo $menuEntryFocusForegroundColor;?>;
+<?php endif; ?>
 	text-decoration: none;
-	background-color: #e6e6e6;
+<?php if ($menuEntryFocusBackgroundColor) : ?>
+	background-color: <?php echo $menuEntryFocusBackgroundColor;?>;
+<?php endif; ?>
+<?php if ($menuType != "tab") : ?>
 	-webkit-box-shadow: inset 0 3px 8px rgba(0,0,0,0.125);
 	-moz-box-shadow: inset 0 3px 8px rgba(0,0,0,0.125);
 	box-shadow: inset 0 3px 8px rgba(0,0,0,0.125);
+<?php endif; ?>
 }
 .navbar .btn-navbar {
 	display: none;
@@ -3767,12 +3790,10 @@ input[type="submit"].btn.btn-mini {
 .active > a,
 .nav-pills >
 .active > a:hover {
-<?php if ($menuType != "block") : ?>
-	background: #fff;
-	color: <?php echo $templateColor;?>;
+<?php if ($menuBackgroundColor) : ?>
+	background: <?php echo $menuBackgroundColor;?>;
 <?php else: ?>
 	background: <?php echo $templateColor;?>;
-	color: #fff;
 <?php endif; ?>
 }
 .breadcrumb {
