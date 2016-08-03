@@ -10,6 +10,8 @@
 defined('_JEXEC') or die;
 
 function detectNoHoverDevice(){
+	global $_SERVER;
+	if (!isset($_SERVER['HTTP_USER_AGENT'])) { return true; }
 	$agent = $_SERVER['HTTP_USER_AGENT'];
 	$useragents = array (
 		"android",
