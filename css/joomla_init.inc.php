@@ -72,6 +72,8 @@ $templateForegroundColor = $templateParams->get('templateForegroundColor');
 $templateLinkColor = $templateParams->get('templateLinkColor');
 $templateLinkDecoration = $templateParams->get('templateLinkDecoration');
 $templateRadius = $templateParams->get('templateRadius');
+$templateFontSize = $templateParams->get('templateFontSize');
+if (empty($templateFontSize)) { $templateFontSize = '12'; }
 
 $bodyBackgroundColor = $templateParams->get('bodyBackgroundColor');
 $bodyBackgroundFile = $templateParams->get('bodyBackgroundFile');
@@ -98,6 +100,7 @@ $menuChildFocusBackgroundColor = $templateParams->get('menuChildFocusBackgroundC
 $menuChildFocusForegroundColor = $templateParams->get('menuChildFocusForegroundColor');
 $menuChildHoverBackgroundColor = $templateParams->get('menuChildHoverBackgroundColor');
 $menuChildHoverForegroundColor = $templateParams->get('menuChildHoverForegroundColor');
+$menuFontSize = $templateParams->get('menuFontSize');
 $menuMobileType = $templateParams->get('menuMobileType');
 
 $moduleBackgroundColor = calcBackground($templateParams,'moduleBackgroundColor','moduleBackgroundOpacity');

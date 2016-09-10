@@ -208,8 +208,8 @@ textarea {
 body {
 	margin: 0;
 	font-family: Verdana, Helvetica, Arial, sans-serif;
-	font-size: 13px;
-	line-height: 18px;
+	font-size: <?php echo $templateFontSize; ?>px;
+    line-height: <?php echo intval(intval($templateFontSize)*1.5); ?>px;
 	color: <?php echo $templateForegroundColor; ?>;
 	background-color: #fff;
 }
@@ -637,7 +637,7 @@ h6 {
 	margin: 9px 0;
 	font-family: inherit;
 	font-weight: bold;
-	line-height: 18px;
+    font-size: <?php echo intval(intval($templateFontSize)*1.5); ?>px;
 	color: inherit;
 	text-rendering: optimizelegibility;
 }
@@ -654,37 +654,37 @@ h6 small {
 h1,
 h2,
 h3 {
-	line-height: 36px;
+    line-height: <?php echo intval(intval($templateFontSize)*3); ?>px;
 }
 h1 {
-	font-size: 35.75px;
+    font-size: <?php echo intval(intval($templateFontSize)*3); ?>px;
 }
 h2 {
-	font-size: 29.25px;
+    font-size: <?php echo intval(intval($templateFontSize)*2.5); ?>px;
 }
 h3 {
-	font-size: 22.75px;
+    font-size: <?php echo intval(intval($templateFontSize)*2); ?>px;
 }
 h4 {
-	font-size: 16.25px;
+    font-size: <?php echo intval(intval($templateFontSize)*1.5); ?>px;
 }
 h5 {
-	font-size: 13px;
+    font-size: <?php echo intval(intval($templateFontSize)*1); ?>px;
 }
 h6 {
-	font-size: 11.05px;
+    font-size: <?php echo intval(intval($templateFontSize)*0.8); ?>px;
 }
 h1 small {
-	font-size: 22.75px;
+    font-size: <?php echo intval(intval($templateFontSize)*2); ?>px;
 }
 h2 small {
-	font-size: 16.25px;
+    font-size: <?php echo intval(intval($templateFontSize)*1.5); ?>px;
 }
 h3 small {
-	font-size: 13px;
+    font-size: <?php echo $templateFontSize; ?>px;
 }
 h4 small {
-	font-size: 13px;
+    font-size: <?php echo $templateFontSize; ?>px;
 }
 ul,
 ol {
@@ -822,7 +822,7 @@ code,
 pre {
 	padding: 0 3px 2px;
 	font-family: Monaco, Menlo, Consolas, "Courier New", monospace;
-	font-size: 11px;
+	font-size: <?php echo $templateFontSize; ?>px;
 	color: #333;
 	-webkit-border-radius: <?php echo $templateRadius; ?>px;
 	-moz-border-radius: <?php echo $templateRadius; ?>px;
@@ -839,8 +839,8 @@ pre {
 	display: block;
 	padding: 8.5px;
 	margin: 0 0 9px;
-	font-size: 12px;
-	line-height: 18px;
+	font-size: <?php echo $templateFontSize; ?>px;
+    line-height: <?php echo intval(intval($templateFontSize)*1.5); ?>px;
 	word-break: break-all;
 	word-wrap: break-word;
 	white-space: pre;
@@ -930,8 +930,8 @@ input[type="color"],
 	height: 18px;
 	padding: 4px 6px;
 	margin-bottom: 9px;
-	font-size: 13px;
-	line-height: 18px;
+	font-size: <?php echo $templateFontSize; ?>px;
+    line-height: <?php echo intval(intval($templateFontSize)*1.5); ?>px;
 	color: #555;
 	-webkit-border-radius: <?php echo $templateRadius; ?>px;
 	-moz-border-radius: <?php echo $templateRadius; ?>px;
@@ -1464,9 +1464,9 @@ select:focus:invalid:focus {
 	height: 18px;
 	min-width: 16px;
 	padding: 4px 5px;
-	font-size: 13px;
+	font-size: <?php echo $templateFontSize; ?>px;
 	font-weight: normal;
-	line-height: 18px;
+    line-height: <?php echo intval(intval($templateFontSize)*1.5); ?>px;
 	text-align: center;
 	text-shadow: 0 1px 0 #fff;
 	background-color: #eee;
@@ -1713,7 +1713,7 @@ table {
 .table th,
 .table td {
 	padding: 8px;
-	line-height: 18px;
+    line-height: <?php echo intval(intval($templateFontSize)*1.5); ?>px;
 	text-align: left;
 	vertical-align: top;
 	border-top: 1px solid #ddd;
@@ -2005,7 +2005,7 @@ table th[class*="span"],
 	padding: 3px 20px;
 	clear: both;
 	font-weight: normal;
-	line-height: 18px;
+    line-height: <?php echo intval(intval($menuFontSize)*1.5); ?>px;
 	color: #333;
 	white-space: nowrap;
 }
@@ -2230,8 +2230,8 @@ button.close {
 	*zoom: 1;
 	padding: 4px 12px;
 	margin-bottom: 0;
-	font-size: 13px;
-	line-height: 18px;
+	font-size: <?php echo $templateFontSize; ?>px;
+    line-height: <?php echo intval(intval($templateFontSize)*1.5); ?>px;
 	text-align: center;
 	vertical-align: middle;
 	cursor: pointer;
@@ -2842,7 +2842,7 @@ input[type="submit"].btn.btn-mini {
 	position: relative;
 	top: -2px;
 	right: -21px;
-	line-height: 18px;
+    line-height: <?php echo intval(intval($templateFontSize)*1.5); ?>px;
 }
 .alert-success {
 	background-color: #dff0d8;
@@ -2889,6 +2889,7 @@ input[type="submit"].btn.btn-mini {
 <?php endif; ?>
 	margin-bottom: 18px;
 	list-style: none;
+	font-size: <?php echo $menuFontSize; ?>px;
 }
 .navselect {
 	display: none;
@@ -3000,7 +3001,7 @@ input[type="submit"].btn.btn-mini {
 	padding-left: <?php echo $menuEntryHorizontalSpacing;?>px;
 <?php endif; ?>
 	margin-right: 2px;
-	line-height: 14px;
+    line-height: <?php echo intval($menuFontSize)+2; ?>px;
 <?php if ($menuType != "block") : ?>
 	color: #ffffff;
 <?php endif; ?>
@@ -3019,7 +3020,7 @@ input[type="submit"].btn.btn-mini {
 .nav-tabs > li > a {
 	padding-top: 8px;
 	padding-bottom: 8px;
-	line-height: 18px;
+    line-height: <?php echo intval(intval($menuFontSize)*1.5); ?>px;
 	border: 1px solid transparent;
 	-webkit-border-radius: <?php echo $templateRadius; ?>px <?php echo $templateRadius; ?>px 0 0;
 	-moz-border-radius: <?php echo $templateRadius; ?>px <?php echo $templateRadius; ?>px 0 0;
@@ -4295,7 +4296,7 @@ input[type="submit"].btn.btn-mini {
 .thumbnail {
 	display: block;
 	padding: 4px;
-	line-height: 18px;
+    line-height: <?php echo intval(intval($templateFontSize)*1.5); ?>px;
 	border: 1px solid #ddd;
 	-webkit-border-radius: <?php echo $templateRadius; ?>px;
 	-moz-border-radius: <?php echo $templateRadius; ?>px;
@@ -4743,7 +4744,7 @@ a.badge:focus {
 .carousel-caption h4,
 .carousel-caption p {
 	color: #fff;
-	line-height: 18px;
+    line-height: <?php echo intval(intval($templateFontSize)*1.5); ?>px;
 }
 .carousel-caption h4 {
 	margin: 0 0 5px;
@@ -7204,38 +7205,6 @@ body.site.fluid {
 	background-position: <?php echo $footerBackgroundPosition;?>;
 <?php endif; ?>
 }
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-	margin: 12px 0;
-}
-h1 {
-	font-size: 26px;
-	line-height: 28px;
-}
-h2 {
-	font-size: 22px;
-	line-height: 24px;
-}
-h3 {
-	font-size: 18px;
-	line-height: 20px;
-}
-h4 {
-	font-size: 14px;
-	line-height: 16px;
-}
-h5 {
-	font-size: 13px;
-	line-height: 15px;
-}
-h6 {
-	font-size: 12px;
-	line-height: 14px;
-}
 .module-icon {
 	float: left;
 }
@@ -7376,9 +7345,9 @@ figcaption {
 	display: block;
 	padding: 3px 20px;
 	clear: both;
-	font-size: 13px;
+	font-size: <?php echo $menuFontSize; ?>px;
 	font-weight: normal;
-	line-height: 18px;
+    line-height: <?php echo intval(intval($menuFontSize)*1.5); ?>px;
 <?php if ($menuChildForegroundColor) : ?>
 	color: <?php echo $menuChildForegroundColor; ?>;
 <?php endif; ?>
