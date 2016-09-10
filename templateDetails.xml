@@ -7,7 +7,10 @@
 	<author>Norbert Kuemin</author>
 	<authorEmail>norbert@kuem.in</authorEmail>
 	<copyright>Copyright (C) 2014-2016 GPL V2. All rights reserved.</copyright>
-	<description>TPL_NOK-GENERIC_XML_DESCRIPTION</description>
+	<description>
+		&lt;p&gt;NoK-Generic is a highly customizable template. Design your website like YOU want. &lt;a href="../templates/nok-generic/documentation_en.html" target="_new"&gt;Documentation&lt;/a&gt;&lt;/p&gt;
+		&lt;p&gt;NoK-Generic ist ein extrem anpassungsfähiges Template. Designen Sie Ihre Website wie Sie wollen. &lt;a href="../templates/nok-generic/documentation_de.html" target="_new"&gt;Dokumentation&lt;/a&gt;&lt;/p&gt;
+	</description>
 	<files>
 		<filename>component.php</filename>
 		<filename>documentation_de.html</filename>
