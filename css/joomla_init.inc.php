@@ -101,6 +101,7 @@ $menuChildFocusForegroundColor = $templateParams->get('menuChildFocusForegroundC
 $menuChildHoverBackgroundColor = $templateParams->get('menuChildHoverBackgroundColor');
 $menuChildHoverForegroundColor = $templateParams->get('menuChildHoverForegroundColor');
 $menuFontSize = $templateParams->get('menuFontSize');
+if (empty($menuFontSize)) { $menuFontSize = '12'; }
 $menuMobileType = $templateParams->get('menuMobileType');
 
 $moduleBackgroundColor = calcBackground($templateParams,'moduleBackgroundColor','moduleBackgroundOpacity');
