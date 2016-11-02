@@ -354,9 +354,11 @@
 				<field name="moduleTitleIcon" class="" type="media" default=""
 					label="TPL_NOK-GENERIC_MODULE_TITLE_ICON_FILE_LABEL"
 					description="TPL_NOK-GENERIC_MODULE_TITLE_ICON_FILE_DESC" />
-				<field name="moduleTitleBackgroundFile" class="" type="media" default=""
+<!-- Not yet implemented
+					<field name="moduleTitleBackgroundFile" class="" type="media" default=""
 					label="TPL_NOK-GENERIC_MODULE_TITLE_BACKGROUND_FILE_LABEL"
 					description="TPL_NOK-GENERIC_MODULE_TITLE_BACKGROUND_FILE_DESC" />
+-->
 				<field name="moduleTitleDecoration" default="none"
 					type="list"
 					label="TPL_NOK-GENERIC_MODULE_TITLE_DECORATION_LABEL"

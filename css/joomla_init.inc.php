@@ -113,8 +113,9 @@ $moduleBorderColor = $templateParams->get('moduleBorderColor');
 $moduleBorderSize = $templateParams->get('moduleBorderSize');
 $moduleBorderType = $templateParams->get('moduleBorderType');
 $modulePaddingSize = $templateParams->get('modulePaddingSize');
-$moduleTitleBackgroundFile = $templateParams->get('moduleTitleBackgroundFile');
 $moduleTitleIcon = $templateParams->get('moduleTitleIcon');
+// Not yet implemented
+//$moduleTitleBackgroundFile = $templateParams->get('moduleTitleBackgroundFile');
 $moduleTitleDecoration = $templateParams->get('moduleTitleDecoration');
 
 $contentBackgroundColor = calcBackground($templateParams,'contentBackgroundColor','contentBackgroundOpacity');
