@@ -7076,7 +7076,6 @@ div.modal.fade.in {
 }
 body.site {
 	padding: 20px;
-	border-top: 3px solid <?php echo $templateColor;?>;
 <?php if ($bodyBackgroundColor) : ?>
 	background-color: <?php echo $bodyBackgroundColor;?>;
 <?php else : ?>
