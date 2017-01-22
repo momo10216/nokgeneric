@@ -7175,7 +7175,9 @@ body.site.fluid {
 	border: <?php echo $contentBorderSize;?>px <?php echo $contentBorderType;?> <?php echo $contentBorderColor;?>;
 	-moz-box-shadow: 0px 0px 6px rgba(0,0,0,0.05);
 	-webkit-box-shadow: 0px 0px 6px rgba(0,0,0,0.05);
+<?php if (($contentBackgroundColor) && ($bodyBackgroundColor != $contentBackgroundColor)) : ?>
 	box-shadow: 0px 0px 6px rgba(0,0,0,0.05);
+<?php endif; ?>
 <?php if ($contentBackgroundFile) : ?>
 	background-image: url("<?php echo JURI::base()."../../../".$contentBackgroundFile;?>");
 <?php if ($contentBackgroundRepeat) : ?>
@@ -7194,7 +7196,9 @@ body.site.fluid {
 	border: <?php echo $footerBorderSize;?>px <?php echo $footerBorderType;?> <?php echo $footerBorderColor;?>;
 	-moz-box-shadow: 0px 0px 6px rgba(0,0,0,0.05);
 	-webkit-box-shadow: 0px 0px 6px rgba(0,0,0,0.05);
+<?php if (($footerBackgroundColor) && ($bodyBackgroundColor != $footerBackgroundColor)) : ?>
 	box-shadow: 0px 0px 6px rgba(0,0,0,0.05);
+<?php endif; ?>
 <?php if ($footerBackgroundFile) : ?>
 	background-image: url("<?php echo JURI::base()."../../../".$footerBackgroundFile;?>");
 <?php if ($footerBackgroundRepeat) : ?>
