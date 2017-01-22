@@ -74,6 +74,10 @@ $templateLinkDecoration = $templateParams->get('templateLinkDecoration');
 $templateRadius = $templateParams->get('templateRadius');
 $templateFontSize = $templateParams->get('templateFontSize');
 if (empty($templateFontSize)) { $templateFontSize = '12'; }
+$templateParagraphMarginTop = $templateParams->get('templateParagraphMarginTop');
+if (empty($templateParagraphMarginTop)) { $templateParagraphMarginTop = '0'; }
+$templateParagraphMarginBottom = $templateParams->get('templateParagraphMarginBottom');
+if (empty($templateParagraphMarginBottom)) { $templateParagraphMarginBottom = '1'; }
 
 $bodyBackgroundColor = $templateParams->get('bodyBackgroundColor');
 $bodyBackgroundFile = $templateParams->get('bodyBackgroundFile');

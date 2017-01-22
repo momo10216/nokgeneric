@@ -73,6 +73,10 @@ img {
 	border: 0;
 	-ms-interpolation-mode: bicubic;
 }
+p {
+	margin-top: <?php echo $templateParagraphMarginTop; ?>;
+	margin-bottom: <?php echo $templateParagraphMarginBottom; ?>;
+}
 #map_canvas img,
 .google-maps img,
 .gm-style img {

@@ -104,6 +104,14 @@
 				<field name="faviconFile" class="" type="media" default=""
 					label="TPL_NOK-GENERIC_FAVICON_FILE_LABEL"
 					description="TPL_NOK-GENERIC_FAVICON_FILE_DESC" />
+				<field name="templateParagraphMarginTop" class=""
+					type="integer" first="0" last="10" step="1" default="0"
+					label="TPL_NOK-GENERIC_PARAGRAPH_MARGIN_TOP_LABEL"
+					description="TPL_NOK-GENERIC_PARAGRAPH_MARGIN_TOP_DESC" />
+				<field name="templateParagraphMarginBottom" class=""
+					type="integer" first="0" last="10" step="1" default="1"
+					label="TPL_NOK-GENERIC_PARAGRAPH_MARGIN_BOTTOM_LABEL"
+					description="TPL_NOK-GENERIC_PARAGRAPH_MARGIN_BOTTOM_DESC" />
 			</fieldset>
 
 			<fieldset name="body" label="TPL_NOK-GENERIC_BODY_LABEL">
