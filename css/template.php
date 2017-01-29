@@ -7177,9 +7177,9 @@ body.site.fluid {
 	border-radius: <?php echo $templateRadius; ?>px;
 	padding: 20px;
 	border: <?php echo $contentBorderSize;?>px <?php echo $contentBorderType;?> <?php echo $contentBorderColor;?>;
+<?php if (($contentBackgroundColor) && ($bodyBackgroundColor != $contentBackgroundColor)) : ?>
 	-moz-box-shadow: 0px 0px 6px rgba(0,0,0,0.05);
 	-webkit-box-shadow: 0px 0px 6px rgba(0,0,0,0.05);
-<?php if (($contentBackgroundColor) && ($bodyBackgroundColor != $contentBackgroundColor)) : ?>
 	box-shadow: 0px 0px 6px rgba(0,0,0,0.05);
 <?php endif; ?>
 <?php if ($contentBackgroundFile) : ?>
@@ -7192,15 +7192,17 @@ body.site.fluid {
 <?php endif; ?>
 }
 .footer .container {
+<?php if (!empty($footerBackgroundColor)) : ?>
 	background-color: <?php echo $footerBackgroundColor;?>;
+<?php endif; ?>
 	-moz-border-radius: <?php echo $templateRadius; ?>px;
 	-webkit-border-radius: <?php echo $templateRadius; ?>px;
 	border-radius: <?php echo $templateRadius; ?>px;
 	padding: 20px;
 	border: <?php echo $footerBorderSize;?>px <?php echo $footerBorderType;?> <?php echo $footerBorderColor;?>;
+<?php if (!empty($footerBackgroundColor) && ($bodyBackgroundColor != $footerBackgroundColor)) : ?>
 	-moz-box-shadow: 0px 0px 6px rgba(0,0,0,0.05);
 	-webkit-box-shadow: 0px 0px 6px rgba(0,0,0,0.05);
-<?php if (($footerBackgroundColor) && ($bodyBackgroundColor != $footerBackgroundColor)) : ?>
 	box-shadow: 0px 0px 6px rgba(0,0,0,0.05);
 <?php endif; ?>
 <?php if ($footerBackgroundFile) : ?>
