@@ -50,19 +50,15 @@ function hex2RGB($hexStr, $returnAsString = false, $seperator = ',') {
     return $returnAsString ? implode($seperator, $rgbArray) : $rgbArray; // returns the rgb string or the associative array
 }
 
-function calcBackground($templateParams, $colorKey, $opacityKey="") {
-	$backgroundColor = $templateParams->get($colorKey);
-	if (empty($backgroundColor)) { return ""; }
-	if (!empty($opacityKey)) {
-		$backgroundOpacity = $templateParams->get($opacityKey);
-		if (!empty($backgroundOpacity)) {
-			$backgroundOpacity = $backgroundOpacity/100;
-			return "rgba(".hex2RGB($backgroundColor,true).",".$backgroundOpacity.")";
-		}
+function calcBackground($colorValue, $opacityValue="") {
+	if (empty($colorValue)) { return ""; }
+	if (!empty($opacityValue)) {
+		$opacityValue = $opacityValue/100;
+		return "rgba(".hex2RGB($colorValue,true).",".$opacityValue.")";
 	}
-	return "rgb(".hex2RGB($backgroundColor,true).")";	
+	return "rgb(".hex2RGB($colorValue,true).")";	
 }
- 
+
 // Instantiate the application.
 $app = JFactory::getApplication('site');
 $templateParams = JFactory::getApplication()->getTemplate(true)->params;
@@ -85,10 +81,12 @@ $bodyBackgroundRepeat = $templateParams->get('bodyBackgroundRepeat');
 $bodyBackgroundAttachment = $templateParams->get('bodyBackgroundAttachment');
 $bodyBackgroundPosition = $templateParams->get('bodyBackgroundPosition');
 
-$headerBackgroundColor = calcBackground($templateParams,'headerBackgroundColor','headerBackgroundOpacity');
+$headerBackgroundColor = $templateParams->get('headerBackgroundColor');
+$headerBackgroundOpacity = $templateParams->get('headerBackgroundOpacity');
 
 $menuType = $templateParams->get('menuType');
-$menuBackgroundColor = calcBackground($templateParams,'menuBackgroundColor','menuBackgroundOpacity');
+$menuBackgroundColor = $templateParams->get('menuBackgroundColor');
+$menuBackgroundOpacity = $templateParams->get('menuBackgroundOpacity');
 $menuEntryBackgroundColor = $templateParams->get('menuEntryBackgroundColor');
 $menuEntryForegroundColor = $templateParams->get('menuEntryForegroundColor');
 $menuEntryRadius = $templateParams->get('menuEntryRadius');
@@ -108,7 +106,8 @@ $menuFontSize = $templateParams->get('menuFontSize');
 if (empty($menuFontSize)) { $menuFontSize = '12'; }
 $menuMobileType = $templateParams->get('menuMobileType');
 
-$moduleBackgroundColor = calcBackground($templateParams,'moduleBackgroundColor','moduleBackgroundOpacity');
+$moduleBackgroundColor = $templateParams->get('moduleBackgroundColor');
+$moduleBackgroundOpacity = $templateParams->get('moduleBackgroundOpacity');
 $moduleBorderColor = $templateParams->get('moduleBorderColor');
 $moduleBorderSize = $templateParams->get('moduleBorderSize');
 $moduleBorderType = $templateParams->get('moduleBorderType');
@@ -118,7 +117,8 @@ $moduleTitleIcon = $templateParams->get('moduleTitleIcon');
 //$moduleTitleBackgroundFile = $templateParams->get('moduleTitleBackgroundFile');
 $moduleTitleDecoration = $templateParams->get('moduleTitleDecoration');
 
-$contentBackgroundColor = calcBackground($templateParams,'contentBackgroundColor','contentBackgroundOpacity');
+$contentBackgroundColor = $templateParams->get('contentBackgroundColor');
+$contentBackgroundOpacity = $templateParams->get('contentBackgroundOpacity');
 $contentBackgroundFile = $templateParams->get('contentBackgroundFile');
 $contentBackgroundRepeat = $templateParams->get('contentBackgroundRepeat');
 $contentBackgroundAttachment = $templateParams->get('contentBackgroundAttachment');
@@ -127,7 +127,8 @@ $contentBorderType = $templateParams->get('contentBorderType');
 $contentBorderSize = $templateParams->get('contentBorderSize');
 $contentBorderColor = $templateParams->get('contentBorderColor');
 
-$footerBackgroundColor = calcBackground($templateParams,'footerBackgroundColor','footerBackgroundOpacity');
+$footerBackgroundColor = $templateParams->get('footerBackgroundColor');
+$footerBackgroundOpacity = $templateParams->get('footerBackgroundOpacity');
 $footerBackgroundFile = $templateParams->get('footerBackgroundFile');
 $footerBackgroundRepeat = $templateParams->get('footerBackgroundRepeat');
 $footerBackgroundAttachment = $templateParams->get('footerBackgroundAttachment');

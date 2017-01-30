@@ -551,7 +551,7 @@ a:focus {
 }
 .container-fluid {
 <?php if ($contentBackgroundColor) : ?>
-	background-color: <?php echo $contentBackgroundColor; ?>;
+	background-color: <?php echo calcBackground($contentBackgroundColor,$contentBackgroundOpacity); ?>;
 <?php endif; ?>
 	padding-right: 20px;
 	padding-left: 20px;
@@ -2151,14 +2151,18 @@ table th[class*="span"],
 	min-height: 20px;
 	padding: <?php echo $modulePaddingSize; ?>px;
 	margin-bottom: 20px;
-	background-color: <?php echo $moduleBackgroundColor; ?>;
+<?php if (!empty($moduleBackgroundColor)) : ?>
+	background-color: <?php echo calcBackground($moduleBackgroundColor,$moduleBackgroundOpacity); ?>;
+<?php endif; ?>
 	border: <?php echo $moduleBorderSize; ?>px <?php echo $moduleBorderType; ?> <?php echo $moduleBorderColor; ?>;
 	-webkit-border-radius: <?php echo $templateRadius; ?>px;
 	-moz-border-radius: <?php echo $templateRadius; ?>px;
 	border-radius: <?php echo $templateRadius; ?>px;
+<?php if (!empty($moduleBackgroundColor) && ($moduleBackgroundColor != $contentBackgroundColor)) : ?>
 	-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,0.05);
 	-moz-box-shadow: inset 0 1px 1px rgba(0,0,0,0.05);
 	box-shadow: inset 0 1px 1px rgba(0,0,0,0.05);
+<?php endif; ?>
 <?php if ($moduleTitleIcon) : ?>
 	background-image: url("<?php echo JURI::base()."../../../".$moduleTitleIcon; ?>");
 	background-repeat: no-repeat;
@@ -3282,10 +3286,10 @@ input[type="submit"].btn.btn-mini {
 <?php if ($menuType != "tab") : ?>
 	min-height: 40px;
 <?php endif; ?>
-<?php if ($menuBackgroundColor) : ?>
-	background-color: <?php echo $menuBackgroundColor;?>;
+<?php if (!empty($menuBackgroundColor)) : ?>
+	background-color: <?php echo calcBackground($menuBackgroundColor,$menuBackgroundOpacity);?>;
 <?php else: ?>
-	background-color: <?php echo $templateColor;?>;
+	background-color: <?php echo $templateColor;?>; /*template color*/
 <?php endif; ?>
 	background-image: -moz-linear-gradient(top,#ffffff,#f2f2f2);
 	background-image: -webkit-gradient(linear,0 0,0 100%,from(#ffffff),to(#f2f2f2));
@@ -3297,7 +3301,7 @@ input[type="submit"].btn.btn-mini {
 	-webkit-border-radius: <?php echo $templateRadius; ?>px;
 	-moz-border-radius: <?php echo $templateRadius; ?>px;
 	border-radius: <?php echo $templateRadius; ?>px;
-<?php if ($menuType != "tab") : ?>
+<?php if (($menuType != "tab") && !empty($menuBackgroundColor) && ($bodyBackgroundColor != $menuBackgroundColor)) : ?>
 	-webkit-box-shadow: 0 1px 4px rgba(0,0,0,0.065);
 	-moz-box-shadow: 0 1px 4px rgba(0,0,0,0.065);
 	box-shadow: 0 1px 4px rgba(0,0,0,0.065);
@@ -3537,7 +3541,7 @@ input[type="submit"].btn.btn-mini {
 	margin-right: 5px;
 	color: <?php echo $menuEntryForegroundColor;?>;
 	text-shadow: 0 -1px 0 rgba(0,0,0,0.25);
-	background-color: <?php echo $menuBackgroundColor;?>;
+	background-color: <?php echo calcBackground($menuBackgroundColor,$menuBackgroundOpacity);?>;
 	border-color: <?php echo $menuEntryForegroundColor;?>;
 	box-shadow: inset 0 1px 0 rgba(255,255,255,.1), 0 1px 0 rgba(255,255,255,.075);
 }
@@ -7123,7 +7127,7 @@ body.site.fluid {
 }
 .header-inner {
 <?php if ($headerBackgroundColor) : ?>
-	background-color: <?php echo $headerBackgroundColor;?>;
+	background-color: <?php echo calcBackground($headerBackgroundColor,$headerBackgroundOpacity);?>;
 <?php endif; ?>
 }
 .header {
@@ -7145,7 +7149,7 @@ body.site.fluid {
 	border-bottom: 0px solid rgba(0,0,0,0.075);
 	margin-bottom: 10px;
 <?php if ($menuBackgroundColor) : ?>
-	background-color: <?php echo $menuBackgroundColor;?>;
+	background-color: <?php echo calcBackground($menuBackgroundColor,$menuBackgroundOpacity);?>;
 <?php else: ?>
 	background-color: <?php echo $templateColor;?>;
 <?php endif; ?>
@@ -7170,7 +7174,7 @@ body.site.fluid {
 }
 .body .container {
 <?php if ($contentBackgroundColor) : ?>
-	background-color: <?php echo $contentBackgroundColor; ?>;
+	background-color: <?php echo calcBackground($contentBackgroundColor,$contentBackgroundOpacity); ?>;
 <?php endif; ?>
 	-moz-border-radius: <?php echo $templateRadius; ?>px;
 	-webkit-border-radius: <?php echo $templateRadius; ?>px;
@@ -7193,7 +7197,7 @@ body.site.fluid {
 }
 .footer .container {
 <?php if (!empty($footerBackgroundColor)) : ?>
-	background-color: <?php echo $footerBackgroundColor;?>;
+	background-color: <?php echo calcBackground($footerBackgroundColor,$footerBackgroundOpacity);?>;
 <?php endif; ?>
 	-moz-border-radius: <?php echo $templateRadius; ?>px;
 	-webkit-border-radius: <?php echo $templateRadius; ?>px;
