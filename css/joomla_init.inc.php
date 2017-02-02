@@ -144,77 +144,8 @@ if (isset($_GET['styleId'])) {
 		$params[$varname] = $templateParams->get($varname);
 	}
 }
-$templateColor = $templateParams->get('templateColor');
-$templateForegroundColor = $templateParams->get('templateForegroundColor');
-$templateLinkColor = $templateParams->get('templateLinkColor');
-$templateLinkDecoration = $templateParams->get('templateLinkDecoration');
-$templateRadius = $templateParams->get('templateRadius');
-$templateFontSize = $templateParams->get('templateFontSize');
 if (empty($templateFontSize)) { $templateFontSize = '12'; }
-$templateParagraphMarginTop = $templateParams->get('templateParagraphMarginTop');
 if (empty($templateParagraphMarginTop)) { $templateParagraphMarginTop = '0'; }
-$templateParagraphMarginBottom = $templateParams->get('templateParagraphMarginBottom');
 if (empty($templateParagraphMarginBottom)) { $templateParagraphMarginBottom = '1'; }
-
-$bodyBackgroundColor = $templateParams->get('bodyBackgroundColor');
-$bodyBackgroundFile = $templateParams->get('bodyBackgroundFile');
-$bodyBackgroundRepeat = $templateParams->get('bodyBackgroundRepeat');
-$bodyBackgroundAttachment = $templateParams->get('bodyBackgroundAttachment');
-$bodyBackgroundPosition = $templateParams->get('bodyBackgroundPosition');
-
-$headerBackgroundColor = $templateParams->get('headerBackgroundColor');
-$headerBackgroundOpacity = $templateParams->get('headerBackgroundOpacity');
-
-$menuType = $templateParams->get('menuType');
-$menuBackgroundColor = $templateParams->get('menuBackgroundColor');
-$menuBackgroundOpacity = $templateParams->get('menuBackgroundOpacity');
-$menuEntryBackgroundColor = $templateParams->get('menuEntryBackgroundColor');
-$menuEntryForegroundColor = $templateParams->get('menuEntryForegroundColor');
-$menuEntryRadius = $templateParams->get('menuEntryRadius');
-$menuEntryHorizontalSpacing = $templateParams->get('menuEntryHorizontalSpacing');
-$menuEntryFocusBackgroundColor = $templateParams->get('menuEntryFocusBackgroundColor');
-$menuEntryFocusForegroundColor = $templateParams->get('menuEntryFocusForegroundColor');
-$menuEntryHoverBackgroundColor = $templateParams->get('menuEntryHoverBackgroundColor');
-$menuEntryHoverForegroundColor = $templateParams->get('menuEntryHoverForegroundColor');
-$menuChildBackgroundColor = $templateParams->get('menuChildBackgroundColor');
-$menuChildForegroundColor = $templateParams->get('menuChildForegroundColor');
-$menuChildBorderColor = $templateParams->get('menuChildBorderColor');
-$menuChildFocusBackgroundColor = $templateParams->get('menuChildFocusBackgroundColor');
-$menuChildFocusForegroundColor = $templateParams->get('menuChildFocusForegroundColor');
-$menuChildHoverBackgroundColor = $templateParams->get('menuChildHoverBackgroundColor');
-$menuChildHoverForegroundColor = $templateParams->get('menuChildHoverForegroundColor');
-$menuFontSize = $templateParams->get('menuFontSize');
 if (empty($menuFontSize)) { $menuFontSize = '12'; }
-$menuMobileType = $templateParams->get('menuMobileType');
-
-$moduleBackgroundColor = $templateParams->get('moduleBackgroundColor');
-$moduleBackgroundOpacity = $templateParams->get('moduleBackgroundOpacity');
-$moduleBorderColor = $templateParams->get('moduleBorderColor');
-$moduleBorderSize = $templateParams->get('moduleBorderSize');
-$moduleBorderType = $templateParams->get('moduleBorderType');
-$modulePaddingSize = $templateParams->get('modulePaddingSize');
-$moduleTitleIcon = $templateParams->get('moduleTitleIcon');
-// Not yet implemented
-//$moduleTitleBackgroundFile = $templateParams->get('moduleTitleBackgroundFile');
-$moduleTitleDecoration = $templateParams->get('moduleTitleDecoration');
-
-$contentBackgroundColor = $templateParams->get('contentBackgroundColor');
-$contentBackgroundOpacity = $templateParams->get('contentBackgroundOpacity');
-$contentBackgroundFile = $templateParams->get('contentBackgroundFile');
-$contentBackgroundRepeat = $templateParams->get('contentBackgroundRepeat');
-$contentBackgroundAttachment = $templateParams->get('contentBackgroundAttachment');
-$contentBackgroundPosition = $templateParams->get('contentBackgroundPosition');
-$contentBorderType = $templateParams->get('contentBorderType');
-$contentBorderSize = $templateParams->get('contentBorderSize');
-$contentBorderColor = $templateParams->get('contentBorderColor');
-
-$footerBackgroundColor = $templateParams->get('footerBackgroundColor');
-$footerBackgroundOpacity = $templateParams->get('footerBackgroundOpacity');
-$footerBackgroundFile = $templateParams->get('footerBackgroundFile');
-$footerBackgroundRepeat = $templateParams->get('footerBackgroundRepeat');
-$footerBackgroundAttachment = $templateParams->get('footerBackgroundAttachment');
-$footerBackgroundPosition = $templateParams->get('footerBackgroundPosition');
-$footerBorderType = $templateParams->get('footerBorderType');
-$footerBorderSize = $templateParams->get('footerBorderSize');
-$footerBorderColor = $templateParams->get('footerBorderColor');
 ?>
