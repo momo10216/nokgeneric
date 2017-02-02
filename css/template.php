@@ -74,8 +74,12 @@ img {
 	-ms-interpolation-mode: bicubic;
 }
 p {
+<?php if (isset($params['templateParagraphMarginTop']) && !empty($params['templateParagraphMarginTop'])) : ?>
 	margin-top: <?php echo $params['templateParagraphMarginTop']; ?>;
+<?php endif; ?>
+<?php if (isset($params['templateParagraphMarginBottom']) && !empty($params['templateParagraphMarginBottom'])) : ?>
 	margin-bottom: <?php echo $params['templateParagraphMarginBottom']; ?>;
+<?php endif; ?>
 }
 #map_canvas img,
 .google-maps img,
@@ -7091,14 +7095,12 @@ body.site {
 <?php endif; ?>
 <?php if ($params['bodyBackgroundFile']) : ?>
 	background-image: url("<?php echo JURI::base()."../../../".$params['bodyBackgroundFile'];?>");
-<?php if ($bodyBackgroundRepeat) : ?>
+<?php if ($params['bodyBackgroundRepeat']) : ?>
 	background-repeat: <?php echo $params['bodyBackgroundRepeat'];?>;
 <?php endif; ?>
 	background-attachment: <?php echo $params['bodyBackgroundAttachment'];?>;
 	background-position: <?php echo $params['bodyBackgroundPosition'];?>;
 <?php endif; ?>
-}
-
 }
 body.site.fluid {
 	background-color: #ffffff;
