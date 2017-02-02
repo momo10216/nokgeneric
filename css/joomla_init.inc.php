@@ -61,8 +61,89 @@ function calcBackground($colorValue, $opacityValue="") {
 
 // Instantiate the application.
 $app = JFactory::getApplication('site');
-$templateParams = JFactory::getApplication()->getTemplate(true)->params;
-
+if (isset($_GET['styleId'])) {
+	JTable::addIncludePath(JPATH_ADMINISTRATOR . '/components/com_templates/tables');
+	$style = JTable::getInstance('Style', 'TemplatesTable');
+	$style->load($_GET['styleId']);
+	$paramsText = str_replace('{','',str_replace('}','',$style->params));
+	$params = array();
+	foreach(explode('","', $paramsText) as $item) {
+		list($key,$value) = explode('":"', $item,2);
+		$params[str_replace('"','',$key)] = str_replace('"','',$value);
+	}
+	$templateParams = JFactory::getApplication()->getTemplate(true)->params;
+} else {
+	$templateParams = JFactory::getApplication()->getTemplate(true)->params;
+	$varnames = array('templateColor',
+'templateForegroundColor',
+'templateLinkColor',
+'templateLinkDecoration',
+'googleFont',
+'googleFontName',
+'templateFontSize',
+'fluidContainer',
+'templateRadius',
+'faviconFile',
+'templateParagraphMarginTop',
+'templateParagraphMarginBottom',
+'bodyBackgroundColor',
+'bodyBackgroundFile',
+'bodyBackgroundRepeat',
+'bodyBackgroundAttachment',
+'bodyBackgroundPosition',
+'headerBackgroundColor',
+'headerBackgroundOpacity',
+'menuType',
+'menuBackgroundColor',
+'menuFontSize',
+'menuBackgroundOpacity',
+'menuEntryBackgroundColor',
+'menuEntryForegroundColor',
+'menuEntryRadius',
+'menuEntryHorizontalSpacing',
+'menuEntryFocusBackgroundColor',
+'menuEntryFocusForegroundColor',
+'menuEntryHoverBackgroundColor',
+'menuEntryHoverForegroundColor',
+'menuChildBackgroundColor',
+'menuChildForegroundColor',
+'menuChildFocusBackgroundColor',
+'menuChildFocusForegroundColor',
+'menuChildHoverBackgroundColor',
+'menuChildHoverForegroundColor',
+'menuChildBorderColor',
+'menuMobileType',
+'contentBackgroundColor',
+'contentBackgroundOpacity',
+'contentBackgroundFile',
+'contentBackgroundRepeat',
+'contentBackgroundAttachment',
+'contentBackgroundPosition',
+'contentBorderType',
+'contentBorderSize',
+'contentBorderColor',
+'moduleBackgroundColor',
+'moduleBackgroundOpacity',
+'moduleBorderType',
+'moduleBorderSize',
+'moduleBorderColor',
+'modulePaddingSize',
+'moduleTitleIcon',
+'moduleTitleDecoration',
+'footerBackgroundColor',
+'footerBackgroundOpacity',
+'footerBackgroundFile',
+'footerBackgroundRepeat',
+'footerBackgroundAttachment',
+'footerBackgroundPosition',
+'footerBorderType',
+'footerBorderSize',
+'footerBorderColor');
+	$params = array();
+	foreach($varnames as $varname) {
+		$params[$varname] = $templateParams->get($varname);
+	}
+}
 $templateColor = $templateParams->get('templateColor');
 $templateForegroundColor = $templateParams->get('templateForegroundColor');
 $templateLinkColor = $templateParams->get('templateLinkColor');

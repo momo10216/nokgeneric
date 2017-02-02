@@ -74,8 +74,8 @@ img {
 	-ms-interpolation-mode: bicubic;
 }
 p {
-	margin-top: <?php echo $templateParagraphMarginTop; ?>;
-	margin-bottom: <?php echo $templateParagraphMarginBottom; ?>;
+	margin-top: <?php echo $params['templateParagraphMarginTop']; ?>;
+	margin-bottom: <?php echo $params['templateParagraphMarginBottom']; ?>;
 }
 #map_canvas img,
 .google-maps img,
@@ -212,30 +212,30 @@ textarea {
 body {
 	margin: 0;
 	font-family: Verdana, Helvetica, Arial, sans-serif;
-	font-size: <?php echo $templateFontSize; ?>px;
-    line-height: <?php echo intval(intval($templateFontSize)*1.5); ?>px;
-	color: <?php echo $templateForegroundColor; ?>;
+	font-size: <?php echo $params['templateFontSize']; ?>px;
+    line-height: <?php echo intval(intval($params['templateFontSize'])*1.5); ?>px;
+	color: <?php echo $params['templateForegroundColor']; ?>;
 	background-color: #fff;
 }
 a {
-<?php if ($templateLinkColor) : ?>
-	color: <?php echo $templateLinkColor; ?>;
+<?php if ($params['templateLinkColor']) : ?>
+	color: <?php echo $params['templateLinkColor']; ?>;
 <?php else: ?>
-	color: <?php echo $templateColor; ?>;
+	color: <?php echo $params['templateColor']; ?>;
 <?php endif; ?>
-<?php if ($templateLinkDecoration) : ?>
-	text-decoration: <?php echo $templateLinkDecoration; ?>;
+<?php if ($params['templateLinkDecoration']) : ?>
+	text-decoration: <?php echo $params['templateLinkDecoration']; ?>;
 <?php endif; ?>
 }
 a:hover,
 a:focus {
-<?php if ($templateLinkColor) : ?>
-	color: <?php echo $templateLinkColor; ?>;
+<?php if ($params['templateLinkColor']) : ?>
+	color: <?php echo $params['templateLinkColor']; ?>;
 <?php else: ?>
-	color: <?php echo $templateColor; ?>;
+	color: <?php echo $params['templateColor']; ?>;
 <?php endif; ?>
-<?php if ($templateLinkDecoration) : ?>
-	text-decoration: <?php echo $templateLinkDecoration; ?>;
+<?php if ($params['templateLinkDecoration']) : ?>
+	text-decoration: <?php echo $params['templateLinkDecoration']; ?>;
 <?php endif; ?>
 }
 .img-rounded {
@@ -550,8 +550,8 @@ a:focus {
 	clear: both;
 }
 .container-fluid {
-<?php if ($contentBackgroundColor) : ?>
-	background-color: <?php echo calcBackground($contentBackgroundColor,$contentBackgroundOpacity); ?>;
+<?php if ($params['contentBackgroundColor']) : ?>
+	background-color: <?php echo calcBackground($params['contentBackgroundColor'],$params['contentBackgroundOpacity']); ?>;
 <?php endif; ?>
 	padding-right: 20px;
 	padding-left: 20px;
@@ -641,7 +641,7 @@ h6 {
 	margin: 9px 0;
 	font-family: inherit;
 	font-weight: bold;
-    font-size: <?php echo intval(intval($templateFontSize)*1.5); ?>px;
+    font-size: <?php echo intval(intval($params['templateFontSize'])*1.5); ?>px;
 	color: inherit;
 	text-rendering: optimizelegibility;
 }
@@ -658,37 +658,37 @@ h6 small {
 h1,
 h2,
 h3 {
-    line-height: <?php echo intval(intval($templateFontSize)*3); ?>px;
+    line-height: <?php echo intval(intval($params['templateFontSize'])*3); ?>px;
 }
 h1 {
-    font-size: <?php echo intval(intval($templateFontSize)*3); ?>px;
+    font-size: <?php echo intval(intval($params['templateFontSize'])*3); ?>px;
 }
 h2 {
-    font-size: <?php echo intval(intval($templateFontSize)*2.5); ?>px;
+    font-size: <?php echo intval(intval($params['templateFontSize'])*2.5); ?>px;
 }
 h3 {
-    font-size: <?php echo intval(intval($templateFontSize)*2); ?>px;
+    font-size: <?php echo intval(intval($params['templateFontSize'])*2); ?>px;
 }
 h4 {
-    font-size: <?php echo intval(intval($templateFontSize)*1.5); ?>px;
+    font-size: <?php echo intval(intval($params['templateFontSize'])*1.5); ?>px;
 }
 h5 {
-    font-size: <?php echo intval(intval($templateFontSize)*1); ?>px;
+    font-size: <?php echo intval(intval($params['templateFontSize'])*1); ?>px;
 }
 h6 {
-    font-size: <?php echo intval(intval($templateFontSize)*0.8); ?>px;
+    font-size: <?php echo intval(intval($params['templateFontSize'])*0.8); ?>px;
 }
 h1 small {
-    font-size: <?php echo intval(intval($templateFontSize)*2); ?>px;
+    font-size: <?php echo intval(intval($params['templateFontSize'])*2); ?>px;
 }
 h2 small {
-    font-size: <?php echo intval(intval($templateFontSize)*1.5); ?>px;
+    font-size: <?php echo intval(intval($params['templateFontSize'])*1.5); ?>px;
 }
 h3 small {
-    font-size: <?php echo $templateFontSize; ?>px;
+    font-size: <?php echo $params['templateFontSize']; ?>px;
 }
 h4 small {
-    font-size: <?php echo $templateFontSize; ?>px;
+    font-size: <?php echo $params['templateFontSize']; ?>px;
 }
 ul,
 ol {
@@ -826,11 +826,11 @@ code,
 pre {
 	padding: 0 3px 2px;
 	font-family: Monaco, Menlo, Consolas, "Courier New", monospace;
-	font-size: <?php echo $templateFontSize; ?>px;
+	font-size: <?php echo $params['templateFontSize']; ?>px;
 	color: #333;
-	-webkit-border-radius: <?php echo $templateRadius; ?>px;
-	-moz-border-radius: <?php echo $templateRadius; ?>px;
-	border-radius: <?php echo $templateRadius; ?>px;
+	-webkit-border-radius: <?php echo $params['templateRadius']; ?>px;
+	-moz-border-radius: <?php echo $params['templateRadius']; ?>px;
+	border-radius: <?php echo $params['templateRadius']; ?>px;
 }
 code {
 	padding: 2px 4px;
@@ -843,8 +843,8 @@ pre {
 	display: block;
 	padding: 8.5px;
 	margin: 0 0 9px;
-	font-size: <?php echo $templateFontSize; ?>px;
-    line-height: <?php echo intval(intval($templateFontSize)*1.5); ?>px;
+	font-size: <?php echo $params['templateFontSize']; ?>px;
+    line-height: <?php echo intval(intval($params['templateFontSize'])*1.5); ?>px;
 	word-break: break-all;
 	word-wrap: break-word;
 	white-space: pre;
@@ -852,9 +852,9 @@ pre {
 	background-color: #f5f5f5;
 	border: 1px solid #ccc;
 	border: 1px solid rgba(0,0,0,0.15);
-	-webkit-border-radius: <?php echo $templateRadius; ?>px;
-	-moz-border-radius: <?php echo $templateRadius; ?>px;
-	border-radius: <?php echo $templateRadius; ?>px;
+	-webkit-border-radius: <?php echo $params['templateRadius']; ?>px;
+	-moz-border-radius: <?php echo $params['templateRadius']; ?>px;
+	border-radius: <?php echo $params['templateRadius']; ?>px;
 }
 pre.prettyprint {
 	margin-bottom: 18px;
@@ -934,12 +934,12 @@ input[type="color"],
 	height: 18px;
 	padding: 4px 6px;
 	margin-bottom: 9px;
-	font-size: <?php echo $templateFontSize; ?>px;
-    line-height: <?php echo intval(intval($templateFontSize)*1.5); ?>px;
+	font-size: <?php echo $params['templateFontSize']; ?>px;
+    line-height: <?php echo intval(intval($params['templateFontSiz'])*1.5); ?>px;
 	color: #555;
-	-webkit-border-radius: <?php echo $templateRadius; ?>px;
-	-moz-border-radius: <?php echo $templateRadius; ?>px;
-	border-radius: <?php echo $templateRadius; ?>px;
+	-webkit-border-radius: <?php echo $params['templateRadius']; ?>px;
+	-moz-border-radius: <?php echo $params['templateRadius']; ?>px;
+	border-radius: <?php echo $params['templateRadius']; ?>px;
 	vertical-align: middle;
 }
 input,
@@ -1449,9 +1449,9 @@ select:focus:invalid:focus {
 	margin-bottom: 0;
 	*margin-left: 0;
 	vertical-align: top;
-	-webkit-border-radius: 0 <?php echo $templateRadius; ?>px <?php echo $templateRadius; ?>px 0;
-	-moz-border-radius: 0 <?php echo $templateRadius; ?>px <?php echo $templateRadius; ?>px 0;
-	border-radius: 0 <?php echo $templateRadius; ?>px <?php echo $templateRadius; ?>px 0;
+	-webkit-border-radius: 0 <?php echo $params['templateRadius']; ?>px <?php echo $params['templateRadius']; ?>px 0;
+	-moz-border-radius: 0 <?php echo $params['templateRadius']; ?>px <?php echo $params['templateRadius']; ?>px 0;
+	border-radius: 0 <?php echo $params['templateRadius']; ?>px <?php echo $params['templateRadius']; ?>px 0;
 }
 .input-append input:focus,
 .input-append select:focus,
@@ -1468,9 +1468,9 @@ select:focus:invalid:focus {
 	height: 18px;
 	min-width: 16px;
 	padding: 4px 5px;
-	font-size: <?php echo $templateFontSize; ?>px;
+	font-size: <?php echo $params['templateFontSize']; ?>px;
 	font-weight: normal;
-    line-height: <?php echo intval(intval($templateFontSize)*1.5); ?>px;
+    line-height: <?php echo intval(intval($params['templateFontSize'])*1.5); ?>px;
 	text-align: center;
 	text-shadow: 0 1px 0 #fff;
 	background-color: #eee;
@@ -1498,23 +1498,23 @@ select:focus:invalid:focus {
 }
 .input-prepend .add-on:first-child,
 .input-prepend .btn:first-child {
-	-webkit-border-radius: <?php echo $templateRadius; ?>px 0 0 <?php echo $templateRadius; ?>px;
-	-moz-border-radius: <?php echo $templateRadius; ?>px 0 0 <?php echo $templateRadius; ?>px;
-	border-radius: <?php echo $templateRadius; ?>px 0 0 <?php echo $templateRadius; ?>px;
+	-webkit-border-radius: <?php echo $params['templateRadius']; ?>px 0 0 <?php echo $params['templateRadius']; ?>px;
+	-moz-border-radius: <?php echo $params['templateRadius']; ?>px 0 0 <?php echo $params['templateRadius']; ?>px;
+	border-radius: <?php echo $params['templateRadius']; ?>px 0 0 <?php echo $params['templateRadius']; ?>px;
 }
 .input-append input,
 .input-append select,
 .input-append .uneditable-input {
-	-webkit-border-radius: <?php echo $templateRadius; ?>px 0 0 <?php echo $templateRadius; ?>px;
-	-moz-border-radius: <?php echo $templateRadius; ?>px 0 0 <?php echo $templateRadius; ?>px;
-	border-radius: <?php echo $templateRadius; ?>px 0 0 <?php echo $templateRadius; ?>px;
+	-webkit-border-radius: <?php echo $params['templateRadius']; ?>px 0 0 <?php echo $params['templateRadius']; ?>px;
+	-moz-border-radius: <?php echo $params['templateRadius']; ?>px 0 0 <?php echo $params['templateRadius']; ?>px;
+	border-radius: <?php echo $params['templateRadius']; ?>px 0 0 <?php echo $params['templateRadius']; ?>px;
 }
 .input-append input + .btn-group .btn:last-child,
 .input-append select + .btn-group .btn:last-child,
 .input-append .uneditable-input + .btn-group .btn:last-child {
-	-webkit-border-radius: 0 <?php echo $templateRadius; ?>px <?php echo $templateRadius; ?>px 0;
-	-moz-border-radius: 0 <?php echo $templateRadius; ?>px <?php echo $templateRadius; ?>px 0;
-	border-radius: 0 <?php echo $templateRadius; ?>px <?php echo $templateRadius; ?>px 0;
+	-webkit-border-radius: 0 <?php echo $params['templateRadius']; ?>px <?php echo $params['templateRadius']; ?>px 0;
+	-moz-border-radius: 0 <?php echo $params['templateRadius']; ?>px <?php echo $params['templateRadius']; ?>px 0;
+	border-radius: 0 <?php echo $params['templateRadius']; ?>px <?php echo $params['templateRadius']; ?>px 0;
 }
 .input-append .add-on,
 .input-append .btn,
@@ -1524,9 +1524,9 @@ select:focus:invalid:focus {
 .input-append .add-on:last-child,
 .input-append .btn:last-child,
 .input-append .btn-group:last-child > .dropdown-toggle {
-	-webkit-border-radius: 0 <?php echo $templateRadius; ?>px <?php echo $templateRadius; ?>px 0;
-	-moz-border-radius: 0 <?php echo $templateRadius; ?>px <?php echo $templateRadius; ?>px 0;
-	border-radius: 0 <?php echo $templateRadius; ?>px <?php echo $templateRadius; ?>px 0;
+	-webkit-border-radius: 0 <?php echo $params['templateRadius']; ?>px <?php echo $params['templateRadius']; ?>px 0;
+	-moz-border-radius: 0 <?php echo $params['templateRadius']; ?>px <?php echo $params['templateRadius']; ?>px 0;
+	border-radius: 0 <?php echo $params['templateRadius']; ?>px <?php echo $params['templateRadius']; ?>px 0;
 }
 .input-prepend.input-append input,
 .input-prepend.input-append select,
@@ -1538,23 +1538,23 @@ select:focus:invalid:focus {
 .input-prepend.input-append input + .btn-group .btn,
 .input-prepend.input-append select + .btn-group .btn,
 .input-prepend.input-append .uneditable-input + .btn-group .btn {
-	-webkit-border-radius: 0 <?php echo $templateRadius; ?>px <?php echo $templateRadius; ?>px 0;
-	-moz-border-radius: 0 <?php echo $templateRadius; ?>px <?php echo $templateRadius; ?>px 0;
-	border-radius: 0 <?php echo $templateRadius; ?>px <?php echo $templateRadius; ?>px 0;
+	-webkit-border-radius: 0 <?php echo $params['templateRadius']; ?>px <?php echo $params['templateRadius']; ?>px 0;
+	-moz-border-radius: 0 <?php echo $params['templateRadius']; ?>px <?php echo $params['templateRadius']; ?>px 0;
+	border-radius: 0 <?php echo $params['templateRadius']; ?>px <?php echo $params['templateRadius']; ?>px 0;
 }
 .input-prepend.input-append .add-on:first-child,
 .input-prepend.input-append .btn:first-child {
 	margin-right: -1px;
-	-webkit-border-radius: <?php echo $templateRadius; ?>px 0 0 <?php echo $templateRadius; ?>px;
-	-moz-border-radius: <?php echo $templateRadius; ?>px 0 0 <?php echo $templateRadius; ?>px;
-	border-radius: <?php echo $templateRadius; ?>px 0 0 <?php echo $templateRadius; ?>px;
+	-webkit-border-radius: <?php echo $params['templateRadius']; ?>px 0 0 <?php echo $params['templateRadius']; ?>px;
+	-moz-border-radius: <?php echo $params['templateRadius']; ?>px 0 0 <?php echo $params['templateRadius']; ?>px;
+	border-radius: <?php echo $params['templateRadius']; ?>px 0 0 <?php echo $params['templateRadius']; ?>px;
 }
 .input-prepend.input-append .add-on:last-child,
 .input-prepend.input-append .btn:last-child {
 	margin-left: -1px;
-	-webkit-border-radius: 0 <?php echo $templateRadius; ?>px <?php echo $templateRadius; ?>px 0;
-	-moz-border-radius: 0 <?php echo $templateRadius; ?>px <?php echo $templateRadius; ?>px 0;
-	border-radius: 0 <?php echo $templateRadius; ?>px <?php echo $templateRadius; ?>px 0;
+	-webkit-border-radius: 0 <?php echo $params['templateRadius']; ?>px <?php echo $params['templateRadius']; ?>px 0;
+	-moz-border-radius: 0 <?php echo $params['templateRadius']; ?>px <?php echo $params['templateRadius']; ?>px 0;
+	border-radius: 0 <?php echo $params['templateRadius']; ?>px <?php echo $params['templateRadius']; ?>px 0;
 }
 .input-prepend.input-append .btn-group:first-child {
 	margin-left: 0;
@@ -1717,7 +1717,7 @@ table {
 .table th,
 .table td {
 	padding: 8px;
-    line-height: <?php echo intval(intval($templateFontSize)*1.5); ?>px;
+    line-height: <?php echo intval(intval($params['templateFontSize'])*1.5); ?>px;
 	text-align: left;
 	vertical-align: top;
 	border-top: 1px solid #ddd;
@@ -1751,9 +1751,9 @@ table {
 	border-collapse: separate;
 	*border-collapse: collapse;
 	border-left: 0;
-	-webkit-border-radius: <?php echo $templateRadius; ?>px;
-	-moz-border-radius: <?php echo $templateRadius; ?>px;
-	border-radius: <?php echo $templateRadius; ?>px;
+	-webkit-border-radius: <?php echo $params['templateRadius']; ?>px;
+	-moz-border-radius: <?php echo $params['templateRadius']; ?>px;
+	border-radius: <?php echo $params['templateRadius']; ?>px;
 }
 .table-bordered th,
 .table-bordered td {
@@ -1773,34 +1773,34 @@ table {
 .table-bordered thead:first-child tr:first-child > th:first-child,
 .table-bordered tbody:first-child tr:first-child > td:first-child,
 .table-bordered tbody:first-child tr:first-child > th:first-child {
-	-webkit-border-top-left-radius: <?php echo $templateRadius; ?>px;
-	-moz-border-radius-topleft: <?php echo $templateRadius; ?>px;
-	border-top-left-radius: <?php echo $templateRadius; ?>px;
+	-webkit-border-top-left-radius: <?php echo $params['templateRadius']; ?>px;
+	-moz-border-radius-topleft: <?php echo $params['templateRadius']; ?>px;
+	border-top-left-radius: <?php echo $params['templateRadius']; ?>px;
 }
 .table-bordered thead:first-child tr:first-child > th:last-child,
 .table-bordered tbody:first-child tr:first-child > td:last-child,
 .table-bordered tbody:first-child tr:first-child > th:last-child {
-	-webkit-border-top-right-radius: <?php echo $templateRadius; ?>px;
-	-moz-border-radius-topright: <?php echo $templateRadius; ?>px;
-	border-top-right-radius: <?php echo $templateRadius; ?>px;
+	-webkit-border-top-right-radius: <?php echo $params['templateRadius']; ?>px;
+	-moz-border-radius-topright: <?php echo $params['templateRadius']; ?>px;
+	border-top-right-radius: <?php echo $params['templateRadius']; ?>px;
 }
 .table-bordered thead:last-child tr:last-child > th:first-child,
 .table-bordered tbody:last-child tr:last-child > td:first-child,
 .table-bordered tbody:last-child tr:last-child > th:first-child,
 .table-bordered tfoot:last-child tr:last-child > td:first-child,
 .table-bordered tfoot:last-child tr:last-child > th:first-child {
-	-webkit-border-bottom-left-radius: <?php echo $templateRadius; ?>px;
-	-moz-border-radius-bottomleft: <?php echo $templateRadius; ?>px;
-	border-bottom-left-radius: <?php echo $templateRadius; ?>px;
+	-webkit-border-bottom-left-radius: <?php echo $params['templateRadius']; ?>px;
+	-moz-border-radius-bottomleft: <?php echo $params['templateRadius']; ?>px;
+	border-bottom-left-radius: <?php echo $params['templateRadius']; ?>px;
 }
 .table-bordered thead:last-child tr:last-child > th:last-child,
 .table-bordered tbody:last-child tr:last-child > td:last-child,
 .table-bordered tbody:last-child tr:last-child > th:last-child,
 .table-bordered tfoot:last-child tr:last-child > td:last-child,
 .table-bordered tfoot:last-child tr:last-child > th:last-child {
-	-webkit-border-bottom-right-radius: <?php echo $templateRadius; ?>px;
-	-moz-border-radius-bottomright: <?php echo $templateRadius; ?>px;
-	border-bottom-right-radius: <?php echo $templateRadius; ?>px;
+	-webkit-border-bottom-right-radius: <?php echo $params['templateRadius']; ?>px;
+	-moz-border-radius-bottomright: <?php echo $params['templateRadius']; ?>px;
+	border-bottom-right-radius: <?php echo $params['templateRadius']; ?>px;
 }
 .table-bordered tfoot + tbody:last-child tr:last-child td:first-child {
 	-webkit-border-bottom-left-radius: 0;
@@ -1816,17 +1816,17 @@ table {
 .table-bordered caption + tbody tr:first-child td:first-child,
 .table-bordered colgroup + thead tr:first-child th:first-child,
 .table-bordered colgroup + tbody tr:first-child td:first-child {
-	-webkit-border-top-left-radius: <?php echo $templateRadius; ?>px;
-	-moz-border-radius-topleft: <?php echo $templateRadius; ?>px;
-	border-top-left-radius: <?php echo $templateRadius; ?>px;
+	-webkit-border-top-left-radius: <?php echo $params['templateRadius']; ?>px;
+	-moz-border-radius-topleft: <?php echo $params['templateRadius']; ?>px;
+	border-top-left-radius: <?php echo $params['templateRadius']; ?>px;
 }
 .table-bordered caption + thead tr:first-child th:last-child,
 .table-bordered caption + tbody tr:first-child td:last-child,
 .table-bordered colgroup + thead tr:first-child th:last-child,
 .table-bordered colgroup + tbody tr:first-child td:last-child {
-	-webkit-border-top-right-radius: <?php echo $templateRadius; ?>px;
-	-moz-border-radius-topright: <?php echo $templateRadius; ?>px;
-	border-top-right-radius: <?php echo $templateRadius; ?>px;
+	-webkit-border-top-right-radius: <?php echo $params['templateRadius']; ?>px;
+	-moz-border-radius-topright: <?php echo $params['templateRadius']; ?>px;
+	border-top-right-radius: <?php echo $params['templateRadius']; ?>px;
 }
 .table-striped tbody > tr:nth-child(odd) > td,
 .table-striped tbody > tr:nth-child(odd) > th {
@@ -1981,9 +1981,9 @@ table th[class*="span"],
 	border: 1px solid rgba(0,0,0,0.2);
 	*border-right-width: 2px;
 	*border-bottom-width: 2px;
-	-webkit-border-radius: <?php echo $templateRadius; ?>px;
-	-moz-border-radius: <?php echo $templateRadius; ?>px;
-	border-radius: <?php echo $templateRadius; ?>px;
+	-webkit-border-radius: <?php echo $params['templateRadius']; ?>px;
+	-moz-border-radius: <?php echo $params['templateRadius']; ?>px;
+	border-radius: <?php echo $params['templateRadius']; ?>px;
 	-webkit-box-shadow: 0 5px 10px rgba(0,0,0,0.2);
 	-moz-box-shadow: 0 5px 10px rgba(0,0,0,0.2);
 	box-shadow: 0 5px 10px rgba(0,0,0,0.2);
@@ -2009,7 +2009,7 @@ table th[class*="span"],
 	padding: 3px 20px;
 	clear: both;
 	font-weight: normal;
-    line-height: <?php echo intval(intval($menuFontSize)*1.5); ?>px;
+    line-height: <?php echo intval(intval($params['menuFontSize'])*1.5); ?>px;
 	color: #333;
 	white-space: nowrap;
 }
@@ -2094,9 +2094,9 @@ table th[class*="span"],
 	left: 100%;
 	margin-top: -6px;
 	margin-left: -1px;
-	-webkit-border-radius: <?php echo $templateRadius; ?>px <?php echo $templateRadius; ?>px <?php echo $templateRadius; ?>px <?php echo $templateRadius; ?>px;
-	-moz-border-radius: <?php echo $templateRadius; ?>px <?php echo $templateRadius; ?>px <?php echo $templateRadius; ?>px <?php echo $templateRadius; ?>px;
-	border-radius: <?php echo $templateRadius; ?>px <?php echo $templateRadius; ?>px <?php echo $templateRadius; ?>px <?php echo $templateRadius; ?>px;
+	-webkit-border-radius: <?php echo $params['templateRadius']; ?>px <?php echo $params['templateRadius']; ?>px <?php echo $params['templateRadius']; ?>px <?php echo $params['templateRadius']; ?>px;
+	-moz-border-radius: <?php echo $params['templateRadius']; ?>px <?php echo $params['templateRadius']; ?>px <?php echo $params['templateRadius']; ?>px <?php echo $params['templateRadius']; ?>px;
+	border-radius: <?php echo $params['templateRadius']; ?>px <?php echo $params['templateRadius']; ?>px <?php echo $params['templateRadius']; ?>px <?php echo $params['templateRadius']; ?>px;
 }
 .dropdown-submenu:hover > .dropdown-menu {
 	display: block;
@@ -2106,9 +2106,9 @@ table th[class*="span"],
 	bottom: 0;
 	margin-top: 0;
 	margin-bottom: -2px;
-	-webkit-border-radius: <?php echo $templateRadius; ?>px <?php echo $templateRadius; ?>px <?php echo $templateRadius; ?>px 0;
-	-moz-border-radius: <?php echo $templateRadius; ?>px <?php echo $templateRadius; ?>px <?php echo $templateRadius; ?>px 0;
-	border-radius: <?php echo $templateRadius; ?>px <?php echo $templateRadius; ?>px <?php echo $templateRadius; ?>px 0;
+	-webkit-border-radius: <?php echo $params['templateRadius']; ?>px <?php echo $params['templateRadius']; ?>px <?php echo $params['templateRadius']; ?>px 0;
+	-moz-border-radius: <?php echo $params['templateRadius']; ?>px <?php echo $params['templateRadius']; ?>px <?php echo $params['templateRadius']; ?>px 0;
+	border-radius: <?php echo $params['templateRadius']; ?>px <?php echo $params['templateRadius']; ?>px <?php echo $params['templateRadius']; ?>px 0;
 }
 .dropdown-submenu > a:after {
 	display: block;
@@ -2132,9 +2132,9 @@ table th[class*="span"],
 .dropdown-submenu.pull-left > .dropdown-menu {
 	left: -100%;
 	margin-left: 10px;
-	-webkit-border-radius: <?php echo $templateRadius; ?>px 0 <?php echo $templateRadius; ?>px <?php echo $templateRadius; ?>px;
-	-moz-border-radius: <?php echo $templateRadius; ?>px 0 <?php echo $templateRadius; ?>px <?php echo $templateRadius; ?>px;
-	border-radius: <?php echo $templateRadius; ?>px 0 <?php echo $templateRadius; ?>px <?php echo $templateRadius; ?>px;
+	-webkit-border-radius: <?php echo $params['templateRadius']; ?>px 0 <?php echo $params['templateRadius']; ?>px <?php echo $params['templateRadius']; ?>px;
+	-moz-border-radius: <?php echo $params['templateRadius']; ?>px 0 <?php echo $params['templateRadius']; ?>px <?php echo $params['templateRadius']; ?>px;
+	border-radius: <?php echo $params['templateRadius']; ?>px 0 <?php echo $params['templateRadius']; ?>px <?php echo $params['templateRadius']; ?>px;
 }
 .dropdown .dropdown-menu .nav-header {
 	padding-left: 20px;
@@ -2143,30 +2143,30 @@ table th[class*="span"],
 .typeahead {
 	z-index: 1051;
 	margin-top: 2px;
-	-webkit-border-radius: <?php echo $templateRadius; ?>px;
-	-moz-border-radius: <?php echo $templateRadius; ?>px;
-	border-radius: <?php echo $templateRadius; ?>px;
+	-webkit-border-radius: <?php echo $params['templateRadius']; ?>px;
+	-moz-border-radius: <?php echo $params['templateRadius']; ?>px;
+	border-radius: <?php echo $params['templateRadius']; ?>px;
 }
 .moduletable {
 	min-height: 20px;
-	padding: <?php echo $modulePaddingSize; ?>px;
+	padding: <?php echo params['$modulePaddingSize']; ?>px;
 	margin-bottom: 20px;
-<?php if (!empty($moduleBackgroundColor)) : ?>
-	background-color: <?php echo calcBackground($moduleBackgroundColor,$moduleBackgroundOpacity); ?>;
+<?php if (!empty($params['moduleBackgroundColor'])) : ?>
+	background-color: <?php echo calcBackground($params['moduleBackgroundColor'],$params['moduleBackgroundOpacity']); ?>;
 <?php endif; ?>
-	border: <?php echo $moduleBorderSize; ?>px <?php echo $moduleBorderType; ?> <?php echo $moduleBorderColor; ?>;
-	-webkit-border-radius: <?php echo $templateRadius; ?>px;
-	-moz-border-radius: <?php echo $templateRadius; ?>px;
-	border-radius: <?php echo $templateRadius; ?>px;
-<?php if (!empty($moduleBackgroundColor) && ($moduleBackgroundColor != $contentBackgroundColor)) : ?>
+	border: <?php echo $params['moduleBorderSize']; ?>px <?php echo $params['moduleBorderType']; ?> <?php echo $params['moduleBorderColor']; ?>;
+	-webkit-border-radius: <?php echo $params['templateRadius']; ?>px;
+	-moz-border-radius: <?php echo $params['templateRadius']; ?>px;
+	border-radius: <?php echo $params['templateRadius']; ?>px;
+<?php if (!empty($params['moduleBackgroundColor']) && ($params['moduleBackgroundColor'] != $params['contentBackgroundColor'])) : ?>
 	-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,0.05);
 	-moz-box-shadow: inset 0 1px 1px rgba(0,0,0,0.05);
 	box-shadow: inset 0 1px 1px rgba(0,0,0,0.05);
 <?php endif; ?>
-<?php if ($moduleTitleIcon) : ?>
-	background-image: url("<?php echo JURI::base()."../../../".$moduleTitleIcon; ?>");
+<?php if ($params['moduleTitleIcon']) : ?>
+	background-image: url("<?php echo JURI::base()."../../../".$params['moduleTitleIcon']; ?>");
 	background-repeat: no-repeat;
-	background-position: top <?php echo $modulePaddingSize; ?>px left <?php echo $modulePaddingSize; ?>px;
+	background-position: top <?php echo $params['modulePaddingSize']; ?>px left <?php echo $params['modulePaddingSize']; ?>px;
 <?php endif; ?>
 }
 .moduletable blockquote {
@@ -2175,15 +2175,15 @@ table th[class*="span"],
 }
 .well-large {
 	padding: 24px;
-	-webkit-border-radius: <?php echo $templateRadius; ?>px;
-	-moz-border-radius: <?php echo $templateRadius; ?>px;
-	border-radius: <?php echo $templateRadius; ?>px;
+	-webkit-border-radius: <?php echo $params['templateRadius']; ?>px;
+	-moz-border-radius: <?php echo $params['templateRadius']; ?>px;
+	border-radius: <?php echo $params['templateRadius']; ?>px;
 }
 .well-small {
 	padding: 9px;
-	-webkit-border-radius: <?php echo $templateRadius; ?>px;
-	-moz-border-radius: <?php echo $templateRadius; ?>px;
-	border-radius: <?php echo $templateRadius; ?>px;
+	-webkit-border-radius: <?php echo $params['templateRadius']; ?>px;
+	-moz-border-radius: <?php echo $params['templateRadius']; ?>px;
+	border-radius: <?php echo $params['templateRadius']; ?>px;
 }
 .fade {
 	opacity: 0;
@@ -2238,19 +2238,19 @@ button.close {
 	*zoom: 1;
 	padding: 4px 12px;
 	margin-bottom: 0;
-	font-size: <?php echo $templateFontSize; ?>px;
-    line-height: <?php echo intval(intval($templateFontSize)*1.5); ?>px;
+	font-size: <?php echo $params['templateFontSize']; ?>px;
+    line-height: <?php echo intval(intval($params['templateFontSize'])*1.5); ?>px;
 	text-align: center;
 	vertical-align: middle;
 	cursor: pointer;
-<?php if ($contentBackgroundColor) : ?>
-	color: <?php echo $contentBackgroundColor; ?>;
+<?php if ($params['contentBackgroundColor']) : ?>
+	color: <?php echo $params['contentBackgroundColor']; ?>;
 <?php else: ?>
 	color: #333;
 <?php endif; ?>
 	text-shadow: 0 1px 1px rgba(255,255,255,0.75);
-<?php if ($templateColor) : ?>
-	background-color: <?php echo $templateColor; ?>;
+<?php if ($params['templateColor']) : ?>
+	background-color: <?php echo $params['templateColor']; ?>;
 <?php endif; ?>
 /*
 	background-color: #f5f5f5;
@@ -2268,9 +2268,9 @@ button.close {
 	border: 1px solid #bbb;
 	*border: 0;
 	border-bottom-color: #a2a2a2;
-	-webkit-border-radius: <?php echo $templateRadius; ?>px;
-	-moz-border-radius: <?php echo $templateRadius; ?>px;
-	border-radius: <?php echo $templateRadius; ?>px;
+	-webkit-border-radius: <?php echo $params['templateRadius']; ?>px;
+	-moz-border-radius: <?php echo $params['templateRadius']; ?>px;
+	border-radius: <?php echo $params['templateRadius']; ?>px;
 	*margin-left: .3em;
 	-webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,.2), 0 1px 2px rgba(0,0,0,.05);
 	-moz-box-shadow: inset 0 1px 0 rgba(255,255,255,.2), 0 1px 2px rgba(0,0,0,.05);
@@ -2331,9 +2331,9 @@ button.close {
 .btn-large {
 	padding: 11px 19px;
 	font-size: 16.25px;
-	-webkit-border-radius: <?php echo $templateRadius; ?>px;
-	-moz-border-radius: <?php echo $templateRadius; ?>px;
-	border-radius: <?php echo $templateRadius; ?>px;
+	-webkit-border-radius: <?php echo $params['templateRadius']; ?>px;
+	-moz-border-radius: <?php echo $params['templateRadius']; ?>px;
+	border-radius: <?php echo $params['templateRadius']; ?>px;
 }
 .btn-large [class^="icon-"],
 .btn-large [class*=" icon-"] {
@@ -2342,9 +2342,9 @@ button.close {
 .btn-small {
 	padding: 2px 10px;
 	font-size: 12px;
-	-webkit-border-radius: <?php echo $templateRadius; ?>px;
-	-moz-border-radius: <?php echo $templateRadius; ?>px;
-	border-radius: <?php echo $templateRadius; ?>px;
+	-webkit-border-radius: <?php echo $params['templateRadius']; ?>px;
+	-moz-border-radius: <?php echo $params['templateRadius']; ?>px;
+	border-radius: <?php echo $params['templateRadius']; ?>px;
 }
 .btn-small [class^="icon-"],
 .btn-small [class*=" icon-"] {
@@ -2357,9 +2357,9 @@ button.close {
 .btn-mini {
 	padding: 0 6px;
 	font-size: 9.75px;
-	-webkit-border-radius: <?php echo $templateRadius; ?>px;
-	-moz-border-radius: <?php echo $templateRadius; ?>px;
-	border-radius: <?php echo $templateRadius; ?>px;
+	-webkit-border-radius: <?php echo $params['templateRadius']; ?>px;
+	-moz-border-radius: <?php echo $params['templateRadius']; ?>px;
+	border-radius: <?php echo $params['templateRadius']; ?>px;
 }
 .btn-block {
 	display: block;
@@ -2602,9 +2602,9 @@ input[type="submit"].btn.btn-mini {
 	border-color: transparent;
 	cursor: pointer;
 	color: #08c;
-	-webkit-border-radius: <?php echo $templateRadius; ?>px;
-	-moz-border-radius: <?php echo $templateRadius; ?>px;
-	border-radius: <?php echo $templateRadius; ?>px;
+	-webkit-border-radius: <?php echo $params['templateRadius']; ?>px;
+	-moz-border-radius: <?php echo $params['templateRadius']; ?>px;
+	border-radius: <?php echo $params['templateRadius']; ?>px;
 }
 .btn-link:hover,
 .btn-link:focus {
@@ -2645,9 +2645,9 @@ input[type="submit"].btn.btn-mini {
 }
 .btn-group > .btn {
 	position: relative;
-	-webkit-border-radius: <?php echo $templateRadius; ?>px;
-	-moz-border-radius: <?php echo $templateRadius; ?>px;
-	border-radius: <?php echo $templateRadius; ?>px;
+	-webkit-border-radius: <?php echo $params['templateRadius']; ?>px;
+	-moz-border-radius: <?php echo $params['templateRadius']; ?>px;
+	border-radius: <?php echo $params['templateRadius']; ?>px;
 }
 .btn-group > .btn + .btn {
 	margin-left: -1px;
@@ -2668,39 +2668,39 @@ input[type="submit"].btn.btn-mini {
 }
 .btn-group > .btn:first-child {
 	margin-left: 0;
-	-webkit-border-top-left-radius: <?php echo $templateRadius; ?>px;
-	-moz-border-radius-topleft: <?php echo $templateRadius; ?>px;
-	border-top-left-radius: <?php echo $templateRadius; ?>px;
-	-webkit-border-bottom-left-radius: <?php echo $templateRadius; ?>px;
-	-moz-border-radius-bottomleft: <?php echo $templateRadius; ?>px;
-	border-bottom-left-radius: <?php echo $templateRadius; ?>px;
+	-webkit-border-top-left-radius: <?php echo $params['templateRadius']; ?>px;
+	-moz-border-radius-topleft: <?php echo $params['templateRadius']; ?>px;
+	border-top-left-radius: <?php echo $params['templateRadius']; ?>px;
+	-webkit-border-bottom-left-radius: <?php echo $params['templateRadius']; ?>px;
+	-moz-border-radius-bottomleft: <?php echo $params['templateRadius']; ?>px;
+	border-bottom-left-radius: <?php echo $params['templateRadius']; ?>px;
 }
 .btn-group > .btn:last-child,
 .btn-group > .dropdown-toggle {
-	-webkit-border-top-right-radius: <?php echo $templateRadius; ?>px;
-	-moz-border-radius-topright: <?php echo $templateRadius; ?>px;
-	border-top-right-radius: <?php echo $templateRadius; ?>px;
-	-webkit-border-bottom-right-radius: <?php echo $templateRadius; ?>px;
-	-moz-border-radius-bottomright: <?php echo $templateRadius; ?>px;
-	border-bottom-right-radius: <?php echo $templateRadius; ?>px;
+	-webkit-border-top-right-radius: <?php echo $params['templateRadius']; ?>px;
+	-moz-border-radius-topright: <?php echo $params['templateRadius']; ?>px;
+	border-top-right-radius: <?php echo $params['templateRadius']; ?>px;
+	-webkit-border-bottom-right-radius: <?php echo $params['templateRadius']; ?>px;
+	-moz-border-radius-bottomright: <?php echo $params['templateRadius']; ?>px;
+	border-bottom-right-radius: <?php echo $params['templateRadius']; ?>px;
 }
 .btn-group > .btn.large:first-child {
 	margin-left: 0;
-	-webkit-border-top-left-radius: <?php echo $templateRadius; ?>px;
-	-moz-border-radius-topleft: <?php echo $templateRadius; ?>px;
-	border-top-left-radius: <?php echo $templateRadius; ?>px;
-	-webkit-border-bottom-left-radius: <?php echo $templateRadius; ?>px;
-	-moz-border-radius-bottomleft: <?php echo $templateRadius; ?>px;
-	border-bottom-left-radius: <?php echo $templateRadius; ?>px;
+	-webkit-border-top-left-radius: <?php echo $params['templateRadius']; ?>px;
+	-moz-border-radius-topleft: <?php echo $params['templateRadius']; ?>px;
+	border-top-left-radius: <?php echo $params['templateRadius']; ?>px;
+	-webkit-border-bottom-left-radius: <?php echo $params['templateRadius']; ?>px;
+	-moz-border-radius-bottomleft: <?php echo $params['templateRadius']; ?>px;
+	border-bottom-left-radius: <?php echo $params['templateRadius']; ?>px;
 }
 .btn-group > .btn.large:last-child,
 .btn-group > .large.dropdown-toggle {
-	-webkit-border-top-right-radius: <?php echo $templateRadius; ?>px;
-	-moz-border-radius-topright: <?php echo $templateRadius; ?>px;
-	border-top-right-radius: <?php echo $templateRadius; ?>px;
-	-webkit-border-bottom-right-radius: <?php echo $templateRadius; ?>px;
-	-moz-border-radius-bottomright: <?php echo $templateRadius; ?>px;
-	border-bottom-right-radius: <?php echo $templateRadius; ?>px;
+	-webkit-border-top-right-radius: <?php echo $params['templateRadius']; ?>px;
+	-moz-border-radius-topright: <?php echo $params['templateRadius']; ?>px;
+	border-top-right-radius: <?php echo $params['templateRadius']; ?>px;
+	-webkit-border-bottom-right-radius: <?php echo $params['templateRadius']; ?>px;
+	-moz-border-radius-bottomright: <?php echo $params['templateRadius']; ?>px;
+	border-bottom-right-radius: <?php echo $params['templateRadius']; ?>px;
 }
 .btn-group > .btn:hover,
 .btn-group > .btn:focus,
@@ -2801,33 +2801,33 @@ input[type="submit"].btn.btn-mini {
 	display: block;
 	float: none;
 	max-width: 100%;
-	-webkit-border-radius: <?php echo $templateRadius; ?>px;
-	-moz-border-radius: <?php echo $templateRadius; ?>px;
-	border-radius: <?php echo $templateRadius; ?>px;
+	-webkit-border-radius: <?php echo $params['templateRadius']; ?>px;
+	-moz-border-radius: <?php echo $params['templateRadius']; ?>px;
+	border-radius: <?php echo $params['templateRadius']; ?>px;
 }
 .btn-group-vertical > .btn + .btn {
 	margin-left: 0;
 	margin-top: -1px;
 }
 .btn-group-vertical > .btn:first-child {
-	-webkit-border-radius: <?php echo $templateRadius; ?>px <?php echo $templateRadius; ?>px 0 0;
-	-moz-border-radius: <?php echo $templateRadius; ?>px <?php echo $templateRadius; ?>px 0 0;
-	border-radius: <?php echo $templateRadius; ?>px <?php echo $templateRadius; ?>px 0 0;
+	-webkit-border-radius: <?php echo $params['templateRadius']; ?>px <?php echo $params['templateRadius']; ?>px 0 0;
+	-moz-border-radius: <?php echo $params['templateRadius']; ?>px <?php echo $params['templateRadius']; ?>px 0 0;
+	border-radius: <?php echo $params['templateRadius']; ?>px <?php echo $params['templateRadius']; ?>px 0 0;
 }
 .btn-group-vertical > .btn:last-child {
-	-webkit-border-radius: 0 0 <?php echo $templateRadius; ?>px <?php echo $templateRadius; ?>px;
-	-moz-border-radius: 0 0 <?php echo $templateRadius; ?>px <?php echo $templateRadius; ?>px;
-	border-radius: 0 0 <?php echo $templateRadius; ?>px <?php echo $templateRadius; ?>px;
+	-webkit-border-radius: 0 0 <?php echo $params['templateRadius']; ?>px <?php echo $params['templateRadius']; ?>px;
+	-moz-border-radius: 0 0 <?php echo $params['templateRadius']; ?>px <?php echo $params['templateRadius']; ?>px;
+	border-radius: 0 0 <?php echo $params['templateRadius']; ?>px <?php echo $params['templateRadius']; ?>px;
 }
 .btn-group-vertical > .btn-large:first-child {
-	-webkit-border-radius: <?php echo $templateRadius; ?>px <?php echo $templateRadius; ?>px 0 0;
-	-moz-border-radius: <?php echo $templateRadius; ?>px <?php echo $templateRadius; ?>px 0 0;
-	border-radius: <?php echo $templateRadius; ?>px <?php echo $templateRadius; ?>px 0 0;
+	-webkit-border-radius: <?php echo $params['templateRadius']; ?>px <?php echo $params['templateRadius']; ?>px 0 0;
+	-moz-border-radius: <?php echo $params['templateRadius']; ?>px <?php echo $params['templateRadius']; ?>px 0 0;
+	border-radius: <?php echo $params['templateRadius']; ?>px <?php echo $params['templateRadius']; ?>px 0 0;
 }
 .btn-group-vertical > .btn-large:last-child {
-	-webkit-border-radius: 0 0 <?php echo $templateRadius; ?>px <?php echo $templateRadius; ?>px;
-	-moz-border-radius: 0 0 <?php echo $templateRadius; ?>px <?php echo $templateRadius; ?>px;
-	border-radius: 0 0 <?php echo $templateRadius; ?>px <?php echo $templateRadius; ?>px;
+	-webkit-border-radius: 0 0 <?php echo $params['templateRadius']; ?>px <?php echo $params['templateRadius']; ?>px;
+	-moz-border-radius: 0 0 <?php echo $params['templateRadius']; ?>px <?php echo $params['templateRadius']; ?>px;
+	border-radius: 0 0 <?php echo $params['templateRadius']; ?>px <?php echo $params['templateRadius']; ?>px;
 }
 .alert {
 	padding: 8px 35px 8px 14px;
@@ -2835,9 +2835,9 @@ input[type="submit"].btn.btn-mini {
 	text-shadow: 0 1px 0 rgba(255,255,255,0.5);
 	background-color: #fcf8e3;
 	border: 1px solid #fbeed5;
-	-webkit-border-radius: <?php echo $templateRadius; ?>px;
-	-moz-border-radius: <?php echo $templateRadius; ?>px;
-	border-radius: <?php echo $templateRadius; ?>px;
+	-webkit-border-radius: <?php echo $params['templateRadius']; ?>px;
+	-moz-border-radius: <?php echo $params['templateRadius']; ?>px;
+	border-radius: <?php echo $params['templateRadius']; ?>px;
 }
 .alert,
 .alert h4 {
@@ -2850,7 +2850,7 @@ input[type="submit"].btn.btn-mini {
 	position: relative;
 	top: -2px;
 	right: -21px;
-    line-height: <?php echo intval(intval($templateFontSize)*1.5); ?>px;
+    line-height: <?php echo intval(intval($params['templateFontSize'])*1.5); ?>px;
 }
 .alert-success {
 	background-color: #dff0d8;
@@ -2890,14 +2890,14 @@ input[type="submit"].btn.btn-mini {
 	margin-top: 5px;
 }
 .nav {
-<?php if ($menuType != "block") : ?>
+<?php if ($params['menuType'] != "block") : ?>
 	margin-left: 5px;
 <?php else: ?>
 	margin-left: 0;
 <?php endif; ?>
 	margin-bottom: 18px;
 	list-style: none;
-	font-size: <?php echo $menuFontSize; ?>px;
+	font-size: <?php echo $params['menuFontSize']; ?>px;
 }
 .navselect {
 	display: none;
@@ -2905,21 +2905,21 @@ input[type="submit"].btn.btn-mini {
 .nav > li > a {
 	display: block;
 	text-decoration: none;
-<?php if ($menuEntryForegroundColor) : ?>
-	color: <?php echo $menuEntryForegroundColor; ?>;
+<?php if ($params['menuEntryForegroundColor']) : ?>
+	color: <?php echo $params['menuEntryForegroundColor']; ?>;
 <?php endif; ?>
-<?php if ($menuEntryBackgroundColor) : ?>
-	background-color: <?php echo $menuEntryBackgroundColor; ?>;
+<?php if ($params['menuEntryBackgroundColor']) : ?>
+	background-color: <?php echo $params['menuEntryBackgroundColor']; ?>;
 <?php endif; ?>
 }
 .nav > li > a:hover,
 .nav > li > a:focus {
 	text-decoration: none;
-<?php if ($menuEntryForegroundColor) : ?>
-	color: <?php echo $menuEntryForegroundColor; ?>;
+<?php if ($params['menuEntryForegroundColor']) : ?>
+	color: <?php echo $params['menuEntryForegroundColor']; ?>;
 <?php endif; ?>
-<?php if ($menuEntryFocusBackgroundColor) : ?>
-	background-color: <?php echo $menuEntryFocusBackgroundColor; ?>;
+<?php if ($params['menuEntryFocusBackgroundColor']) : ?>
+	background-color: <?php echo $params['menuEntryFocusBackgroundColor']; ?>;
 <?php endif; ?>
 }
 .nav > li > a > img {
@@ -2994,29 +2994,29 @@ input[type="submit"].btn.btn-mini {
 .nav-tabs > li,
 .nav-pills > li {
 	float: left;
-<?php if ($menuType != "block") : ?>
+<?php if ($params['menuType'] != "block") : ?>
 	color: #ffffff;
 <?php endif; ?>
 
-<?php if ($menuType != "block") : ?>
+<?php if ($params['menuType'] != "block") : ?>
 	color: #ffffff;
 <?php endif; ?>
 }
 .nav-tabs > li > a,
 .nav-pills > li > a {
-<?php if ($menuEntryHorizontalSpacing) : ?>
-	padding-right: <?php echo $menuEntryHorizontalSpacing;?>px;
-	padding-left: <?php echo $menuEntryHorizontalSpacing;?>px;
+<?php if ($params['menuEntryHorizontalSpacing']) : ?>
+	padding-right: <?php echo $params['menuEntryHorizontalSpacing'];?>px;
+	padding-left: <?php echo $params['menuEntryHorizontalSpacing'];?>px;
 <?php endif; ?>
 	margin-right: 2px;
-    line-height: <?php echo intval($menuFontSize)+2; ?>px;
-<?php if ($menuType != "block") : ?>
+    line-height: <?php echo intval($params['menuFontSize'])+2; ?>px;
+<?php if ($params['menuType'] != "block") : ?>
 	color: #ffffff;
 <?php endif; ?>
 }
 .nav-pills > li > a:hover {
-<?php if ($menuType != "block") : ?>
-	color: <?php echo $templateColor;?>;
+<?php if ($params['menuType'] != "block") : ?>
+	color: <?php echo $params['templateColor'];?>;
 <?php endif; ?>
 }
 .nav-tabs {
@@ -3028,11 +3028,11 @@ input[type="submit"].btn.btn-mini {
 .nav-tabs > li > a {
 	padding-top: 8px;
 	padding-bottom: 8px;
-    line-height: <?php echo intval(intval($menuFontSize)*1.5); ?>px;
+    line-height: <?php echo intval(intval($params['menuFontSize'])*1.5); ?>px;
 	border: 1px solid transparent;
-	-webkit-border-radius: <?php echo $templateRadius; ?>px <?php echo $templateRadius; ?>px 0 0;
-	-moz-border-radius: <?php echo $templateRadius; ?>px <?php echo $templateRadius; ?>px 0 0;
-	border-radius: <?php echo $templateRadius; ?>px <?php echo $templateRadius; ?>px 0 0;
+	-webkit-border-radius: <?php echo $params['templateRadius']; ?>px <?php echo $params['templateRadius']; ?>px 0 0;
+	-moz-border-radius: <?php echo $params['templateRadius']; ?>px <?php echo $params['templateRadius']; ?>px 0 0;
+	border-radius: <?php echo $params['templateRadius']; ?>px <?php echo $params['templateRadius']; ?>px 0 0;
 }
 .nav-tabs > li > a:hover,
 .nav-tabs > li > a:focus {
@@ -3051,15 +3051,15 @@ input[type="submit"].btn.btn-mini {
 	padding-top: 8px;
 	padding-bottom: 8px;
 	margin-top: 2px;
-<?php if ($menuType != "tab") : ?>
+<?php if ($params['menuType'] != "tab") : ?>
 	margin-bottom: 2px;
-	-webkit-border-radius: <?php echo $templateRadius; ?>px;
-	-moz-border-radius: <?php echo $templateRadius; ?>px;
-	border-radius: <?php echo $templateRadius; ?>px;
+	-webkit-border-radius: <?php echo $params['templateRadius']; ?>px;
+	-moz-border-radius: <?php echo $params['templateRadius']; ?>px;
+	border-radius: <?php echo $params['templateRadius']; ?>px;
 <?php else: ?>
-	-webkit-border-radius: <?php echo $menuEntryRadius; ?>px <?php echo $menuEntryRadius; ?>px 0px 0px;
-	-moz-border-radius: <?php echo $menuEntryRadius; ?>px <?php echo $menuEntryRadius; ?>px 0px 0px;
-	border-radius: <?php echo $menuEntryRadius; ?>px <?php echo $menuEntryRadius; ?>px 0px 0px;
+	-webkit-border-radius: <?php echo $params['menuEntryRadius']; ?>px <?php echo $params['menuEntryRadius']; ?>px 0px 0px;
+	-moz-border-radius: <?php echo params['$menuEntryRadius']; ?>px <?php echo $params['menuEntryRadius']; ?>px 0px 0px;
+	border-radius: <?php echo $params['menuEntryRadius']; ?>px <?php echo $params['menuEntryRadius']; ?>px 0px 0px;
 <?php endif; ?>
 }
 .nav-pills > .active > a,
@@ -3079,25 +3079,25 @@ input[type="submit"].btn.btn-mini {
 }
 .nav-tabs.nav-stacked > li > a {
 	border: 1px solid #ddd;
-	-webkit-border-radius: <?php echo $templateRadius; ?>px;
-	-moz-border-radius: <?php echo $templateRadius; ?>px;
-	border-radius: 0<?php echo $templateRadius; ?>px;
+	-webkit-border-radius: <?php echo $params['templateRadius']; ?>px;
+	-moz-border-radius: <?php echo $params['templateRadius']; ?>px;
+	border-radius: 0<?php echo $params['templateRadius']; ?>px;
 }
 .nav-tabs.nav-stacked > li:first-child > a {
-	-webkit-border-top-right-radius: <?php echo $templateRadius; ?>px;
-	-moz-border-radius-topright: <?php echo $templateRadius; ?>px;
-	border-top-right-radius: <?php echo $templateRadius; ?>px;
-	-webkit-border-top-left-radius: <?php echo $templateRadius; ?>px;
-	-moz-border-radius-topleft: <?php echo $templateRadius; ?>px;
-	border-top-left-radius: <?php echo $templateRadius; ?>px;
+	-webkit-border-top-right-radius: <?php echo $params['templateRadius']; ?>px;
+	-moz-border-radius-topright: <?php echo $params['templateRadius']; ?>px;
+	border-top-right-radius: <?php echo $params['templateRadiu']; ?>px;
+	-webkit-border-top-left-radius: <?php echo $params['templateRadius']; ?>px;
+	-moz-border-radius-topleft: <?php echo $params['templateRadius']; ?>px;
+	border-top-left-radius: <?php echo $params['templateRadius']; ?>px;
 }
 .nav-tabs.nav-stacked > li:last-child > a {
-	-webkit-border-bottom-right-radius: <?php echo $templateRadius; ?>px;
-	-moz-border-radius-bottomright: <?php echo $templateRadius; ?>px;
-	border-bottom-right-radius: <?php echo $templateRadius; ?>px;
-	-webkit-border-bottom-left-radius: <?php echo $templateRadius; ?>px;
-	-moz-border-radius-bottomleft: <?php echo $templateRadius; ?>px;
-	border-bottom-left-radius: <?php echo $templateRadius; ?>px;
+	-webkit-border-bottom-right-radius: <?php echo $params['templateRadius']; ?>px;
+	-moz-border-radius-bottomright: <?php echo $params['templateRadius']; ?>px;
+	border-bottom-right-radius: <?php echo $params['templateRadius']; ?>px;
+	-webkit-border-bottom-left-radius: <?php echo $params['templateRadius']; ?>px;
+	-moz-border-radius-bottomleft: <?php echo $params['templateRadius']; ?>px;
+	border-bottom-left-radius: <?php echo $params['templateRadius']; ?>px;
 }
 .nav-tabs.nav-stacked > li > a:hover,
 .nav-tabs.nav-stacked > li > a:focus {
@@ -3111,14 +3111,14 @@ input[type="submit"].btn.btn-mini {
 	margin-bottom: 1px;
 }
 .nav-tabs .dropdown-menu {
-	-webkit-border-radius: 0 0 <?php echo $templateRadius; ?>px <?php echo $templateRadius; ?>px;
-	-moz-border-radius: 0 0 <?php echo $templateRadius; ?>px <?php echo $templateRadius; ?>px;
-	border-radius: 0 0 <?php echo $templateRadius; ?>px <?php echo $templateRadius; ?>px;
+	-webkit-border-radius: 0 0 <?php echo $params['templateRadius']; ?>px <?php echo $params['templateRadius']; ?>px;
+	-moz-border-radius: 0 0 <?php echo $params['templateRadius']; ?>px <?php echo $params['templateRadius']; ?>px;
+	border-radius: 0 0 <?php echo $params['templateRadius']; ?>px <?php echo $params['templateRadius']; ?>px;
 }
 .nav-pills .dropdown-menu {
-	-webkit-border-radius: <?php echo $templateRadius; ?>px;
-	-moz-border-radius: <?php echo $templateRadius; ?>px;
-	border-radius: <?php echo $templateRadius; ?>px;
+	-webkit-border-radius: <?php echo $params['templateRadius']; ?>px;
+	-moz-border-radius: <?php echo $params['templateRadius']; ?>px;
+	border-radius: <?php echo $params['templateRadius']; ?>px;
 }
 .nav .dropdown-toggle .caret {
 	border-top-color: #08c;
@@ -3202,9 +3202,9 @@ input[type="submit"].btn.btn-mini {
 	margin-bottom: 0;
 }
 .tabs-below > .nav-tabs > li > a {
-	-webkit-border-radius: 0 0 <?php echo $templateRadius; ?>px <?php echo $templateRadius; ?>px;
-	-moz-border-radius: 0 0 <?php echo $templateRadius; ?>px <?php echo $templateRadius; ?>px;
-	border-radius: 0 0 <?php echo $templateRadius; ?>px <?php echo $templateRadius; ?>px;
+	-webkit-border-radius: 0 0 <?php echo $params['templateRadius']; ?>px <?php echo $params['templateRadius']; ?>px;
+	-moz-border-radius: 0 0 <?php echo $params['templateRadius']; ?>px <?php echo $params['templateRadius']; ?>px;
+	border-radius: 0 0 <?php echo $params['templateRadius']; ?>px <?php echo $params['templateRadius']; ?>px;
 }
 .tabs-below > .nav-tabs > li > a:hover,
 .tabs-below > .nav-tabs > li > a:focus {
@@ -3233,9 +3233,9 @@ input[type="submit"].btn.btn-mini {
 }
 .tabs-left > .nav-tabs > li > a {
 	margin-right: -1px;
-	-webkit-border-radius: <?php echo $templateRadius; ?>px 0 0 <?php echo $templateRadius; ?>px;
-	-moz-border-radius: <?php echo $templateRadius; ?>px 0 0 <?php echo $templateRadius; ?>px;
-	border-radius: <?php echo $templateRadius; ?>px 0 0 <?php echo $templateRadius; ?>px;
+	-webkit-border-radius: <?php echo $params['templateRadius']; ?>px 0 0 <?php echo $params['templateRadius']; ?>px;
+	-moz-border-radius: <?php echo $params['templateRadius']; ?>px 0 0 <?php echo $params['templateRadius']; ?>px;
+	border-radius: <?php echo $params['templateRadius']; ?>px 0 0 <?php echo $params['templateRadius']; ?>px;
 }
 .tabs-left > .nav-tabs > li > a:hover,
 .tabs-left > .nav-tabs > li > a:focus {
@@ -3254,9 +3254,9 @@ input[type="submit"].btn.btn-mini {
 }
 .tabs-right > .nav-tabs > li > a {
 	margin-left: -1px;
-	-webkit-border-radius: 0 <?php echo $templateRadius; ?>px <?php echo $templateRadius; ?>px 0;
-	-moz-border-radius: 0 <?php echo $templateRadius; ?>px <?php echo $templateRadius; ?>px 0;
-	border-radius: 0 <?php echo $templateRadius; ?>px <?php echo $templateRadius; ?>px 0;
+	-webkit-border-radius: 0 <?php echo $params['templateRadius']; ?>px <?php echo $params['templateRadius']; ?>px 0;
+	-moz-border-radius: 0 <?php echo $params['templateRadius']; ?>px <?php echo $params['templateRadius']; ?>px 0;
+	border-radius: 0 <?php echo $params['templateRadius']; ?>px <?php echo $params['templateRadius']; ?>px 0;
 }
 .tabs-right > .nav-tabs > li > a:hover,
 .tabs-right > .nav-tabs > li > a:focus {
@@ -3283,13 +3283,13 @@ input[type="submit"].btn.btn-mini {
 	*z-index: 2;
 }
 .navbar-inner {
-<?php if ($menuType != "tab") : ?>
+<?php if ($params['menuType'] != "tab") : ?>
 	min-height: 40px;
 <?php endif; ?>
-<?php if (!empty($menuBackgroundColor)) : ?>
-	background-color: <?php echo calcBackground($menuBackgroundColor,$menuBackgroundOpacity);?>;
+<?php if (!empty($params['menuBackgroundColor'])) : ?>
+	background-color: <?php echo calcBackground($params['menuBackgroundColor'],$params['menuBackgroundOpacity']);?>;
 <?php else: ?>
-	background-color: <?php echo $templateColor;?>; /*template color*/
+	background-color: <?php echo $params['templateColor'];?>; /*template color*/
 <?php endif; ?>
 	background-image: -moz-linear-gradient(top,#ffffff,#f2f2f2);
 	background-image: -webkit-gradient(linear,0 0,0 100%,from(#ffffff),to(#f2f2f2));
@@ -3298,10 +3298,10 @@ input[type="submit"].btn.btn-mini {
 	background-image: linear-gradient(to bottom,#ffffff,#f2f2f2);
 	background-repeat: repeat-x;
 	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff', endColorstr='#fff2f2f2', GradientType=0);
-	-webkit-border-radius: <?php echo $templateRadius; ?>px;
-	-moz-border-radius: <?php echo $templateRadius; ?>px;
-	border-radius: <?php echo $templateRadius; ?>px;
-<?php if (($menuType != "tab") && !empty($menuBackgroundColor) && ($bodyBackgroundColor != $menuBackgroundColor)) : ?>
+	-webkit-border-radius: <?php echo $params['templateRadius']; ?>px;
+	-moz-border-radius: <?php echo $params['templateRadius']; ?>px;
+	border-radius: <?php echo $params['templateRadius']; ?>px;
+<?php if (($params['menuType'] != "tab") && !empty($params['menuBackgroundColor']) && ($params['bodyBackgroundColor'] != $params['menuBackgroundColor'])) : ?>
 	-webkit-box-shadow: 0 1px 4px rgba(0,0,0,0.065);
 	-moz-box-shadow: 0 1px 4px rgba(0,0,0,0.065);
 	box-shadow: 0 1px 4px rgba(0,0,0,0.065);
@@ -3428,9 +3428,9 @@ input[type="submit"].btn.btn-mini {
 	margin-bottom: 0;
 }
 .navbar-static-top .navbar-inner {
-	-webkit-border-radius: <?php echo $templateRadius; ?>px;
-	-moz-border-radius: <?php echo $templateRadius; ?>px;
-	border-radius: <?php echo $templateRadius; ?>px;
+	-webkit-border-radius: <?php echo $params['templateRadius']; ?>px;
+	-moz-border-radius: <?php echo $params['templateRadius']; ?>px;
+	border-radius: <?php echo $params['templateRadius']; ?>px;
 }
 .navbar-fixed-top,
 .navbar-fixed-bottom {
@@ -3451,9 +3451,9 @@ input[type="submit"].btn.btn-mini {
 .navbar-fixed-bottom .navbar-inner {
 	padding-left: 0;
 	padding-right: 0;
-	-webkit-border-radius: <?php echo $templateRadius; ?>px;
-	-moz-border-radius: <?php echo $templateRadius; ?>px;
-	border-radius: <?php echo $templateRadius; ?>px;
+	-webkit-border-radius: <?php echo $params['templateRadius']; ?>px;
+	-moz-border-radius: <?php echo $params['templateRadius']; ?>px;
+	border-radius: <?php echo $params['templateRadius']; ?>px;
 }
 .navbar-static-top .container,
 .navbar-fixed-top .container,
@@ -3494,8 +3494,8 @@ input[type="submit"].btn.btn-mini {
 .navbar .nav > li > a {
 	float: none;
 	padding: 11px 15px 11px;
-<?php if ($menuEntryForegroundColor) : ?>
-	color: <?php echo $menuEntryForegroundColor;?>;
+<?php if ($params['menuEntryForegroundColor']) : ?>
+	color: <?php echo $params['menuEntryForegroundColor'];?>;
 <?php endif; ?>
 	text-decoration: none;
 }
@@ -3504,25 +3504,25 @@ input[type="submit"].btn.btn-mini {
 }
 .navbar .nav > li > a:focus,
 .navbar .nav > li > a:hover {
-<?php if ($menuEntryHoverForegroundColor) : ?>
-	background-color: <?php echo $menuEntryHoverForegroundColor;?>;
+<?php if ($params['menuEntryHoverForegroundColor']) : ?>
+	background-color: <?php echo $params['menuEntryHoverForegroundColor'];?>;
 <?php endif; ?>
 	text-decoration: none;
-<?php if ($menuEntryHoverBackgroundColor) : ?>
-	background-color: <?php echo $menuEntryHoverBackgroundColor;?>;
+<?php if ($params['menuEntryHoverBackgroundColor']) : ?>
+	background-color: <?php echo $params['menuEntryHoverBackgroundColor'];?>;
 <?php endif; ?>
 }
 .navbar .nav > .active > a,
 .navbar .nav > .active > a:hover,
 .navbar .nav > .active > a:focus {
-<?php if ($menuEntryFocusForegroundColor) : ?>
-	color: <?php echo $menuEntryFocusForegroundColor;?>;
+<?php if ($params['menuEntryFocusForegroundColor']) : ?>
+	color: <?php echo $params['menuEntryFocusForegroundColor'];?>;
 <?php endif; ?>
 	text-decoration: none;
-<?php if ($menuEntryFocusBackgroundColor) : ?>
-	background-color: <?php echo $menuEntryFocusBackgroundColor;?>;
+<?php if ($params['menuEntryFocusBackgroundColor']) : ?>
+	background-color: <?php echo $params['menuEntryFocusBackgroundColor'];?>;
 <?php endif; ?>
-<?php if ($menuType != "tab") : ?>
+<?php if ($params['menuType'] != "tab") : ?>
 	-webkit-box-shadow: inset 0 3px 8px rgba(0,0,0,0.125);
 	-moz-box-shadow: inset 0 3px 8px rgba(0,0,0,0.125);
 	box-shadow: inset 0 3px 8px rgba(0,0,0,0.125);
@@ -3530,19 +3530,19 @@ input[type="submit"].btn.btn-mini {
 }
 .navbar .btn-navbar {
 	display: none;
-<?php if ($menuMobileType == "nav-btn-left") : ?>
+<?php if ($params['menuMobileType'] == "nav-btn-left") : ?>
 	float: left;
 <?php endif; ?>
-<?php if ($menuMobileType == "nav-btn-right") : ?>
+<?php if ($params['menuMobileType'] == "nav-btn-right") : ?>
 	float: right;
 <?php endif; ?>
 	padding: 7px 10px;
 	margin-left: 5px;
 	margin-right: 5px;
-	color: <?php echo $menuEntryForegroundColor;?>;
+	color: <?php echo $params['menuEntryForegroundColor'];?>;
 	text-shadow: 0 -1px 0 rgba(0,0,0,0.25);
-	background-color: <?php echo calcBackground($menuBackgroundColor,$menuBackgroundOpacity);?>;
-	border-color: <?php echo $menuEntryForegroundColor;?>;
+	background-color: <?php echo calcBackground($params['menuBackgroundColor'],$params['menuBackgroundOpacity']);?>;
+	border-color: <?php echo $params['menuEntryForegroundColor'];?>;
 	box-shadow: inset 0 1px 0 rgba(255,255,255,.1), 0 1px 0 rgba(255,255,255,.075);
 }
 .navbar .btn-navbar:hover,
@@ -3650,9 +3650,9 @@ input[type="submit"].btn.btn-mini {
 	right: 100%;
 	margin-left: 0;
 	margin-right: -1px;
-	-webkit-border-radius: <?php echo $templateRadius; ?>px 0 <?php echo $templateRadius; ?>px <?php echo $templateRadius; ?>px;
-	-moz-border-radius: <?php echo $templateRadius; ?>px 0 <?php echo $templateRadius; ?>px <?php echo $templateRadius; ?>px;
-	border-radius: <?php echo $templateRadius; ?>px 0 <?php echo $templateRadius; ?>px <?php echo $templateRadius; ?>px;
+	-webkit-border-radius: <?php echo $params['templateRadius']; ?>px 0 <?php echo $params['templateRadius']; ?>px <?php echo $params['templateRadius']; ?>px;
+	-moz-border-radius: <?php echo $params['templateRadius']; ?>px 0 <?php echo $params['templateRadius']; ?>px <?php echo $params['templateRadius']; ?>px;
+	border-radius: <?php echo $params['templateRadius']; ?>px 0 <?php echo $params['templateRadius']; ?>px <?php echo $params['templateRadius']; ?>px;
 }
 .navbar-inverse .navbar-inner {
 	background-color: #1b1b1b;
@@ -3799,10 +3799,10 @@ input[type="submit"].btn.btn-mini {
 .active > a,
 .nav-pills >
 .active > a:hover {
-<?php if ($menuBackgroundColor) : ?>
-	background: <?php echo $menuBackgroundColor;?>;
+<?php if ($params['menuBackgroundColor']) : ?>
+	background: <?php echo $params['menuBackgroundColor'];?>;
 <?php else: ?>
-	background: <?php echo $templateColor;?>;
+	background: <?php echo $params['templateColor'];?>;
 <?php endif; ?>
 }
 .breadcrumb {
@@ -3810,9 +3810,9 @@ input[type="submit"].btn.btn-mini {
 	margin: 0 0 18px;
 	list-style: none;
 	background-color: #f5f5f5;
-	-webkit-border-radius: <?php echo $templateRadius; ?>px;
-	-moz-border-radius: <?php echo $templateRadius; ?>px;
-	border-radius: <?php echo $templateRadius; ?>px;
+	-webkit-border-radius: <?php echo $params['templateRadius']; ?>px;
+	-moz-border-radius: <?php echo $params['templateRadius']; ?>px;
+	border-radius: <?php echo $params['templateRadius']; ?>px;
 }
 .breadcrumb > li {
 	display: inline-block;
@@ -3836,9 +3836,9 @@ input[type="submit"].btn.btn-mini {
 	*zoom: 1;
 	margin-left: 0;
 	margin-bottom: 0;
-	-webkit-border-radius: <?php echo $templateRadius; ?>px;
-	-moz-border-radius: <?php echo $templateRadius; ?>px;
-	border-radius: <?php echo $templateRadius; ?>px;
+	-webkit-border-radius: <?php echo $params['templateRadius']; ?>px;
+	-moz-border-radius: <?php echo $params['templateRadius']; ?>px;
+	border-radius: <?php echo $params['templateRadius']; ?>px;
 	-webkit-box-shadow: 0 1px 2px rgba(0,0,0,0.05);
 	-moz-box-shadow: 0 1px 2px rgba(0,0,0,0.05);
 	box-shadow: 0 1px 2px rgba(0,0,0,0.05);
@@ -3878,21 +3878,21 @@ input[type="submit"].btn.btn-mini {
 .pagination ul > li:first-child > a,
 .pagination ul > li:first-child > span {
 	border-left-width: 1px;
-	-webkit-border-top-left-radius: <?php echo $templateRadius; ?>px;
-	-moz-border-radius-topleft: <?php echo $templateRadius; ?>px;
-	border-top-left-radius: <?php echo $templateRadius; ?>px;
-	-webkit-border-bottom-left-radius: <?php echo $templateRadius; ?>px;
-	-moz-border-radius-bottomleft: <?php echo $templateRadius; ?>px;
-	border-bottom-left-radius: <?php echo $templateRadius; ?>px;
+	-webkit-border-top-left-radius: <?php echo $params['templateRadius']; ?>px;
+	-moz-border-radius-topleft: <?php echo $params['templateRadius']; ?>px;
+	border-top-left-radius: <?php echo $params['templateRadius']; ?>px;
+	-webkit-border-bottom-left-radius: <?php echo $params['templateRadius']; ?>px;
+	-moz-border-radius-bottomleft: <?php echo $params['templateRadius']; ?>px;
+	border-bottom-left-radius: <?php echo $params['templateRadius']; ?>px;
 }
 .pagination ul > li:last-child > a,
 .pagination ul > li:last-child > span {
-	-webkit-border-top-right-radius: <?php echo $templateRadius; ?>px;
-	-moz-border-radius-topright: <?php echo $templateRadius; ?>px;
-	border-top-right-radius: <?php echo $templateRadius; ?>px;
-	-webkit-border-bottom-right-radius: <?php echo $templateRadius; ?>px;
-	-moz-border-radius-bottomright: <?php echo $templateRadius; ?>px;
-	border-bottom-right-radius: <?php echo $templateRadius; ?>px;
+	-webkit-border-top-right-radius: <?php echo $params['templateRadius']; ?>px;
+	-moz-border-radius-topright: <?php echo $params['templateRadius']; ?>px;
+	border-top-right-radius: <?php echo $params['templateRadius']; ?>px;
+	-webkit-border-bottom-right-radius: <?php echo $params['templateRadius']; ?>px;
+	-moz-border-radius-bottomright: <?php echo $params['templateRadius']; ?>px;
+	border-bottom-right-radius: <?php echo $params['templateRadius']; ?>px;
 }
 .pagination-centered {
 	text-align: center;
@@ -3907,43 +3907,43 @@ input[type="submit"].btn.btn-mini {
 }
 .pagination-large ul > li:first-child > a,
 .pagination-large ul > li:first-child > span {
-	-webkit-border-top-left-radius: <?php echo $templateRadius; ?>px;
-	-moz-border-radius-topleft: <?php echo $templateRadius; ?>px;
-	border-top-left-radius: <?php echo $templateRadius; ?>px;
-	-webkit-border-bottom-left-radius: <?php echo $templateRadius; ?>px;
-	-moz-border-radius-bottomleft: <?php echo $templateRadius; ?>px;
-	border-bottom-left-radius: <?php echo $templateRadius; ?>px;
+	-webkit-border-top-left-radius: <?php echo $params['templateRadius']; ?>px;
+	-moz-border-radius-topleft: <?php echo $params['templateRadius']; ?>px;
+	border-top-left-radius: <?php echo $params['templateRadius']; ?>px;
+	-webkit-border-bottom-left-radius: <?php echo $params['templateRadius']; ?>px;
+	-moz-border-radius-bottomleft: <?php echo $params['templateRadius']; ?>px;
+	border-bottom-left-radius: <?php echo $params['templateRadius']; ?>px;
 }
 .pagination-large ul > li:last-child > a,
 .pagination-large ul > li:last-child > span {
-	-webkit-border-top-right-radius: <?php echo $templateRadius; ?>px;
-	-moz-border-radius-topright: <?php echo $templateRadius; ?>px;
-	border-top-right-radius: <?php echo $templateRadius; ?>px;
-	-webkit-border-bottom-right-radius: <?php echo $templateRadius; ?>px;
-	-moz-border-radius-bottomright: <?php echo $templateRadius; ?>px;
-	border-bottom-right-radius: <?php echo $templateRadius; ?>px;
+	-webkit-border-top-right-radius: <?php echo $params['templateRadius']; ?>px;
+	-moz-border-radius-topright: <?php echo $params['templateRadius']; ?>px;
+	border-top-right-radius: <?php echo $params['templateRadius']; ?>px;
+	-webkit-border-bottom-right-radius: <?php echo $params['templateRadius']; ?>px;
+	-moz-border-radius-bottomright: <?php echo $params['templateRadius']; ?>px;
+	border-bottom-right-radius: <?php echo params['$templateRadius']; ?>px;
 }
 .pagination-mini ul > li:first-child > a,
 .pagination-mini ul > li:first-child > span,
 .pagination-small ul > li:first-child > a,
 .pagination-small ul > li:first-child > span {
-	-webkit-border-top-left-radius: <?php echo $templateRadius; ?>px;
-	-moz-border-radius-topleft: <?php echo $templateRadius; ?>px;
-	border-top-left-radius: <?php echo $templateRadius; ?>px;
-	-webkit-border-bottom-left-radius: <?php echo $templateRadius; ?>px;
-	-moz-border-radius-bottomleft: <?php echo $templateRadius; ?>px;
-	border-bottom-left-radius: <?php echo $templateRadius; ?>px;
+	-webkit-border-top-left-radius: <?php echo $params['templateRadius']; ?>px;
+	-moz-border-radius-topleft: <?php echo $params['templateRadius']; ?>px;
+	border-top-left-radius: <?php echo $params['templateRadius']; ?>px;
+	-webkit-border-bottom-left-radius: <?php echo $params['templateRadius']; ?>px;
+	-moz-border-radius-bottomleft: <?php echo $params['templateRadius']; ?>px;
+	border-bottom-left-radius: <?php echo $params['templateRadius']; ?>px;
 }
 .pagination-mini ul > li:last-child > a,
 .pagination-mini ul > li:last-child > span,
 .pagination-small ul > li:last-child > a,
 .pagination-small ul > li:last-child > span {
-	-webkit-border-top-right-radius: <?php echo $templateRadius; ?>px;
-	-moz-border-radius-topright: <?php echo $templateRadius; ?>px;
-	border-top-right-radius: <?php echo $templateRadius; ?>px;
-	-webkit-border-bottom-right-radius: <?php echo $templateRadius; ?>px;
-	-moz-border-radius-bottomright: <?php echo $templateRadius; ?>px;
-	border-bottom-right-radius: <?php echo $templateRadius; ?>px;
+	-webkit-border-top-right-radius: <?php echo $params['templateRadius']; ?>px;
+	-moz-border-radius-topright: <?php echo $params['templateRadius']; ?>px;
+	border-top-right-radius: <?php echo $params['templateRadius']; ?>px;
+	-webkit-border-bottom-right-radius: <?php echo $params['templateRadius']; ?>px;
+	-moz-border-radius-bottomright: <?php echo $params['templateRadius']; ?>px;
+	border-bottom-right-radius: <?php echo $params['templateRadius']; ?>px;
 }
 .pagination-small ul > li > a,
 .pagination-small ul > li > span {
@@ -4051,9 +4051,9 @@ input[type="submit"].btn.btn-mini {
 	text-align: right;
 	background-color: #f5f5f5;
 	border-top: 1px solid #ddd;
-	-webkit-border-radius: 0 0 <?php echo $templateRadius; ?>px <?php echo $templateRadius; ?>px;
-	-moz-border-radius: 0 0 <?php echo $templateRadius; ?>px <?php echo $templateRadius; ?>px;
-	border-radius: 0 0 <?php echo $templateRadius; ?>px <?php echo $templateRadius; ?>px;
+	-webkit-border-radius: 0 0 <?php echo $params['templateRadius']; ?>px <?php echo $params['templateRadius']; ?>px;
+	-moz-border-radius: 0 0 <?php echo $params['templateRadius']; ?>px <?php echo $params['templateRadius']; ?>px;
+	border-radius: 0 0 <?php echo $params['templateRadius']; ?>px <?php echo $params['templateRadius']; ?>px;
 	-webkit-box-shadow: inset 0 1px 0 #fff;
 	-moz-box-shadow: inset 0 1px 0 #fff;
 	box-shadow: inset 0 1px 0 #fff;
@@ -4115,9 +4115,9 @@ input[type="submit"].btn.btn-mini {
 	text-align: center;
 	text-decoration: none;
 	background-color: #000;
-	-webkit-border-radius: <?php echo $templateRadius; ?>px;
-	-moz-border-radius: <?php echo $templateRadius; ?>px;
-	border-radius: <?php echo $templateRadius; ?>px;
+	-webkit-border-radius: <?php echo $params['templateRadius']; ?>px;
+	-moz-border-radius: <?php echo $params['templateRadius']; ?>px;
+	border-radius: <?php echo $params['templateRadius']; ?>px;
 }
 .tooltip-arrow {
 	position: absolute;
@@ -4169,9 +4169,9 @@ input[type="submit"].btn.btn-mini {
 	background-clip: padding-box;
 	border: 1px solid #ccc;
 	border: 1px solid rgba(0,0,0,0.2);
-	-webkit-border-radius: <?php echo $templateRadius; ?>px;
-	-moz-border-radius: <?php echo $templateRadius; ?>px;
-	border-radius: <?php echo $templateRadius; ?>px;
+	-webkit-border-radius: <?php echo $params['templateRadius']; ?>px;
+	-moz-border-radius: <?php echo $params['templateRadius']; ?>px;
+	border-radius: <?php echo $params['templateRadius']; ?>px;
 	-webkit-box-shadow: 0 5px 10px rgba(0,0,0,0.2);
 	-moz-box-shadow: 0 5px 10px rgba(0,0,0,0.2);
 	box-shadow: 0 5px 10px rgba(0,0,0,0.2);
@@ -4197,9 +4197,9 @@ input[type="submit"].btn.btn-mini {
 	line-height: 18px;
 	background-color: #f7f7f7;
 	border-bottom: 1px solid #ebebeb;
-	-webkit-border-radius: <?php echo $templateRadius; ?>px <?php echo $templateRadius; ?>px 0 0;
-	-moz-border-radius: <?php echo $templateRadius; ?>px <?php echo $templateRadius; ?>px 0 0;
-	border-radius: <?php echo $templateRadius; ?>px <?php echo $templateRadius; ?>px 0 0;
+	-webkit-border-radius: <?php echo $params['templateRadius']; ?>px <?php echo $params['templateRadius']; ?>px 0 0;
+	-moz-border-radius: <?php echo $params['templateRadius']; ?>px <?php echo $params['templateRadius']; ?>px 0 0;
+	border-radius: <?php echo $params['templateRadius']; ?>px <?php echo $params['templateRadius']; ?>px 0 0;
 }
 .popover-title:empty {
 	display: none;
@@ -4304,11 +4304,11 @@ input[type="submit"].btn.btn-mini {
 .thumbnail {
 	display: block;
 	padding: 4px;
-    line-height: <?php echo intval(intval($templateFontSize)*1.5); ?>px;
+    line-height: <?php echo intval(intval($params['templateFontSize'])*1.5); ?>px;
 	border: 1px solid #ddd;
-	-webkit-border-radius: <?php echo $templateRadius; ?>px;
-	-moz-border-radius: <?php echo $templateRadius; ?>px;
-	border-radius: <?php echo $templateRadius; ?>px;
+	-webkit-border-radius: <?php echo $params['templateRadius']; ?>px;
+	-moz-border-radius: <?php echo $params['templateRadius']; ?>px;
+	border-radius: <?php echo $params['templateRadius']; ?>px;
 	-webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.055);
 	-moz-box-shadow: 0 1px 3px rgba(0,0,0,0.055);
 	box-shadow: 0 1px 3px rgba(0,0,0,0.055);
@@ -4348,9 +4348,9 @@ a.thumbnail:focus {
 	background-color: #999;
 }
 .label {
-	-webkit-border-radius: <?php echo $templateRadius; ?>px;
-	-moz-border-radius: <?php echo $templateRadius; ?>px;
-	border-radius: <?php echo $templateRadius; ?>px;
+	-webkit-border-radius: <?php echo $params['templateRadius']; ?>px;
+	-moz-border-radius: <?php echo $params['templateRadius']; ?>px;
+	border-radius: <?php echo $params['templateRadius']; ?>px;
 }
 .badge {
 	padding-left: 9px;
@@ -4475,9 +4475,9 @@ a.badge:focus {
 	-webkit-box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
 	-moz-box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
 	box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
-	-webkit-border-radius: <?php echo $templateRadius; ?>px;
-	-moz-border-radius: <?php echo $templateRadius; ?>px;
-	border-radius: <?php echo $templateRadius; ?>px;
+	-webkit-border-radius: <?php echo $params['templateRadius']; ?>px;
+	-moz-border-radius: <?php echo $params['templateRadius']; ?>px;
+	border-radius: <?php echo $params['templateRadius']; ?>px;
 }
 .progress .bar {
 	width: 0%;
@@ -4616,9 +4616,9 @@ a.badge:focus {
 .accordion-group {
 	margin-bottom: 2px;
 	border: 1px solid #e5e5e5;
-	-webkit-border-radius: <?php echo $templateRadius; ?>px;
-	-moz-border-radius: <?php echo $templateRadius; ?>px;
-	border-radius: <?php echo $templateRadius; ?>px;
+	-webkit-border-radius: <?php echo $params['templateRadius']; ?>px;
+	-moz-border-radius: <?php echo $params['templateRadius']; ?>px;
+	border-radius: <?php echo $params['templateRadius']; ?>px;
 }
 .accordion-heading {
 	border-bottom: 0;
@@ -4735,7 +4735,7 @@ a.badge:focus {
 	text-indent: -999px;
 	background-color: #ccc;
 	background-color: rgba(255,255,255,0.25);
-	border-radius: <?php echo $templateRadius; ?>px;
+	border-radius: <?php echo $params['templateRadius']; ?>px;
 }
 .carousel-indicators .active {
 	background-color: #fff;
@@ -4752,7 +4752,7 @@ a.badge:focus {
 .carousel-caption h4,
 .carousel-caption p {
 	color: #fff;
-    line-height: <?php echo intval(intval($templateFontSize)*1.5); ?>px;
+    line-height: <?php echo intval(intval($params['templateFontSize'])*1.5); ?>px;
 }
 .carousel-caption h4 {
 	margin: 0 0 5px;
@@ -4768,9 +4768,9 @@ a.badge:focus {
 	line-height: 27px;
 	color: inherit;
 	background-color: #eee;
-	-webkit-border-radius: <?php echo $templateRadius; ?>px;
-	-moz-border-radius: <?php echo $templateRadius; ?>px;
-	border-radius: <?php echo $templateRadius; ?>px;
+	-webkit-border-radius: <?php echo $params['templateRadius']; ?>px;
+	-moz-border-radius: <?php echo $params['templateRadius']; ?>px;
+	border-radius: <?php echo $params['templateRadius']; ?>px;
 }
 .hero-unit h1 {
 	margin-bottom: 0;
@@ -5725,16 +5725,16 @@ a.badge:focus {
 		padding: 9px 15px;
 		font-weight: bold;
 		color: #555;
-		-webkit-border-radius: <?php echo $templateRadius; ?>px;
-		-moz-border-radius: <?php echo $templateRadius; ?>px;
-		border-radius: <?php echo $templateRadius; ?>px;
+		-webkit-border-radius: <?php echo $params['templateRadius']; ?>px;
+		-moz-border-radius: <?php echo $params['templateRadius']; ?>px;
+		border-radius: <?php echo $params['templateRadius']; ?>px;
 	}
 	.nav-collapse .btn {
-		padding: <?php echo $templateRadius; ?>px 10px <?php echo $templateRadius; ?>px;
+		padding: <?php echo $params['templateRadius']; ?>px 10px <?php echo $params['templateRadius']; ?>px;
 		font-weight: normal;
-		-webkit-border-radius: <?php echo $templateRadius; ?>px;
-		-moz-border-radius: <?php echo $templateRadius; ?>px;
-		border-radius: <?php echo $templateRadius; ?>px;
+		-webkit-border-radius: <?php echo $params['templateRadius']; ?>px;
+		-moz-border-radius: <?php echo $params['templateRadius']; ?>px;
+		border-radius: <?php echo $params['templateRadius']; ?>px;
 	}
 	.nav-collapse .dropdown-menu li + li a {
 		margin-bottom: 2px;
@@ -5770,9 +5770,9 @@ a.badge:focus {
 		padding: 0;
 		background-color: transparent;
 		border: none;
-		-webkit-border-radius: <?php echo $templateRadius; ?>px;
-		-moz-border-radius: <?php echo $templateRadius; ?>px;
-		border-radius: <?php echo $templateRadius; ?>px;
+		-webkit-border-radius: <?php echo $params['templateRadius']; ?>px;
+		-moz-border-radius: <?php echo $params['templateRadius']; ?>px;
+		border-radius: <?php echo $params['templateRadius']; ?>px;
 		-webkit-box-shadow: none;
 		-moz-box-shadow: none;
 		box-shadow: none;
@@ -6086,21 +6086,21 @@ hr.hr-condensed {
 	vertical-align: middle;
 	margin-left: 0;
 	border: 1px solid #ddd;
-	-webkit-border-radius: <?php echo $templateRadius; ?>px;
-	-moz-border-radius: <?php echo $templateRadius; ?>px;
-	border-radius: <?php echo $templateRadius; ?>px;
+	-webkit-border-radius: <?php echo $params['templateRadius']; ?>px;
+	-moz-border-radius: <?php echo $params['templateRadius']; ?>px;
+	border-radius: <?php echo $params['templateRadius']; ?>px;
 }
 .radio.btn-group input[type=radio] {
 	display: none;
 }
 .radio.btn-group > label:first-of-type {
 	margin-left: 0;
-	-webkit-border-bottom-left-radius: <?php echo $templateRadius; ?>px;
-	-webkit-border-top-left-radius: <?php echo $templateRadius; ?>px;
-	border-bottom-left-radius: <?php echo $templateRadius; ?>px;
-	border-top-left-radius: <?php echo $templateRadius; ?>px;
-	-moz-border-radius-bottomleft: <?php echo $templateRadius; ?>px;
-	-moz-border-radius-topleft: <?php echo $templateRadius; ?>px;
+	-webkit-border-bottom-left-radius: <?php echo $params['templateRadius']; ?>px;
+	-webkit-border-top-left-radius: <?php echo $params['templateRadius']; ?>px;
+	border-bottom-left-radius: <?php echo $params['templateRadius']; ?>px;
+	border-top-left-radius: <?php echo $params['templateRadius']; ?>px;
+	-moz-border-radius-bottomleft: <?php echo $params['templateRadius']; ?>px;
+	-moz-border-radius-topleft: <?php echo $params['templateRadius']; ?>px;
 }
 fieldset.radio.btn-group {
 	padding-left: 0;
@@ -6123,9 +6123,9 @@ fieldset.radio.btn-group {
 	padding-bottom: 8px;
 	line-height: 18px;
 	border: 1px solid transparent;
-	-webkit-border-radius: <?php echo $templateRadius; ?>px <?php echo $templateRadius; ?>px 0 0;
-	-moz-border-radius: <?php echo $templateRadius; ?>px <?php echo $templateRadius; ?>px 0 0;
-	border-radius: <?php echo $templateRadius; ?>px <?php echo $templateRadius; ?>px 0 0;
+	-webkit-border-radius: <?php echo $params['templateRadius']; ?>px <?php echo $params['templateRadius']; ?>px 0 0;
+	-moz-border-radius: <?php echo $params['templateRadius']; ?>px <?php echo $params['templateRadius']; ?>px 0 0;
+	border-radius: <?php echo $params['templateRadius']; ?>px <?php echo $params['templateRadius']; ?>px 0 0;
 }
 .btn-micro {
 	padding: 1px 4px;
@@ -6142,19 +6142,19 @@ fieldset.radio.btn-group {
 	text-align: center;
 	text-decoration: none;
 	background-color: #000;
-	-webkit-border-radius: <?php echo $templateRadius; ?>px;
-	-moz-border-radius: <?php echo $templateRadius; ?>px;
-	border-radius: <?php echo $templateRadius; ?>px;
+	-webkit-border-radius: <?php echo $params['templateRadius']; ?>px;
+	-moz-border-radius: <?php echo $params['templateRadius']; ?>px;
+	border-radius: <?php echo $params['templateRadius']; ?>px;
 	z-index: 100;
 }
 .moduletable h3 {
 	position: relative;
-<?php if ($moduleTitleIcon) : ?>
+<?php if ($params['moduleTitleIcon']) : ?>
 	left: 35px;
 <?php endif; ?>
 	margin: 0px 0px 5px 0px;
 	padding-bottom: 5px;
-	text-decoration: <?php echo $moduleTitleDecoration; ?>;
+	text-decoration: <?php echo $params['moduleTitleDecoration']; ?>;
 }
 .input-prepend .chzn-container-single .chzn-single,
 .input-append .chzn-container-single .chzn-single {
@@ -6173,30 +6173,30 @@ fieldset.radio.btn-group {
 	vertical-align: top;
 }
 .input-prepend .chzn-container-single .chzn-single {
-	-webkit-border-radius: 0 <?php echo $templateRadius; ?>px <?php echo $templateRadius; ?>px 0;
-	-moz-border-radius: 0 <?php echo $templateRadius; ?>px <?php echo $templateRadius; ?>px 0;
-	border-radius: 0 <?php echo $templateRadius; ?>px <?php echo $templateRadius; ?>px 0;
+	-webkit-border-radius: 0 <?php echo $params['templateRadius']; ?>px <?php echo $params['templateRadius']; ?>px 0;
+	-moz-border-radius: 0 <?php echo $params['templateRadius']; ?>px <?php echo $params['templateRadius']; ?>px 0;
+	border-radius: 0 <?php echo $params['templateRadius']; ?>px <?php echo $params['templateRadius']; ?>px 0;
 }
 .input-prepend .chzn-container-single .chzn-single-with-drop {
-	-webkit-border-radius: 0 <?php echo $templateRadius; ?>px 0 0;
-	-moz-border-radius: 0 <?php echo $templateRadius; ?>px 0 0;
-	border-radius: 0 <?php echo $templateRadius; ?>px 0 0;
+	-webkit-border-radius: 0 <?php echo $params['templateRadius']; ?>px 0 0;
+	-moz-border-radius: 0 <?php echo $params['templateRadius']; ?>px 0 0;
+	border-radius: 0 <?php echo $params['templateRadius']; ?>px 0 0;
 }
 .input-append .chzn-container-single .chzn-single {
-	-webkit-border-radius: <?php echo $templateRadius; ?>px 0 0 <?php echo $templateRadius; ?>px;
-	-moz-border-radius: <?php echo $templateRadius; ?>px 0 0 <?php echo $templateRadius; ?>px;
-	border-radius: <?php echo $templateRadius; ?>px 0 0 <?php echo $templateRadius; ?>px;
+	-webkit-border-radius: <?php echo $params['templateRadius']; ?>px 0 0 <?php echo $params['templateRadius']; ?>px;
+	-moz-border-radius: <?php echo $params['templateRadius']; ?>px 0 0 <?php echo $params['templateRadius']; ?>px;
+	border-radius: <?php echo $params['templateRadius']; ?>px 0 0 <?php echo $params['templateRadius']; ?>px;
 }
 .input-append .chzn-container-single .chzn-single-with-drop {
-	-webkit-border-radius: <?php echo $templateRadius; ?>px 0 0 0;
-	-moz-border-radius: <?php echo $templateRadius; ?>px 0 0 0;
-	border-radius: <?php echo $templateRadius; ?>px 0 0 0;
+	-webkit-border-radius: <?php echo $params['templateRadius']; ?>px 0 0 0;
+	-moz-border-radius: <?php echo $params['templateRadius']; ?>px 0 0 0;
+	border-radius: <?php echo $params['templateRadius']; ?>px 0 0 0;
 }
 .input-prepend.input-append .chzn-container-single .chzn-single,
 .input-prepend.input-append .chzn-container-single .chzn-single-with-drop {
-	-webkit-border-radius: <?php echo $templateRadius; ?>px;
-	-moz-border-radius: <?php echo $templateRadius; ?>px;
-	border-radius: <?php echo $templateRadius; ?>px;
+	-webkit-border-radius: <?php echo $params['templateRadius']; ?>px;
+	-moz-border-radius: <?php echo $params['templateRadius']; ?>px;
+	border-radius: <?php echo $params['templateRadius']; ?>px;
 }
 .element-invisible {
 	position: absolute;
@@ -6292,9 +6292,9 @@ div.modal {
 	border: 1px solid #999;
 	border: 1px solid rgba(0,0,0,0.3);
 	*border: 1px solid #999;
-	-webkit-border-radius: <?php echo $templateRadius; ?>px;
-	-moz-border-radius: <?php echo $templateRadius; ?>px;
-	border-radius: <?php echo $templateRadius; ?>px;
+	-webkit-border-radius: <?php echo $params['templateRadius']; ?>px;
+	-moz-border-radius: <?php echo $params['templateRadius']; ?>px;
+	border-radius: <?php echo $params['templateRadius']; ?>px;
 	-webkit-box-shadow: 0 3px 7px rgba(0,0,0,0.3);
 	-moz-box-shadow: 0 3px 7px rgba(0,0,0,0.3);
 	box-shadow: 0 3px 7px rgba(0,0,0,0.3);
@@ -7084,18 +7084,18 @@ div.modal.fade.in {
 }
 body.site {
 	padding: 20px;
-<?php if ($bodyBackgroundColor) : ?>
-	background-color: <?php echo $bodyBackgroundColor;?>;
+<?php if ($params['bodyBackgroundColor']) : ?>
+	background-color: <?php echo $params['bodyBackgroundColor'];?>;
 <?php else : ?>
 	background-color: #eeeeee;
 <?php endif; ?>
-<?php if ($bodyBackgroundFile) : ?>
-	background-image: url("<?php echo JURI::base()."../../../".$bodyBackgroundFile;?>");
+<?php if ($params['bodyBackgroundFile']) : ?>
+	background-image: url("<?php echo JURI::base()."../../../".$params['bodyBackgroundFile'];?>");
 <?php if ($bodyBackgroundRepeat) : ?>
-	background-repeat: <?php echo $bodyBackgroundRepeat;?>;
+	background-repeat: <?php echo $params['bodyBackgroundRepeat'];?>;
 <?php endif; ?>
-	background-attachment: <?php echo $bodyBackgroundAttachment;?>;
-	background-position: <?php echo $bodyBackgroundPosition;?>;
+	background-attachment: <?php echo $params['bodyBackgroundAttachment'];?>;
+	background-position: <?php echo $params['bodyBackgroundPosition'];?>;
 <?php endif; ?>
 }
 
@@ -7126,8 +7126,8 @@ body.site.fluid {
 	text-decoration: none;
 }
 .header-inner {
-<?php if ($headerBackgroundColor) : ?>
-	background-color: <?php echo calcBackground($headerBackgroundColor,$headerBackgroundOpacity);?>;
+<?php if ($params['headerBackgroundColor']) : ?>
+	background-color: <?php echo calcBackground($params['headerBackgroundColor'],$params['headerBackgroundOpacity']);?>;
 <?php endif; ?>
 }
 .header {
@@ -7140,7 +7140,7 @@ body.site.fluid {
 	margin-top: 0px;
 }
 .navigation {
-<?php if ($menuType == "tab") : ?>
+<?php if ($params['menuType'] == "tab") : ?>
 	padding: 5px 5px 0 5px;
 <?php else: ?>
 	padding: 5px;
@@ -7148,15 +7148,15 @@ body.site.fluid {
 	border-top: 0px solid rgba(0,0,0,0.075);
 	border-bottom: 0px solid rgba(0,0,0,0.075);
 	margin-bottom: 10px;
-<?php if ($menuBackgroundColor) : ?>
-	background-color: <?php echo calcBackground($menuBackgroundColor,$menuBackgroundOpacity);?>;
+<?php if ($params['menuBackgroundColor']) : ?>
+	background-color: <?php echo calcBackground($params['menuBackgroundColor'],$params['menuBackgroundOpacity']);?>;
 <?php else: ?>
-	background-color: <?php echo $templateColor;?>;
+	background-color: <?php echo $params['templateColor'];?>;
 <?php endif; ?>
-<?php if ($menuType != "block") : ?>
-	-webkit-border-radius: <?php echo $templateRadius; ?>px;
-	-moz-border-radius: <?php echo $templateRadius; ?>px;
-	border-radius: <?php echo $templateRadius; ?>px;
+<?php if ($params['menuType'] != "block") : ?>
+	-webkit-border-radius: <?php echo $params['templateRadius']; ?>px;
+	-moz-border-radius: <?php echo $params['templateRadius']; ?>px;
+	border-radius: <?php echo $params['templateRadius']; ?>px;
 <?php endif; ?>
 }
 .navigation .nav-pills {
@@ -7173,49 +7173,49 @@ body.site.fluid {
 	max-width: 960px;
 }
 .body .container {
-<?php if ($contentBackgroundColor) : ?>
-	background-color: <?php echo calcBackground($contentBackgroundColor,$contentBackgroundOpacity); ?>;
+<?php if ($params['contentBackgroundColor']) : ?>
+	background-color: <?php echo calcBackground($params['contentBackgroundColor'],$params['contentBackgroundOpacity']); ?>;
 <?php endif; ?>
-	-moz-border-radius: <?php echo $templateRadius; ?>px;
-	-webkit-border-radius: <?php echo $templateRadius; ?>px;
-	border-radius: <?php echo $templateRadius; ?>px;
+	-moz-border-radius: <?php echo $params['templateRadius']; ?>px;
+	-webkit-border-radius: <?php echo $params['templateRadius']; ?>px;
+	border-radius: <?php echo $params['templateRadius']; ?>px;
 	padding: 20px;
-	border: <?php echo $contentBorderSize;?>px <?php echo $contentBorderType;?> <?php echo $contentBorderColor;?>;
-<?php if (($contentBackgroundColor) && ($bodyBackgroundColor != $contentBackgroundColor)) : ?>
+	border: <?php echo $params['contentBorderSize;']?>px <?php echo $params['contentBorderType'];?> <?php echo $params['contentBorderColor'];?>;
+<?php if (($params['contentBackgroundColor']) && ($params['bodyBackgroundColor'] != $params['contentBackgroundColor'])) : ?>
 	-moz-box-shadow: 0px 0px 6px rgba(0,0,0,0.05);
 	-webkit-box-shadow: 0px 0px 6px rgba(0,0,0,0.05);
 	box-shadow: 0px 0px 6px rgba(0,0,0,0.05);
 <?php endif; ?>
-<?php if ($contentBackgroundFile) : ?>
-	background-image: url("<?php echo JURI::base()."../../../".$contentBackgroundFile;?>");
-<?php if ($contentBackgroundRepeat) : ?>
-	background-repeat: <?php echo $contentBackgroundRepeat;?>;
+<?php if ($params['contentBackgroundFile']) : ?>
+	background-image: url("<?php echo JURI::base()."../../../".$params['contentBackgroundFile'];?>");
+<?php if ($params['contentBackgroundRepeat']) : ?>
+	background-repeat: <?php echo $params['contentBackgroundRepeat'];?>;
 <?php endif; ?>
-	background-attachment: <?php echo $contentBackgroundAttachment;?>;
-	background-position: <?php echo $contentBackgroundPosition;?>;
+	background-attachment: <?php echo $params['contentBackgroundAttachment'];?>;
+	background-position: <?php echo $params['contentBackgroundPosition'];?>;
 <?php endif; ?>
 }
 .footer .container {
-<?php if (!empty($footerBackgroundColor)) : ?>
-	background-color: <?php echo calcBackground($footerBackgroundColor,$footerBackgroundOpacity);?>;
+<?php if (!empty($params['footerBackgroundColor'])) : ?>
+	background-color: <?php echo calcBackground($params['footerBackgroundColor'],$params['footerBackgroundOpacity']);?>;
 <?php endif; ?>
-	-moz-border-radius: <?php echo $templateRadius; ?>px;
-	-webkit-border-radius: <?php echo $templateRadius; ?>px;
-	border-radius: <?php echo $templateRadius; ?>px;
+	-moz-border-radius: <?php echo $params['templateRadius']; ?>px;
+	-webkit-border-radius: <?php echo $params['templateRadius']; ?>px;
+	border-radius: <?php echo $params['templateRadius']; ?>px;
 	padding: 20px;
-	border: <?php echo $footerBorderSize;?>px <?php echo $footerBorderType;?> <?php echo $footerBorderColor;?>;
-<?php if (!empty($footerBackgroundColor) && ($bodyBackgroundColor != $footerBackgroundColor)) : ?>
+	border: <?php echo $params['footerBorderSize'];?>px <?php echo $params['footerBorderType'];?> <?php echo $params['footerBorderColor'];?>;
+<?php if (!empty($params['footerBackgroundColor']) && ($params['bodyBackgroundColor'] != $params['footerBackgroundColor'])) : ?>
 	-moz-box-shadow: 0px 0px 6px rgba(0,0,0,0.05);
 	-webkit-box-shadow: 0px 0px 6px rgba(0,0,0,0.05);
 	box-shadow: 0px 0px 6px rgba(0,0,0,0.05);
 <?php endif; ?>
-<?php if ($footerBackgroundFile) : ?>
-	background-image: url("<?php echo JURI::base()."../../../".$footerBackgroundFile;?>");
-<?php if ($footerBackgroundRepeat) : ?>
-	background-repeat: <?php echo $footerBackgroundRepeat;?>;
+<?php if ($params['footerBackgroundFile']) : ?>
+	background-image: url("<?php echo JURI::base()."../../../".$params['footerBackgroundFile'];?>");
+<?php if ($params['footerBackgroundRepeat']) : ?>
+	background-repeat: <?php echo $params['footerBackgroundRepeat'];?>;
 <?php endif; ?>
-	background-attachment: <?php echo $footerBackgroundAttachment;?>;
-	background-position: <?php echo $footerBackgroundPosition;?>;
+	background-attachment: <?php echo $params['footerBackgroundAttachment'];?>;
+	background-position: <?php echo $params['footerBackgroundPosition'];?>;
 <?php endif; ?>
 }
 .module-icon {
@@ -7319,21 +7319,21 @@ figcaption {
 	padding: 5px 0;
 	margin: 2px 0 0;
 	list-style: none;
-<?php if ($menuChildBackgroundColor) : ?>
-	background-color: <?php echo $menuChildBackgroundColor; ?>;
+<?php if ($params['menuChildBackgroundColor']) : ?>
+	background-color: <?php echo $params['menuChildBackgroundColor']; ?>;
 <?php endif; ?>
-<?php if ($menuChildForegroundColor) : ?>
-	color: <?php echo $menuChildForegroundColor; ?>;
+<?php if ($params['menuChildForegroundColor']) : ?>
+	color: <?php echo $params['menuChildForegroundColor']; ?>;
 <?php endif; ?>
-<?php if ($menuChildBorderColor) : ?>
-	border: 1px solid <?php echo $menuChildBorderColor; ?>;
+<?php if ($params['menuChildBorderColor']) : ?>
+	border: 1px solid <?php echo $params['menuChildBorderColor']; ?>;
 	border: 1px solid rgba(0,0,0,0.2);
 <?php endif; ?>
 	*border-right-width: 2px;
 	*border-bottom-width: 2px;
-	-webkit-border-radius: <?php echo $templateRadius; ?>px;
-	-moz-border-radius: <?php echo $templateRadius; ?>px;
-	border-radius: <?php echo $templateRadius; ?>px;
+	-webkit-border-radius: <?php echo $params['templateRadius']; ?>px;
+	-moz-border-radius: <?php echo $params['templateRadius']; ?>px;
+	border-radius: <?php echo $params['templateRadius']; ?>px;
 	-webkit-box-shadow: 0 5px 10px rgba(0,0,0,0.2);
 	-moz-box-shadow: 0 5px 10px rgba(0,0,0,0.2);
 	box-shadow: 0 5px 10px rgba(0,0,0,0.2);
@@ -7358,11 +7358,11 @@ figcaption {
 	display: block;
 	padding: 3px 20px;
 	clear: both;
-	font-size: <?php echo $menuFontSize; ?>px;
+	font-size: <?php echo $params['menuFontSize']; ?>px;
 	font-weight: normal;
-    line-height: <?php echo intval(intval($menuFontSize)*1.5); ?>px;
-<?php if ($menuChildForegroundColor) : ?>
-	color: <?php echo $menuChildForegroundColor; ?>;
+    line-height: <?php echo intval(intval($params['menuFontSize'])*1.5); ?>px;
+<?php if ($params['menuChildForegroundColor']) : ?>
+	color: <?php echo $params['menuChildForegroundColor']; ?>;
 <?php endif; ?>
 	white-space: nowrap;
 	text-decoration: none;
@@ -7415,11 +7415,11 @@ figcaption {
 .navigation .nav-child li > a:focus,
 .navigation .nav-child:hover > a {
 	text-decoration: none;
-<?php if ($menuChildForegroundColor) : ?>
-	color: <?php echo $menuChildForegroundColor; ?>;
+<?php if ($params['menuChildForegroundColor']) : ?>
+	color: <?php echo $params['menuChildForegroundColor']; ?>;
 <?php endif; ?>
-<?php if ($menuChildFocusBackgroundColor) : ?>
-	background-color: <?php echo $menuChildFocusBackgroundColor; ?>;
+<?php if ($params['menuChildFocusBackgroundColor']) : ?>
+	background-color: <?php echo $params['menuChildFocusBackgroundColor']; ?>;
 <?php endif; ?>
 }
 .header-logo {
@@ -7464,20 +7464,20 @@ figcaption {
 		border: 1px solid #ddd;
 		border-bottom: 0;
 		margin: 0;
-		-webkit-border-radius: <?php echo $templateRadius; ?>px;
-		-moz-border-radius: <?php echo $templateRadius; ?>px;
-		border-radius: <?php echo $templateRadius; ?>px;
-		margin-right: <?php echo $templateRadius; ?>px;
+		-webkit-border-radius: <?php echo $params['templateRadius']; ?>px;
+		-moz-border-radius: <?php echo $params['templateRadius']; ?>px;
+		border-radius: <?php echo $params['templateRadius']; ?>px;
+		margin-right: <?php echo $params['templateRadius']; ?>px;
 	}
 	.header .nav-pills > li:first-child > a {
-		-webkit-border-radius: <?php echo $templateRadius; ?>px <?php echo $templateRadius; ?>px 0 0;
-		-moz-border-radius: <?php echo $templateRadius; ?>px <?php echo $templateRadius; ?>px 0 0;
-		border-radius: <?php echo $templateRadius; ?>px <?php echo $templateRadius; ?>px 0 0;
+		-webkit-border-radius: <?php echo $params['templateRadius']; ?>px <?php echo params['$templateRadius']; ?>px 0 0;
+		-moz-border-radius: <?php echo $params['templateRadius']; ?>px <?php echo $params['templateRadius']; ?>px 0 0;
+		border-radius: <?php echo $params['templateRadius']; ?>px <?php echo $params['templateRadius']; ?>px 0 0;
 	}
 	.header .nav-pills > li:last-child > a {
-		-webkit-border-radius: 0 0 <?php echo $templateRadius; ?>px <?php echo $templateRadius; ?>px;
-		-moz-border-radius: 0 0 <?php echo $templateRadius; ?>px <?php echo $templateRadius; ?>px;
-		border-radius: 0 0 <?php echo $templateRadius; ?>px <?php echo $templateRadius; ?>px;
+		-webkit-border-radius: 0 0 <?php echo $params['templateRadius']; ?>px <?php echo $params['templateRadius']; ?>px;
+		-moz-border-radius: 0 0 <?php echo $params['templateRadius']; ?>px <?php echo $params['templateRadius']; ?>px;
+		border-radius: 0 0 <?php echo $params['templateRadius']; ?>px <?php echo $params['templateRadius']; ?>px;
 		border-bottom: 1px solid #ddd;
 	}
 	.modal.fade {
@@ -7491,21 +7491,21 @@ figcaption {
 	}
 	.nav-tabs > li > a {
 		border: 1px solid #ddd;
-		-webkit-border-radius: <?php echo $templateRadius; ?>px;
-		-moz-border-radius: <?php echo $templateRadius; ?>px;
-		border-radius: <?php echo $templateRadius; ?>px;
+		-webkit-border-radius: <?php echo $params['templateRadius']; ?>px;
+		-moz-border-radius: <?php echo $params['templateRadius']; ?>px;
+		border-radius: <?php echo $params['templateRadius']; ?>px;
 		margin-right: 0;
 	}
 	.nav-tabs > li:first-child > a {
-		-webkit-border-radius: <?php echo $templateRadius; ?>px <?php echo $templateRadius; ?>px 0 0;
-		-moz-border-radius: <?php echo $templateRadius; ?>px <?php echo $templateRadius; ?>px 0 0;
-		border-radius: <?php echo $templateRadius; ?>px <?php echo $templateRadius; ?>px 0 0;
+		-webkit-border-radius: <?php echo $params['templateRadius']; ?>px <?php echo $params['templateRadius']; ?>px 0 0;
+		-moz-border-radius: <?php echo $params['templateRadius']; ?>px <?php echo $params['templateRadius']; ?>px 0 0;
+		border-radius: <?php echo $params['templateRadius']; ?>px <?php echo $params['templateRadius']; ?>px 0 0;
 	}
 	.nav-tabs > li:last-child > a,
 	.nav-tabs > .active:last-child > a {
-		-webkit-border-radius: 0 0 <?php echo $templateRadius; ?>px <?php echo $templateRadius; ?>px;
-		-moz-border-radius: 0 0 <?php echo $templateRadius; ?>px <?php echo $templateRadius; ?>px;
-		border-radius: 0 0 <?php echo $templateRadius; ?>px <?php echo $templateRadius; ?>px;
+		-webkit-border-radius: 0 0 <?php echo $params['templateRadius']; ?>px <?php echo $params['templateRadius']; ?>px;
+		-moz-border-radius: 0 0 <?php echo $params['templateRadius']; ?>px <?php echo $params['templateRadius']; ?>px;
+		border-radius: 0 0 <?php echo $params['templateRadius']; ?>px <?php echo $params['templateRadius']; ?>px;
 		border-bottom: 1px solid #ddd;
 	}
 	.nav-tabs > li > a:hover {
@@ -7568,7 +7568,7 @@ figcaption {
 	.navbar .btn-navbar {
 		display: block;
 	}
-<?php if (($menuMobileType == "nav-select-left") || ($menuMobileType == "nav-select-right")) : ?>
+<?php if (($params['menuMobileType'] == "nav-select-left") || ($params['menuMobileType'] == "nav-select-right")) : ?>
 	.navbar {
 		height: 24px;
 	}
@@ -7577,7 +7577,7 @@ figcaption {
 	}
 	.navselect {
 		display: block;
-<?php if ($menuMobileType == "nav-select-left") : ?>
+<?php if ($params['menuMobileType'] == "nav-select-left") : ?>
 		float: left;
 <?php else : ?>
 		float: right;

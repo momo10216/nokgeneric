@@ -34,10 +34,18 @@ function detectNoHoverDevice(){
 	return $result;
 }
 
-// Getting params from template
-$params = JFactory::getApplication()->getTemplate(true)->params;
+function getAlternateTemplateStyleId(){
+	$activeMenu = JFactory::getApplication()->getMenu()->getActive();
+	if (is_null($activeMenu)) { return ''; }
+	$templateStyleId = $activeMenu->template_style_id;
+	if (empty($templateStyleId) || ($templateStyleId == '0')) { return ''; }
+	return $templateStyleId;
+}
 
+// Getting global params from template
+$styleId = getAlternateTemplateStyleId();
 $app = JFactory::getApplication();
+$params = $app->getTemplate(true)->params;
 $doc = JFactory::getDocument();
 $this->language = $doc->language;
 $this->direction = $doc->direction;
@@ -91,7 +99,9 @@ if (($menuMobileType == "nav-select-left") || ($menuMobileType == "nav-select-ri
 	");
 }
 // Add Stylesheets
-$doc->addStyleSheet('templates/'.$this->template.'/css/template.php');
+$cssurl = 'templates/'.$this->template.'/css/template.php';
+if (!empty($styleId)) {$cssurl .= '?styleId='.$styleId; }
+$doc->addStyleSheet($cssurl);
 if (detectNoHoverDevice()) {
 	$doc->addStyleSheet('templates/'.$this->template.'/css/template_nohover.php');
 }
