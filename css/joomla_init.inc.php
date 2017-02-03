@@ -144,8 +144,8 @@ if (isset($_GET['styleId'])) {
 		$params[$varname] = $templateParams->get($varname);
 	}
 }
-if (empty($params['templateFontSize'])) { $params['templateFontSize'] = '12'; }
-if (empty($params['templateParagraphMarginTop'])) { $params['templateParagraphMarginTop'] = '0'; }
-if (empty($params['templateParagraphMarginBottom'])) { $params['templateParagraphMarginBottom'] = '1'; }
-if (empty($params['menuFontSize'])) { $params['menuFontSize'] = '12'; }
+if (!iiset($params['templateFontSize']) || empty($params['templateFontSize'])) { $params['templateFontSize'] = '12'; }
+if (!iiset($params['templateParagraphMarginTop']) || empty($params['templateParagraphMarginTop'])) { $params['templateParagraphMarginTop'] = '0'; }
+if (!iiset($params['templateParagraphMarginBottom']) || empty($params['templateParagraphMarginBottom'])) { $params['templateParagraphMarginBottom'] = '1'; }
+if (!iiset($params['menuFontSize']) || empty($params['menuFontSize'])) { $params['menuFontSize'] = '12'; }
 ?>
