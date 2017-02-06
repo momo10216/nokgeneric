@@ -2,7 +2,7 @@
 <!DOCTYPE install PUBLIC "-//Joomla! 2.5//DTD template 1.0//EN" "http://www.joomla.org/xml/dtd/2.5/template-install.dtd">
 <extension version="3.1" type="template" client="site" method="upgrade">
 	<name>NoK-Generic</name>
-	<version>1.5.0</version>
+	<version>1.5.1</version>
 	<creationDate>09/10/2014</creationDate>
 	<author>Norbert Kuemin</author>
 	<authorEmail>norbert@kuem.in</authorEmail>
@@ -51,6 +51,10 @@
 		<language tag="en-GB">en-GB/en-GB.tpl_nok-generic.sys.ini</language>
 		<language tag="de-DE">de-DE/de-DE.tpl_nok-generic.ini</language>
 		<language tag="de-DE">de-DE/de-DE.tpl_nok-generic.sys.ini</language>
+		<language tag="fr-FR">fr-FR/fr-FR.tpl_nok-generic.ini</language>
+		<language tag="fr-FR">fr-FR/fr-FR.tpl_nok-generic.sys.ini</language>
+		<language tag="it-IT">it-IT/it-IT.tpl_nok-generic.ini</language>
+		<language tag="it-IT">it-IT/it-IT.tpl_nok-generic.sys.ini</language>
 	</languages>
 	<config>
 		<fields name="params">
