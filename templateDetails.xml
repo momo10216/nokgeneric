@@ -353,7 +353,7 @@
 					description="TPL_NOK-GENERIC_MODULE_BORDER_COLOR_DESC" />
 				<field name="modulePaddingSize"
 					type="integer" first="0" last="30" step="1" default="19"
-					label="TPL_NOK-GENERIC_PADDING_SIZE_LABEL"
+					label="TPL_NOK-GENERIC_MODULE_PADDING_SIZE_LABEL"
 					description="TPL_NOK-GENERIC_MODULE_PADDING_SIZE_DESC" />
 				<field name="moduleTitleIcon" class="" type="media" default=""
 					label="TPL_NOK-GENERIC_MODULE_TITLE_ICON_FILE_LABEL"
