@@ -445,8 +445,10 @@
 			</fieldset>
 
 			<fieldset name="css" label="TPL_NOK-GENERIC_CSS_LABEL">
+				<field name="cssTemplate" type="textarea" default="" rows="10" cols="80"
 					label="TPL_NOK-GENERIC_CSS_TEMPLATE_LABEL"
 					description="TPL_NOK-GENERIC_CSS_TEMPLATE_DESC" />
+				<field name="cssPage" type="textarea" default="" rows="10" cols="80"
 					label="TPL_NOK-GENERIC_CSS_PAGE_LABEL"
 					description="TPL_NOK-GENERIC_CSS_PAGE_DESC" />
 			</fieldset>
