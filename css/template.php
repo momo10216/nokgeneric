@@ -8005,3 +8005,6 @@ code {
 	font-weight: bold;
 	padding: 1px 4px;
 }
+<?php if (isset($params['cssTemplate']) && !empty($params['cssTemplate'])) : ?>
+<?php echo $params['cssTemplate']; ?>
+<?php endif; ?>

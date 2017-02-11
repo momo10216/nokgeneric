@@ -443,6 +443,13 @@
 					label="TPL_NOK-GENERIC_BORDER_COLOR_LABEL"
 					description="TPL_NOK-GENERIC_FOOTER_BORDER_COLOR_DESC" />
 			</fieldset>
+
+			<fieldset name="css" label="TPL_NOK-GENERIC_CSS_LABEL">
+					label="TPL_NOK-GENERIC_CSS_TEMPLATE_LABEL"
+					description="TPL_NOK-GENERIC_CSS_TEMPLATE_DESC" />
+					label="TPL_NOK-GENERIC_CSS_PAGE_LABEL"
+					description="TPL_NOK-GENERIC_CSS_PAGE_DESC" />
+			</fieldset>
 		</fields>
 	</config>
 	<updateservers>

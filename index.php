@@ -149,6 +149,19 @@ if ($showLeftColumn && $showRightColumn) {
 	<?php
 	}
 	?>
+	<?php
+	// Write additional css information
+	if ($this->params->get('cssPage'))
+	{
+	?>
+		<style type="text/css">
+<?php echo $params['cssPage']; ?>
+		</style>
+	<?php
+	}
+	?>
+
+
 	<!--[if lt IE 9]>
 		<script src="<?php echo $this->baseurl ?>/media/jui/js/html5.js"></script>
 	<![endif]-->

@@ -138,7 +138,9 @@ if (isset($_GET['styleId'])) {
 'footerBackgroundPosition',
 'footerBorderType',
 'footerBorderSize',
-'footerBorderColor');
+'footerBorderColor',
+'cssTemplate',
+'cssPage');
 	$params = array();
 	foreach($varnames as $varname) {
 		$params[$varname] = $templateParams->get($varname);
