@@ -2359,14 +2359,30 @@ button.close {
 	text-align: center;
 	vertical-align: middle;
 	cursor: pointer;
+<?php if (!isNullOrEmpty($params,'templateButtonTextColor')) : ?>
+	color: <?php echo $params['templateButtonTextColor']; ?>;
+<?php else: ?>
 <?php if (!isNullOrEmpty($params,'contentBackgroundColor')) : ?>
 	color: <?php echo $params['contentBackgroundColor']; ?>;
 <?php else: ?>
 	color: #333;
 <?php endif; ?>
+<?php endif; ?>
 	text-shadow: 0 1px 1px rgba(255,255,255,0.75);
+<?php if (!isNullOrEmpty($params,'templateButtonBackgroundColor')) : ?>
+<?php if (!isNullOrEmpty($params,'templateButtonBackgroundOpacity')) : ?>
+	background-color: <?php echo calcBackground($params['templateButtonBackgroundColor'],$params['templateButtonBackgroundOpacity']); ?>;
+<?php else: ?>
+	background-color: <?php echo calcBackground($params['templateButtonBackgroundColor'],''); ?>;
+<?php endif; ?>
+<?php else: ?>
 <?php if (!isNullOrEmpty($params,'templateColor')) : ?>
-	background-color: <?php echo $params['templateColor']; ?>;
+<?php if (!isNullOrEmpty($params,'templateButtonBackgroundOpacity')) : ?>
+	background-color: <?php echo calcBackground($params['templateColor'],$params['templateButtonBackgroundOpacity']); ?>;
+<?php else: ?>
+	background-color: <?php echo calcBackground($params['templateColor'],''); ?>;
+<?php endif; ?>
+<?php endif; ?>
 <?php endif; ?>
 /*
 	background-color: #f5f5f5;
@@ -2381,7 +2397,11 @@ button.close {
 	filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
 */
 	border-color: #e6e6e6 #e6e6e6 #bfbfbf;
+<?php if (!isNullOrEmpty($params,'templateButtonBorderColor')) : ?>
+	border: 1px solid <?php echo $params['templateButtonBorderColor']; ?>;
+<?php else: ?>
 	border: 1px solid #bbb;
+<?php endif; ?>
 	*border: 0;
 	border-bottom-color: #a2a2a2;
 <?php if (!isNullOrEmpty($params,'templateRadius')) : ?>
