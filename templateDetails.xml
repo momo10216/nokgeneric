@@ -2,7 +2,7 @@
 <!DOCTYPE install PUBLIC "-//Joomla! 2.5//DTD template 1.0//EN" "http://www.joomla.org/xml/dtd/2.5/template-install.dtd">
 <extension version="3.1" type="template" client="site" method="upgrade">
 	<name>NoK-Generic</name>
-	<version>1.6</version>
+	<version>1.6.1</version>
 	<creationDate>09/10/2014</creationDate>
 	<author>Norbert Kuemin</author>
 	<authorEmail>norbert@kuem.in</authorEmail>
@@ -78,6 +78,12 @@
 					<option value="line-through">TPL_NOK-GENERIC_TEXT_DECORATION_LINETHROUGH</option>
 					<option value="blink">TPL_NOK-GENERIC_TEXT_DECORATION_BLINK</option>
 				</field>
+				<field name="templateButtonBackgroundColor" class="" type="color" default="#333"
+					label="TPL_NOK-GENERIC_BUTTON_BACKGROUND_COLOR_LABEL"
+					description="TPL_NOK-GENERIC_BUTTON_BACKGROUND_COLOR_DESC" />
+				<field name="templateButtonBackgroundColor" class="" type="color" default="#333"
+					label="TPL_NOK-GENERIC_BUTTON_TEXTGROUND_COLOR_LABEL"
+					description="TPL_NOK-GENERIC_BUTTON_TEXTGROUND_COLOR_DESC" />
 				<field name="googleFont"
 					type="radio"
 					class="btn-group btn-group-yesno"

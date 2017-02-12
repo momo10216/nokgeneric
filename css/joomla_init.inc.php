@@ -32,6 +32,12 @@ if (!defined('_JDEFINES'))
 
 require_once JPATH_BASE . '/includes/framework.php';
 
+function isNullOrEmpty($list, $key) {
+	if (!isset($list[$key])) { return true; }
+	if (empty($list[$key])) { return true; }
+	return false;
+}
+
 function hex2RGB($hexStr, $returnAsString = false, $seperator = ',') {
     $hexStr = preg_replace("/[^0-9A-Fa-f]/", '', $hexStr); // Gets a proper hex string
     $rgbArray = array();
