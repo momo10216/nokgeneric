@@ -1,13 +1,16 @@
 <?php
 /**
- * @package     Joomla.Site
- * @subpackage  Templates.nok-generic
- *
- * @copyright   Copyright (C) 2014 Norbert Kuemin. All rights reserved.
- * @license     GNU General Public License version 2 or later; see LICENSE.txt
- */
+* @version	$Id$
+* @package	Joomla
+* @subpackage	NoK-Generic
+* @copyright	Copyright (c) 2017 Norbert Kuemin. All rights reserved.
+* @license	http://www.gnu.org/copyleft/gpl.html GNU/GPL, see LICENSE
+* @author	Norbert Kuemin
+* @authorEmail	momo_102@bluemail.ch
+*/
 
-defined('_JEXEC') or die;
+// Check to ensure this file is included in Joomla!
+defined('_JEXEC') or die('Restricted access');
 
 function detectNoHoverDevice(){
 	global $_SERVER;
@@ -78,7 +81,7 @@ if (($menuMobileType == "nav-select-left") || ($menuMobileType == "nav-select-ri
 			jQuery('<option />', {
 				'selected': 'selected',
 				'value'   : '',
-				'text'    : '".JText::_('TPL_NOK-GENERIC_GOTO')."'
+				'text'    : '".JText::_('TPL_NOKGENERIC_GOTO')."'
 			}).appendTo('.navbar select');
 			jQuery('nav a').each(function() {
 				var el = jQuery(this);
@@ -266,7 +269,7 @@ if ($showLeftColumn && $showRightColumn) {
 			</div>
 			<p class="pull-right">
 				<a href="#top" id="back-top">
-					<?php echo JText::_('TPL_NOK-GENERIC_BACKTOTOP'); ?>
+					<?php echo JText::_('TPL_NOKGENERIC_BACKTOTOP'); ?>
 				</a>
 			</p>
 		</div>
