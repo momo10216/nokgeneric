@@ -2230,7 +2230,7 @@ table th[class*="span"],
 	border-radius: <?php echo $params['templateRadius']; ?>px 0 <?php echo $params['templateRadius']; ?>px <?php echo $params['templateRadius']; ?>px;
 <?php endif; ?>
 }
-.dropdown .dropdown-menu .nav-header {
+.dropdown .dropdown-menu {
 	padding-left: 20px;
 	padding-right: 20px;
 }
@@ -3072,7 +3072,8 @@ input[type="submit"].btn.btn-mini {
 .navselect {
 	display: none;
 }
-.nav > li > a {
+.nav > li > a,
+.nav-header {
 	display: block;
 	text-decoration: none;
 <?php if (!isNullOrEmpty($params,'menuEntryForegroundColor')) : ?>
@@ -3097,16 +3098,6 @@ input[type="submit"].btn.btn-mini {
 }
 .nav > .pull-right {
 	float: right;
-}
-.nav-header {
-	display: block;
-	padding: 3px 15px;
-	font-size: 11px;
-	font-weight: bold;
-	line-height: 18px;
-	color: #999;
-	text-shadow: 0 1px 0 rgba(255,255,255,0.5);
-	text-transform: uppercase;
 }
 .nav li + .nav-header {
 	margin-top: 9px;
@@ -3695,7 +3686,8 @@ input[type="submit"].btn.btn-mini {
 .navbar .nav > li {
 	float: left;
 }
-.navbar .nav > li > a {
+.navbar .nav > li > a,
+.nav-header {
 	float: none;
 	padding: 11px 15px 11px;
 <?php if (!isNullOrEmpty($params,'menuEntryForegroundColor')) : ?>

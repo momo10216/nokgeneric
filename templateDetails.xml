@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <extension version="3.1" type="template" client="site" method="upgrade">
 	<name>TPL_NOKGENERIC</name>
-	<version>1.6.3</version>
+	<version>1.6.4</version>
 	<creationDate>09/10/2014</creationDate>
 	<author>Norbert Kuemin</author>
 	<authorEmail>norbert@kuem.in</authorEmail>
