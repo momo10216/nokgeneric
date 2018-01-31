@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <extension version="3.1" type="template" client="site" method="upgrade">
 	<name>TPL_NOKGENERIC</name>
-	<version>1.6.4</version>
+	<version>1.6.5</version>
 	<creationDate>09/10/2014</creationDate>
 	<author>Norbert Kuemin</author>
 	<authorEmail>norbert@kuem.in</authorEmail>
@@ -44,14 +44,14 @@
 		<position>position-14</position>
 	</positions>
 	<languages folder="language">
-		<language tag="en-GB">en-GB/en-GB.tpl_nok-generic.ini</language>
-		<language tag="en-GB">en-GB/en-GB.tpl_nok-generic.sys.ini</language>
-		<language tag="de-DE">de-DE/de-DE.tpl_nok-generic.ini</language>
-		<language tag="de-DE">de-DE/de-DE.tpl_nok-generic.sys.ini</language>
-		<language tag="fr-FR">fr-FR/fr-FR.tpl_nok-generic.ini</language>
-		<language tag="fr-FR">fr-FR/fr-FR.tpl_nok-generic.sys.ini</language>
-		<language tag="it-IT">it-IT/it-IT.tpl_nok-generic.ini</language>
-		<language tag="it-IT">it-IT/it-IT.tpl_nok-generic.sys.ini</language>
+		<language tag="en-GB">en-GB/en-GB.tpl_nokgeneric.ini</language>
+		<language tag="en-GB">en-GB/en-GB.tpl_nokgeneric.sys.ini</language>
+		<language tag="de-DE">de-DE/de-DE.tpl_nokgeneric.ini</language>
+		<language tag="de-DE">de-DE/de-DE.tpl_nokgeneric.sys.ini</language>
+		<language tag="fr-FR">fr-FR/fr-FR.tpl_nokgeneric.ini</language>
+		<language tag="fr-FR">fr-FR/fr-FR.tpl_nokgeneric.sys.ini</language>
+		<language tag="it-IT">it-IT/it-IT.tpl_nokgeneric.ini</language>
+		<language tag="it-IT">it-IT/it-IT.tpl_nokgeneric.sys.ini</language>
 	</languages>
 	<config>
 		<fields name="params">
